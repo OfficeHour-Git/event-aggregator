@@ -95,7 +95,9 @@ _EXCLUDED_PATTERNS = re.compile(
         # Americas outside US
         "toronto", "canada", "vancouver", "montreal", "ottawa",
         "halifax", "calgary", "edmonton", "winnipeg",
-        "brazil", "sao paulo", "mexico city",
+        "brazil", "sao paulo", "são paulo",
+        "mexico city", "guadalajara", "monterrey", "culiacan",
+        "mexico",  # catches "Cursor Meetup Mexico City" etc in title
         # Africa
         "south africa", "johannesburg", "nigeria", "kenya",
         "addis ababa", "nairobi",
@@ -154,11 +156,13 @@ def is_us_or_europe(vevent) -> bool:
             pass  # malformed GEO — fall through
 
     # ── 2. Keyword exclusion ──────────────────────────────────────────────────
-    # Check LOCATION, DESCRIPTION, and UID (UID sometimes contains the slug)
+    # Check SUMMARY too — many events name the city in the title only
+    # e.g. "Cursor Hackathon Indonesia", "Cursor Meetup São Paulo"
+    summary  = str(vevent.get("summary", ""))
     location = str(vevent.get("location", ""))
     desc     = str(vevent.get("description", ""))
     uid      = str(vevent.get("uid", ""))
-    text     = location + " " + desc + " " + uid
+    text     = summary + " " + location + " " + desc + " " + uid
     if _EXCLUDED_PATTERNS.search(text):
         return False
 
@@ -302,7 +306,9 @@ def scrape_json_ld(url: str, source_name: str, base_url: str = "") -> list[dict]
                 data = json.loads(script.string)
                 items = data if isinstance(data, list) else [data]
                 for item in items:
-                    if item.get("@type") == "Event":
+                    # Must be an Event AND have a startDate — filters out
+                    # page navigation junk like "In Person", "Browse Library"
+                    if item.get("@type") == "Event" and item.get("startDate"):
                         events.append({
                             "summary":     item.get("name", f"{source_name} Event"),
                             "description": item.get("description", ""),
