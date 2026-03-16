@@ -137,13 +137,25 @@ def is_us_or_europe(vevent) -> bool:
     """
     Return True if the event is in the US or Europe (or is virtual/unknown).
 
-    1. GEO lat/lon bounding box — most reliable when present.
-       US:     lat 18–72,  lon -180 to -60
-       Europe: lat 34–72,  lon  -25 to  45
-    2. Keyword exclusion via regex word boundaries.
+    1. Keyword exclusion — always checked first, catches Canada/Mexico/etc
+       even when their GEO coordinates overlap with the US bounding box.
+    2. GEO lat/lon bounding box — used to positively confirm US/Europe
+       only after keywords have not excluded it.
     3. Default keep — virtual/online events with no location pass through.
     """
-    # ── 1. GEO bounding box ───────────────────────────────────────────────────
+    # ── 1. Keyword exclusion — always runs first ──────────────────────────────
+    # Canada and Mexico share lat/lon ranges with the US so GEO alone can't
+    # distinguish them. Keywords on SUMMARY/LOCATION/DESCRIPTION/UID catch
+    # events like "Cursor Meetup Toronto", "Build with Cursor Mexico City".
+    summary  = str(vevent.get("summary", ""))
+    location = str(vevent.get("location", ""))
+    desc     = str(vevent.get("description", ""))
+    uid      = str(vevent.get("uid", ""))
+    text     = summary + " " + location + " " + desc + " " + uid
+    if _EXCLUDED_PATTERNS.search(text):
+        return False
+
+    # ── 2. GEO bounding box — confirms US/Europe after keywords pass ──────────
     geo = vevent.get("geo")
     if geo is not None:
         try:
@@ -154,17 +166,6 @@ def is_us_or_europe(vevent) -> bool:
             return in_us or in_europe
         except Exception:
             pass  # malformed GEO — fall through
-
-    # ── 2. Keyword exclusion ──────────────────────────────────────────────────
-    # Check SUMMARY too — many events name the city in the title only
-    # e.g. "Cursor Hackathon Indonesia", "Cursor Meetup São Paulo"
-    summary  = str(vevent.get("summary", ""))
-    location = str(vevent.get("location", ""))
-    desc     = str(vevent.get("description", ""))
-    uid      = str(vevent.get("uid", ""))
-    text     = summary + " " + location + " " + desc + " " + uid
-    if _EXCLUDED_PATTERNS.search(text):
-        return False
 
     # ── 3. Default: keep ──────────────────────────────────────────────────────
     return True
