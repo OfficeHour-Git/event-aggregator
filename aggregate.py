@@ -2,6 +2,10 @@
 """
 Event Feed Aggregator
 Merges multiple event calendars (Luma + others) into a single .ics feed.
+- No source prefix tags on event names
+- Deduplication by title + start time
+- Filters out events outside US and Europe
+- Filters out past events
 """
 
 import requests
@@ -18,22 +22,22 @@ from dateutil.parser import parse as parse_dt
 # ─── Source Definitions ───────────────────────────────────────────────────────
 
 LUMA_DIRECT_ICS_URLS = {
-    "Luma Calendar 1":          "https://api2.luma.com/ics/get?entity=calendar&id=cal-yrYsEKDQ91hPMWy",
-    "Luma Calendar 2":          "https://api2.luma.com/ics/get?entity=calendar&id=cal-61Cv6COs4g9GKw7",
-    "Luma Calendar 3":          "https://api2.luma.com/ics/get?entity=calendar&id=cal-7Q5A70Bz5Idxopu",
-    "Luma Calendar 4":          "https://api2.luma.com/ics/get?entity=calendar&id=cal-iOipAs7mv59Hbuz",
-    "Luma Calendar 5":          "https://api2.luma.com/ics/get?entity=calendar&id=cal-tBOSmnsBzW0kTrf",
-    "Luma Calendar 6":          "https://api2.luma.com/ics/get?entity=calendar&id=cal-E74MDlDKBaeAwXK",
-    "Nebius Community":         "https://api2.luma.com/ics/get?entity=calendar&id=cal-36Kb7AwwNrfc0eU",
-    "Luma Calendar 8":          "https://api2.luma.com/ics/get?entity=calendar&id=cal-2mLDnq80EKWoGy8",
-    "Luma Calendar 9":          "https://api2.luma.com/ics/get?entity=calendar&id=cal-r8BcsXhhHYmA3tp",
-    "Luma Calendar 10":         "https://api2.luma.com/ics/get?entity=calendar&id=cal-8zLyKMgaKTvonbT",
-    "Luma Calendar 11":         "https://api2.luma.com/ics/get?entity=calendar&id=cal-vSo9sRaAQOgoflu",
-    "Luma Calendar 12":         "https://api2.luma.com/ics/get?entity=calendar&id=cal-YKwEv0xAlmNR6VN",
-    "Luma Calendar 13":         "https://api2.luma.com/ics/get?entity=calendar&id=cal-UAliCb7j5QccLrn",
-    "AI Builders Collective":   "https://api2.luma.com/ics/get?entity=calendar&id=cal-QvcuRhmCBjOA1T7",
-    "Luma Calendar 15":         "https://api2.luma.com/ics/get?entity=calendar&id=cal-RHI1LJC6K8JRBLI",
-    "Luma Calendar 16":         "https://api2.luma.com/ics/get?entity=calendar&id=cal-l7gcEleWIMCKLbv",
+    "Luma Calendar 1":        "https://api2.luma.com/ics/get?entity=calendar&id=cal-yrYsEKDQ91hPMWy",
+    "Luma Calendar 2":        "https://api2.luma.com/ics/get?entity=calendar&id=cal-61Cv6COs4g9GKw7",
+    "Luma Calendar 3":        "https://api2.luma.com/ics/get?entity=calendar&id=cal-7Q5A70Bz5Idxopu",
+    "Luma Calendar 4":        "https://api2.luma.com/ics/get?entity=calendar&id=cal-iOipAs7mv59Hbuz",
+    "Luma Calendar 5":        "https://api2.luma.com/ics/get?entity=calendar&id=cal-tBOSmnsBzW0kTrf",
+    "Luma Calendar 6":        "https://api2.luma.com/ics/get?entity=calendar&id=cal-E74MDlDKBaeAwXK",
+    "Nebius Community":       "https://api2.luma.com/ics/get?entity=calendar&id=cal-36Kb7AwwNrfc0eU",
+    "Luma Calendar 8":        "https://api2.luma.com/ics/get?entity=calendar&id=cal-2mLDnq80EKWoGy8",
+    "Luma Calendar 9":        "https://api2.luma.com/ics/get?entity=calendar&id=cal-r8BcsXhhHYmA3tp",
+    "Luma Calendar 10":       "https://api2.luma.com/ics/get?entity=calendar&id=cal-8zLyKMgaKTvonbT",
+    "Luma Calendar 11":       "https://api2.luma.com/ics/get?entity=calendar&id=cal-vSo9sRaAQOgoflu",
+    "Luma Calendar 12":       "https://api2.luma.com/ics/get?entity=calendar&id=cal-YKwEv0xAlmNR6VN",
+    "Luma Calendar 13":       "https://api2.luma.com/ics/get?entity=calendar&id=cal-UAliCb7j5QccLrn",
+    "AI Builders Collective": "https://api2.luma.com/ics/get?entity=calendar&id=cal-QvcuRhmCBjOA1T7",
+    "Luma Calendar 15":       "https://api2.luma.com/ics/get?entity=calendar&id=cal-RHI1LJC6K8JRBLI",
+    "Luma Calendar 16":       "https://api2.luma.com/ics/get?entity=calendar&id=cal-l7gcEleWIMCKLbv",
 }
 
 OTHER_SOURCES = {
@@ -50,7 +54,6 @@ HEADERS = {
     )
 }
 
-# VTIMEZONE block for America/New_York — required for correct time display
 VTIMEZONE_NYC = """BEGIN:VTIMEZONE
 TZID:America/New_York
 BEGIN:DAYLIGHT
@@ -69,65 +72,74 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE"""
 
-# ─── Location helpers ─────────────────────────────────────────────────────────
+# ─── Filters ──────────────────────────────────────────────────────────────────
 
-def extract_real_location(vevent) -> str:
-    """
-    Luma often sets LOCATION to a luma.com URL.
-    When that happens, pull the real address from DESCRIPTION instead.
-    """
-    loc = str(vevent.get("location", ""))
-    if loc and not loc.startswith("http"):
-        return loc
-
-    desc = str(vevent.get("description", ""))
-    m = re.search(r"Address:\n(.+?)(?:\n\n|\nHosted by|$)", desc, re.DOTALL)
-    if m:
-        addr = m.group(1).strip()
-        if addr.lower() != "check event page for more details.":
-            return addr
-
-    return loc  # fall back to luma URL if nothing better
-
-
-# Excluded locations outside US and Europe.
-# Uses regex word boundaries (\b) so "india" won't match "indiana",
-# and "mexico" won't match "new mexico".
+# Matches location/description text that signals a non-US/Europe event.
+# Uses \b word boundaries so "india" won't match "indiana",
+# "melb" won't match "melbourne" legitimate uses, etc.
 _EXCLUDED_PATTERNS = re.compile(
     r"\b(" + "|".join([
         # Middle East
         "dubai", "united arab emirates", "abu dhabi", "uae",
         "saudi arabia", "riyadh", "qatar", "doha",
-        # Asia-Pacific
-        "singapore", "hong kong", "tokyo", "japan", "china",
-        "beijing", "shanghai", "south korea", "seoul",
-        "thailand", "bangkok", "indonesia", "jakarta",
-        "malaysia", "kuala lumpur", "india", "bangalore",
-        "mumbai", "delhi", "new zealand", "auckland",
+        # East Asia
+        "singapore", "hong kong", "tokyo", "osaka", "japan",
+        "china", "beijing", "shanghai", "hangzhou", "chengdu",
+        "guangzhou", "nanjing", "wuhan", "shenzhen",
+        "south korea", "seoul", "taiwan", "taipei",
+        "thailand", "bangkok", "vietnam", "hanoi",
+        "indonesia", "jakarta", "philippines", "manila",
+        "malaysia", "kuala lumpur",
+        # South Asia
+        "india", "bangalore", "mumbai", "delhi", "hyderabad",
         # Americas outside US
-        "toronto", "canada", "vancouver", "montreal",
-        "brazil", r"s[aã]o paulo", "mexico",
+        "toronto", "canada", "vancouver", "montreal", "ottawa",
+        "halifax", "calgary", "edmonton", "winnipeg",
+        "brazil", "sao paulo", "mexico city",
         # Africa
         "south africa", "johannesburg", "nigeria", "kenya",
-        # Oceania
-        "australia", "sydney", "melbourne", "brisbane",
+        "addis ababa", "nairobi",
+        # Oceania — city names AND URL slug fragments
+        "australia", "sydney", "melbourne", "brisbane", "perth",
+        "auckland", "new zealand",
+        "melb", "bris", "startupweekendsydney",
+        # Calendar slugs that are clearly Australia/NZ communities
+        "buildercommunityanz", "aunz",
         # Other
-        "israel", "tel aviv",
+        "israel", "tel aviv", "el salvador",
     ]) + r")\b",
     re.IGNORECASE,
 )
+
+# Today's date in UTC — used to filter out past events
+_NOW = datetime.now(timezone.utc)
+
+
+def is_future_event(vevent) -> bool:
+    """Return True if the event starts today or in the future."""
+    dtstart = vevent.get("dtstart")
+    if dtstart is None:
+        return True  # no start date — keep it
+    start = dtstart.dt
+    # Handle both date and datetime objects
+    if hasattr(start, "tzinfo"):
+        if start.tzinfo is None:
+            start = start.replace(tzinfo=timezone.utc)
+    else:
+        # date-only — convert to datetime at midnight UTC
+        start = datetime(start.year, start.month, start.day, tzinfo=timezone.utc)
+    return start >= _NOW.replace(hour=0, minute=0, second=0, microsecond=0)
 
 
 def is_us_or_europe(vevent) -> bool:
     """
     Return True if the event is in the US or Europe (or is virtual/unknown).
 
-    1. GEO lat/lon bounding box — checked first on the raw component.
-       US bounding box:     lat 18–72, lon -180 to -60
-       Europe bounding box: lat 34–72, lon  -25 to  45
-    2. Regex keyword exclusion — word-boundary matching so "india" ≠ "indiana"
-       and "mexico" ≠ "new mexico".
-    3. Default keep — virtual/online events with no location info pass through.
+    1. GEO lat/lon bounding box — most reliable when present.
+       US:     lat 18–72,  lon -180 to -60
+       Europe: lat 34–72,  lon  -25 to  45
+    2. Keyword exclusion via regex word boundaries.
+    3. Default keep — virtual/online events with no location pass through.
     """
     # ── 1. GEO bounding box ───────────────────────────────────────────────────
     geo = vevent.get("geo")
@@ -136,15 +148,17 @@ def is_us_or_europe(vevent) -> bool:
             lat = float(geo.latitude)
             lon = float(geo.longitude)
             in_us     = (18 <= lat <= 72) and (-180 <= lon <= -60)
-            in_europe = (34 <= lat <= 72) and ( -25 <= lon <=  45)
+            in_europe = (34 <= lat <= 72) and (  -25 <= lon <=  45)
             return in_us or in_europe
         except Exception:
-            pass  # malformed GEO — fall through to keyword check
+            pass  # malformed GEO — fall through
 
-    # ── 2. Keyword exclusion (word-boundary regex) ────────────────────────────
+    # ── 2. Keyword exclusion ──────────────────────────────────────────────────
+    # Check LOCATION, DESCRIPTION, and UID (UID sometimes contains the slug)
     location = str(vevent.get("location", ""))
     desc     = str(vevent.get("description", ""))
-    text     = location + " " + desc
+    uid      = str(vevent.get("uid", ""))
+    text     = location + " " + desc + " " + uid
     if _EXCLUDED_PATTERNS.search(text):
         return False
 
@@ -152,55 +166,60 @@ def is_us_or_europe(vevent) -> bool:
     return True
 
 
+# ─── Location extractor ───────────────────────────────────────────────────────
+
+def extract_real_location(vevent) -> str:
+    """Use the physical address when available; fall back to Luma URL."""
+    loc = str(vevent.get("location", ""))
+    if loc and not loc.startswith("http"):
+        return loc
+    # Try to extract address from description
+    desc = str(vevent.get("description", ""))
+    m = re.search(r"Address:\n(.+?)(?:\n\n|\nHosted by|$)", desc, re.DOTALL)
+    if m:
+        addr = m.group(1).strip()
+        if addr.lower() not in ("check event page for more details.", ""):
+            return addr
+    return loc
+
+
 # ─── VEVENT builder ───────────────────────────────────────────────────────────
 
 def make_clean_vevent(src: Event) -> Event:
     """
     Build a fresh VEVENT from a raw Luma component.
-    - Summary is copied as-is (NO source prefix tag added)
-    - Location uses real address when available
-    - GEO is preserved so downstream filters can use it
-    - Status forced to CONFIRMED (Luma sends TENTATIVE)
+    - NO source prefix tag on the summary
+    - Uses real address for location when available
+    - GEO preserved for downstream use
+    - Status forced to CONFIRMED
     """
     dst = Event()
-
-    # UID + timestamp
     dst.add("uid",     str(src.get("uid", str(uuid.uuid4()))))
-    dst.add("dtstamp", src.get("dtstamp", datetime.now(timezone.utc)))
-
-    # Summary — exactly as Luma provides it, no prefix
+    dst.add("dtstamp", src.get("dtstamp", _NOW))
+    # Summary copied exactly as Luma provides — no prefix added
     dst.add("summary", str(src.get("summary", "Event")))
 
-    # Dates
     for field in ("dtstart", "dtend", "created", "last-modified"):
         val = src.get(field)
         if val is not None:
             dst.add(field, val.dt if hasattr(val, "dt") else val)
 
-    # Location — prefer real address over luma URL
     location = extract_real_location(src)
     if location:
         dst.add("location", location)
 
-    # GEO — copy so is_us_or_europe() can use bounding box on the clean vevent
-    # (is_us_or_europe is called on raw src BEFORE make_clean_vevent in fetch_luma,
-    #  but keeping GEO here is good practice for any downstream processing)
     geo = src.get("geo")
     if geo is not None:
         dst.add("geo", geo)
 
-    # Description
     dst.add("description", str(src.get("description", "")))
 
-    # URL
     url = src.get("url")
     if url:
         dst.add("url", str(url))
 
-    # Force CONFIRMED so Google Calendar renders events normally (not greyed out)
     dst.add("status", "CONFIRMED")
 
-    # Organizer
     organizer = src.get("organizer")
     if organizer:
         dst.add("organizer", organizer)
@@ -208,17 +227,13 @@ def make_clean_vevent(src: Event) -> Event:
     return dst
 
 
-# ─── Luma fetcher ─────────────────────────────────────────────────────────────
+# ─── Fetchers ─────────────────────────────────────────────────────────────────
 
 def fetch_luma(name: str, url: str) -> list[Event]:
-    """
-    Fetch a Luma iCal URL.
-    Geo-filter is applied to the RAW component (which has GEO field intact)
-    BEFORE building the clean vevent — this is the key fix that makes the
-    bounding-box check actually work.
-    """
+    """Fetch a Luma iCal URL, filter by location and date, return clean VEVENTs."""
     events = []
-    skipped = 0
+    skipped_geo = 0
+    skipped_past = 0
     try:
         r = requests.get(url, headers=HEADERS, timeout=15)
         r.raise_for_status()
@@ -226,33 +241,34 @@ def fetch_luma(name: str, url: str) -> list[Event]:
         for component in cal.walk():
             if component.name != "VEVENT":
                 continue
-            # Filter on raw component — GEO is present here
+            # Filter on raw component (GEO is present here)
             if not is_us_or_europe(component):
-                skipped += 1
+                skipped_geo += 1
+                continue
+            if not is_future_event(component):
+                skipped_past += 1
                 continue
             events.append(make_clean_vevent(component))
-        print(f"  ✓  {name} ({len(events)} events, {skipped} filtered out)")
+        print(f"  ✓  {name} ({len(events)} kept, {skipped_geo} geo-filtered, {skipped_past} past)")
     except Exception as e:
         print(f"  ✗  {name}: {e}", file=sys.stderr)
     return events
 
-
-# ─── Scraped event builder ────────────────────────────────────────────────────
 
 def dict_to_vevent(ev: dict) -> Event:
     """Convert a scraped event dict to a clean VEVENT. No source prefix."""
     vevent = Event()
     vevent.add("uid",     str(uuid.uuid4()) + "@event-aggregator")
     vevent.add("summary", ev.get("summary", "Event"))  # no prefix
-    vevent.add("description", ev.get("description", "") + f"\n\nSource: {ev.get('url','')}")
-    vevent.add("status",  "CONFIRMED")
+    vevent.add("description", ev.get("description", "") + f"\n\nSource: {ev.get('url', '')}")
+    vevent.add("status", "CONFIRMED")
 
     if ev.get("url"):
         vevent.add("url", ev["url"])
     if ev.get("location"):
         vevent.add("location", ev["location"])
 
-    now = datetime.now(timezone.utc)
+    now = _NOW
     vevent.add("dtstamp", now)
     vevent.add("created", now)
 
@@ -353,7 +369,6 @@ def build_merged_calendar(output_path: str = "docs/events.ics") -> None:
     # ── Luma calendars ────────────────────────────────────────────────────────
     print("\n📡 Fetching Luma calendars…")
     for name, url in LUMA_DIRECT_ICS_URLS.items():
-        # fetch_luma already geo-filters on raw components internally
         for vevent in fetch_luma(name, url):
             if not is_duplicate(vevent):
                 merged.add_component(vevent)
@@ -371,7 +386,7 @@ def build_merged_calendar(output_path: str = "docs/events.ics") -> None:
         items = scrape_json_ld(url, name, base)
         for ev in items:
             vevent = dict_to_vevent(ev)
-            if is_us_or_europe(vevent) and not is_duplicate(vevent):
+            if is_us_or_europe(vevent) and is_future_event(vevent) and not is_duplicate(vevent):
                 merged.add_component(vevent)
                 event_count += 1
 
