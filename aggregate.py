@@ -155,7 +155,7 @@ def is_us_or_europe(vevent) -> bool:
     if _EXCLUDED_PATTERNS.search(text):
         return False
 
-    # ── 2. GEO bounding box — confirms US/Europe after keywords pass ──────────
+    # ── 2. GEO bounding box ───────────────────────────────────────────────────
     geo = vevent.get("geo")
     if geo is not None:
         try:
@@ -163,9 +163,13 @@ def is_us_or_europe(vevent) -> bool:
             lon = float(geo.longitude)
             in_us     = (18 <= lat <= 72) and (-180 <= lon <= -60)
             in_europe = (34 <= lat <= 72) and (  -25 <= lon <=  45)
-            return in_us or in_europe
+            if in_us or in_europe:
+                return True
+            # GEO is present and outside both boxes — exclude it
+            # (catches Taiwan lon ~121, Australia lat ~-33, etc.)
+            return False
         except Exception:
-            pass  # malformed GEO — fall through
+            pass  # malformed GEO — fall through to default
 
     # ── 3. Default: keep ──────────────────────────────────────────────────────
     return True
