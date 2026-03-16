@@ -10,10 +10,9 @@ import os
 import sys
 import uuid
 import json
-from copy import deepcopy
 from datetime import datetime, timezone
 from bs4 import BeautifulSoup
-from icalendar import Calendar, Event, vText, vDatetime
+from icalendar import Calendar, Event, vText
 from dateutil.parser import parse as parse_dt
 
 # ─── Source Definitions ───────────────────────────────────────────────────────
@@ -70,70 +69,138 @@ RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
 END:STANDARD
 END:VTIMEZONE"""
 
-# ─── Helpers ──────────────────────────────────────────────────────────────────
+# ─── Location helpers ─────────────────────────────────────────────────────────
 
 def extract_real_location(vevent) -> str:
     """
     Luma often sets LOCATION to a luma.com URL.
-    When that happens, try to pull the real address from DESCRIPTION instead.
+    When that happens, pull the real address from DESCRIPTION instead.
     """
     loc = str(vevent.get("location", ""))
-    # If location looks like a real address, use it
     if loc and not loc.startswith("http"):
         return loc
 
-    # Otherwise dig the address out of the description
     desc = str(vevent.get("description", ""))
-    # Pattern: "Address:\nLine1\nLine2\n..." up to a blank line or "Hosted by"
     m = re.search(r"Address:\n(.+?)(?:\n\n|\nHosted by|$)", desc, re.DOTALL)
     if m:
         addr = m.group(1).strip()
         if addr.lower() != "check event page for more details.":
             return addr
 
-    # Fall back to the luma URL if nothing better
-    return loc
+    return loc  # fall back to luma URL if nothing better
 
 
-def make_clean_vevent(src: Event, source_name: str) -> Event:
+# Excluded locations outside US and Europe.
+# Uses regex word boundaries (\b) so "india" won't match "indiana",
+# and "mexico" won't match "new mexico".
+_EXCLUDED_PATTERNS = re.compile(
+    r"\b(" + "|".join([
+        # Middle East
+        "dubai", "united arab emirates", "abu dhabi", "uae",
+        "saudi arabia", "riyadh", "qatar", "doha",
+        # Asia-Pacific
+        "singapore", "hong kong", "tokyo", "japan", "china",
+        "beijing", "shanghai", "south korea", "seoul",
+        "thailand", "bangkok", "indonesia", "jakarta",
+        "malaysia", "kuala lumpur", "india", "bangalore",
+        "mumbai", "delhi", "new zealand", "auckland",
+        # Americas outside US
+        "toronto", "canada", "vancouver", "montreal",
+        "brazil", r"s[aã]o paulo", "mexico",
+        # Africa
+        "south africa", "johannesburg", "nigeria", "kenya",
+        # Oceania
+        "australia", "sydney", "melbourne", "brisbane",
+        # Other
+        "israel", "tel aviv",
+    ]) + r")\b",
+    re.IGNORECASE,
+)
+
+
+def is_us_or_europe(vevent) -> bool:
     """
-    Create a fresh VEVENT from src, properly copying all fields,
-    fixing the location. No source prefix added — keeps event names clean.
+    Return True if the event is in the US or Europe (or is virtual/unknown).
+
+    1. GEO lat/lon bounding box — checked first on the raw component.
+       US bounding box:     lat 18–72, lon -180 to -60
+       Europe bounding box: lat 34–72, lon  -25 to  45
+    2. Regex keyword exclusion — word-boundary matching so "india" ≠ "indiana"
+       and "mexico" ≠ "new mexico".
+    3. Default keep — virtual/online events with no location info pass through.
+    """
+    # ── 1. GEO bounding box ───────────────────────────────────────────────────
+    geo = vevent.get("geo")
+    if geo is not None:
+        try:
+            lat = float(geo.latitude)
+            lon = float(geo.longitude)
+            in_us     = (18 <= lat <= 72) and (-180 <= lon <= -60)
+            in_europe = (34 <= lat <= 72) and ( -25 <= lon <=  45)
+            return in_us or in_europe
+        except Exception:
+            pass  # malformed GEO — fall through to keyword check
+
+    # ── 2. Keyword exclusion (word-boundary regex) ────────────────────────────
+    location = str(vevent.get("location", ""))
+    desc     = str(vevent.get("description", ""))
+    text     = location + " " + desc
+    if _EXCLUDED_PATTERNS.search(text):
+        return False
+
+    # ── 3. Default: keep ──────────────────────────────────────────────────────
+    return True
+
+
+# ─── VEVENT builder ───────────────────────────────────────────────────────────
+
+def make_clean_vevent(src: Event) -> Event:
+    """
+    Build a fresh VEVENT from a raw Luma component.
+    - Summary is copied as-is (NO source prefix tag added)
+    - Location uses real address when available
+    - GEO is preserved so downstream filters can use it
+    - Status forced to CONFIRMED (Luma sends TENTATIVE)
     """
     dst = Event()
 
-    # Core required fields — copy directly
-    dst.add("uid",     str(src.get("uid",  str(uuid.uuid4()))) )
+    # UID + timestamp
+    dst.add("uid",     str(src.get("uid", str(uuid.uuid4()))))
     dst.add("dtstamp", src.get("dtstamp", datetime.now(timezone.utc)))
 
-    # Summary — use as-is, no prefix
-    raw_summary = str(src.get("summary", "Event"))
-    dst.add("summary", raw_summary)
+    # Summary — exactly as Luma provides it, no prefix
+    dst.add("summary", str(src.get("summary", "Event")))
 
-    # Dates — preserve as-is (already UTC with Z suffix from Luma)
+    # Dates
     for field in ("dtstart", "dtend", "created", "last-modified"):
         val = src.get(field)
-        if val:
+        if val is not None:
             dst.add(field, val.dt if hasattr(val, "dt") else val)
 
-    # Location — use real address when possible
+    # Location — prefer real address over luma URL
     location = extract_real_location(src)
     if location:
         dst.add("location", location)
 
-    # Description — keep original
-    desc = str(src.get("description", ""))
-    dst.add("description", desc)
+    # GEO — copy so is_us_or_europe() can use bounding box on the clean vevent
+    # (is_us_or_europe is called on raw src BEFORE make_clean_vevent in fetch_luma,
+    #  but keeping GEO here is good practice for any downstream processing)
+    geo = src.get("geo")
+    if geo is not None:
+        dst.add("geo", geo)
 
-    # URL — keep original
+    # Description
+    dst.add("description", str(src.get("description", "")))
+
+    # URL
     url = src.get("url")
     if url:
         dst.add("url", str(url))
 
-    # Status — use CONFIRMED so Google shows events normally
+    # Force CONFIRMED so Google Calendar renders events normally (not greyed out)
     dst.add("status", "CONFIRMED")
 
-    # Organizer — copy if present
+    # Organizer
     organizer = src.get("organizer")
     if organizer:
         dst.add("organizer", organizer)
@@ -141,37 +208,47 @@ def make_clean_vevent(src: Event, source_name: str) -> Event:
     return dst
 
 
-# ─── Luma iCal Fetching ───────────────────────────────────────────────────────
+# ─── Luma fetcher ─────────────────────────────────────────────────────────────
 
 def fetch_luma(name: str, url: str) -> list[Event]:
-    """Fetch a Luma iCal URL and return a list of clean VEVENT objects."""
+    """
+    Fetch a Luma iCal URL.
+    Geo-filter is applied to the RAW component (which has GEO field intact)
+    BEFORE building the clean vevent — this is the key fix that makes the
+    bounding-box check actually work.
+    """
     events = []
+    skipped = 0
     try:
         r = requests.get(url, headers=HEADERS, timeout=15)
         r.raise_for_status()
         cal = Calendar.from_ical(r.content)
         for component in cal.walk():
-            if component.name == "VEVENT":
-                events.append(make_clean_vevent(component, name))
-        print(f"  ✓  {name} ({len(events)} events)")
+            if component.name != "VEVENT":
+                continue
+            # Filter on raw component — GEO is present here
+            if not is_us_or_europe(component):
+                skipped += 1
+                continue
+            events.append(make_clean_vevent(component))
+        print(f"  ✓  {name} ({len(events)} events, {skipped} filtered out)")
     except Exception as e:
         print(f"  ✗  {name}: {e}", file=sys.stderr)
     return events
 
 
-# ─── HTML Scrapers ────────────────────────────────────────────────────────────
+# ─── Scraped event builder ────────────────────────────────────────────────────
 
-def dict_to_vevent(ev: dict, source_name: str) -> Event:
-    """Convert a scraped event dict to a clean VEVENT component."""
+def dict_to_vevent(ev: dict) -> Event:
+    """Convert a scraped event dict to a clean VEVENT. No source prefix."""
     vevent = Event()
     vevent.add("uid",     str(uuid.uuid4()) + "@event-aggregator")
-    vevent.add("summary", ev.get('summary', 'Event'))
+    vevent.add("summary", ev.get("summary", "Event"))  # no prefix
     vevent.add("description", ev.get("description", "") + f"\n\nSource: {ev.get('url','')}")
     vevent.add("status",  "CONFIRMED")
 
-    url = ev.get("url", "")
-    if url:
-        vevent.add("url", url)
+    if ev.get("url"):
+        vevent.add("url", ev["url"])
     if ev.get("location"):
         vevent.add("location", ev["location"])
 
@@ -223,10 +300,10 @@ def scrape_json_ld(url: str, source_name: str, base_url: str = "") -> list[dict]
 
         if not events:
             for card in soup.select("article, .event-card, [class*='event'], a[href*='/event']"):
-                link = card.find("a") if card.name != "a" else card
+                link  = card.find("a") if card.name != "a" else card
                 title = card.find(["h2", "h3", "h4"]) or card
                 if title and title.get_text(strip=True):
-                    href = (link["href"] if link and link.get("href") else url)
+                    href = link["href"] if link and link.get("href") else url
                     if href.startswith("/") and base_url:
                         href = base_url + href
                     events.append({
@@ -244,15 +321,15 @@ def scrape_json_ld(url: str, source_name: str, base_url: str = "") -> list[dict]
 
 def build_merged_calendar(output_path: str = "docs/events.ics") -> None:
     merged = Calendar()
-    merged.add("prodid",       "-//NYC AI Event Aggregator//EN")
-    merged.add("version",      "2.0")
-    merged.add("calscale",     "GREGORIAN")
-    merged.add("method",       "PUBLISH")
-    merged.add("x-wr-calname", "NYC AI & Tech Events — Aggregated")
-    merged.add("x-wr-caldesc", "Auto-aggregated from Luma, Verci, Betaworks, AI Tinkerers & more.")
-    merged.add("x-wr-timezone","America/New_York")
+    merged.add("prodid",        "-//NYC AI Event Aggregator//EN")
+    merged.add("version",       "2.0")
+    merged.add("calscale",      "GREGORIAN")
+    merged.add("method",        "PUBLISH")
+    merged.add("x-wr-calname",  "NYC AI & Tech Events — Aggregated")
+    merged.add("x-wr-caldesc",  "Auto-aggregated from Luma, Verci, Betaworks, AI Tinkerers & more.")
+    merged.add("x-wr-timezone", "America/New_York")
 
-    # Embed VTIMEZONE so clients know how to render UTC times
+    # Embed VTIMEZONE so clients render UTC times correctly
     tz_cal = Calendar.from_ical(
         "BEGIN:VCALENDAR\nVERSION:2.0\n" + VTIMEZONE_NYC + "\nEND:VCALENDAR"
     )
@@ -261,13 +338,12 @@ def build_merged_calendar(output_path: str = "docs/events.ics") -> None:
             merged.add_component(component)
 
     event_count = 0
-    seen = set()  # tracks (normalized_title, start_datetime) to deduplicate
+    seen = set()  # deduplication: (lowercase_title, start_str)
 
     def is_duplicate(vevent) -> bool:
-        """Return True if we've already added an event with the same title+start."""
         summary = str(vevent.get("summary", "")).strip().lower()
         dtstart = vevent.get("dtstart")
-        start = str(dtstart.dt) if dtstart else ""
+        start   = str(dtstart.dt) if dtstart else ""
         key = (summary, start)
         if key in seen:
             return True
@@ -277,6 +353,7 @@ def build_merged_calendar(output_path: str = "docs/events.ics") -> None:
     # ── Luma calendars ────────────────────────────────────────────────────────
     print("\n📡 Fetching Luma calendars…")
     for name, url in LUMA_DIRECT_ICS_URLS.items():
+        # fetch_luma already geo-filters on raw components internally
         for vevent in fetch_luma(name, url):
             if not is_duplicate(vevent):
                 merged.add_component(vevent)
@@ -293,8 +370,8 @@ def build_merged_calendar(output_path: str = "docs/events.ics") -> None:
     for name, url, base in scraped:
         items = scrape_json_ld(url, name, base)
         for ev in items:
-            vevent = dict_to_vevent(ev, name)
-            if not is_duplicate(vevent):
+            vevent = dict_to_vevent(ev)
+            if is_us_or_europe(vevent) and not is_duplicate(vevent):
                 merged.add_component(vevent)
                 event_count += 1
 
