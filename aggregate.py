@@ -15,23 +15,25 @@ import sys
 
 # ─── Source Definitions ───────────────────────────────────────────────────────
 
-LUMA_ICS_BASE = "https://api.lu.ma/ics/get"
-
-LUMA_COMMUNITY_SLUGS = {
-    "Tavily Community":         "eventstavily",
-    "Bond AI NYC":              "genai-ny",
-    "Open Source for AI":       "oss4ai",
-    "The AI Collective":        "genai-collective",
-    "Build Club":               "buildercommunityanz",
-    "Rho Community":            "rhoevents",
-    "Leverage SF (Nir Naamani)":"LeverageSF",
-    "Startup Grind NYC":        "startupgrindnyc",
-    "Fractal Tech NYC":         "nyc-tech",
-}
-
-LUMA_CALENDAR_IDS = {
-    "Nebius Community":         "cal-36Kb7AwwNrfc0eU",
-    "AI Builders Collective":   "cal-QvcuRhmCBjOA1T7",
+# Direct iCal URLs from Luma (api2.luma.com format)
+# Two are identified; others labeled by cal-ID until confirmed
+LUMA_DIRECT_ICS_URLS = {
+    "Luma Calendar (cal-yrYsEKDQ91hPMWy)":  "https://api2.luma.com/ics/get?entity=calendar&id=cal-yrYsEKDQ91hPMWy",
+    "Luma Calendar (cal-61Cv6COs4g9GKw7)":  "https://api2.luma.com/ics/get?entity=calendar&id=cal-61Cv6COs4g9GKw7",
+    "Luma Calendar (cal-7Q5A70Bz5Idxopu)":  "https://api2.luma.com/ics/get?entity=calendar&id=cal-7Q5A70Bz5Idxopu",
+    "Luma Calendar (cal-iOipAs7mv59Hbuz)":  "https://api2.luma.com/ics/get?entity=calendar&id=cal-iOipAs7mv59Hbuz",
+    "Luma Calendar (cal-tBOSmnsBzW0kTrf)":  "https://api2.luma.com/ics/get?entity=calendar&id=cal-tBOSmnsBzW0kTrf",
+    "Luma Calendar (cal-E74MDlDKBaeAwXK)":  "https://api2.luma.com/ics/get?entity=calendar&id=cal-E74MDlDKBaeAwXK",
+    "Nebius Community":                      "https://api2.luma.com/ics/get?entity=calendar&id=cal-36Kb7AwwNrfc0eU",
+    "Luma Calendar (cal-2mLDnq80EKWoGy8)":  "https://api2.luma.com/ics/get?entity=calendar&id=cal-2mLDnq80EKWoGy8",
+    "Luma Calendar (cal-r8BcsXhhHYmA3tp)":  "https://api2.luma.com/ics/get?entity=calendar&id=cal-r8BcsXhhHYmA3tp",
+    "Luma Calendar (cal-8zLyKMgaKTvonbT)":  "https://api2.luma.com/ics/get?entity=calendar&id=cal-8zLyKMgaKTvonbT",
+    "Luma Calendar (cal-vSo9sRaAQOgoflu)":  "https://api2.luma.com/ics/get?entity=calendar&id=cal-vSo9sRaAQOgoflu",
+    "Luma Calendar (cal-YKwEv0xAlmNR6VN)":  "https://api2.luma.com/ics/get?entity=calendar&id=cal-YKwEv0xAlmNR6VN",
+    "Luma Calendar (cal-UAliCb7j5QccLrn)":  "https://api2.luma.com/ics/get?entity=calendar&id=cal-UAliCb7j5QccLrn",
+    "AI Builders Collective":                "https://api2.luma.com/ics/get?entity=calendar&id=cal-QvcuRhmCBjOA1T7",
+    "Luma Calendar (cal-RHI1LJC6K8JRBLI)":  "https://api2.luma.com/ics/get?entity=calendar&id=cal-RHI1LJC6K8JRBLI",
+    "Luma Calendar (cal-l7gcEleWIMCKLbv)":  "https://api2.luma.com/ics/get?entity=calendar&id=cal-l7gcEleWIMCKLbv",
 }
 
 OTHER_SOURCES = {
@@ -50,28 +52,16 @@ HEADERS = {
 
 # ─── Luma iCal Fetching ───────────────────────────────────────────────────────
 
-def fetch_luma_community(name: str, slug: str) -> Calendar | None:
-    url = f"{LUMA_ICS_BASE}?entity=community&slug={slug}"
+def fetch_luma_direct(name: str, url: str) -> Calendar | None:
     try:
         r = requests.get(url, headers=HEADERS, timeout=15)
         r.raise_for_status()
         cal = Calendar.from_ical(r.content)
-        print(f"  ✓  {name} ({slug})")
+        count = sum(1 for c in cal.walk() if c.name == "VEVENT")
+        print(f"  ✓  {name} ({count} events)")
         return cal
     except Exception as e:
-        print(f"  ✗  {name} ({slug}): {e}", file=sys.stderr)
-        return None
-
-def fetch_luma_calendar(name: str, cal_id: str) -> Calendar | None:
-    url = f"{LUMA_ICS_BASE}?entity=calendar&calendarApiId={cal_id}"
-    try:
-        r = requests.get(url, headers=HEADERS, timeout=15)
-        r.raise_for_status()
-        cal = Calendar.from_ical(r.content)
-        print(f"  ✓  {name} ({cal_id})")
-        return cal
-    except Exception as e:
-        print(f"  ✗  {name} ({cal_id}): {e}", file=sys.stderr)
+        print(f"  ✗  {name}: {e}", file=sys.stderr)
         return None
 
 # ─── HTML Scrapers ────────────────────────────────────────────────────────────
@@ -84,7 +74,6 @@ def scrape_verci(url: str) -> list[dict]:
         r.raise_for_status()
         soup = BeautifulSoup(r.text, "html.parser")
 
-        # Verci uses structured event cards / JSON-LD
         for script in soup.find_all("script", type="application/ld+json"):
             try:
                 data = json.loads(script.string)
@@ -102,7 +91,6 @@ def scrape_verci(url: str) -> list[dict]:
             except Exception:
                 pass
 
-        # Fallback: grab event card titles + links
         if not events:
             for card in soup.select("a[href*='/events/']"):
                 title = card.get_text(strip=True)
@@ -126,7 +114,6 @@ def scrape_betaworks(url: str) -> list[dict]:
         r.raise_for_status()
         soup = BeautifulSoup(r.text, "html.parser")
 
-        # Try JSON-LD first
         for script in soup.find_all("script", type="application/ld+json"):
             try:
                 data = json.loads(script.string)
@@ -188,7 +175,6 @@ def scrape_aitinkerers(url: str) -> list[dict]:
                 pass
 
         if not events:
-            # AI Tinkerers typically lists events in cards
             for card in soup.select(".event, [class*='event-card'], article"):
                 link = card.find("a")
                 title = card.find(["h2", "h3", "h4", "strong"])
@@ -259,7 +245,6 @@ def dict_to_vevent(ev: dict, source_name: str) -> Event:
     if ev.get("location"):
         vevent.add("location", ev["location"])
 
-    # Parse dates
     now = datetime.now(timezone.utc)
     vevent.add("dtstamp", now)
     vevent.add("created", now)
@@ -298,33 +283,17 @@ def build_merged_calendar(output_path: str = "docs/events.ics") -> None:
     merged.add("version", "2.0")
     merged.add("calscale", "GREGORIAN")
     merged.add("method", "PUBLISH")
-    merged.add(
-        "x-wr-calname",
-        "NYC AI & Tech Events — Aggregated"
-    )
-    merged.add(
-        "x-wr-caldesc",
-        "Auto-aggregated from Luma, Verci, Betaworks, AI Tinkerers, New York AI & more."
-    )
+    merged.add("x-wr-calname", "NYC AI & Tech Events — Aggregated")
+    merged.add("x-wr-caldesc",
+               "Auto-aggregated from Luma, Verci, Betaworks, AI Tinkerers, New York AI & more.")
     merged.add("x-wr-timezone", "America/New_York")
 
     event_count = 0
 
-    # ── Luma community calendars ──────────────────────────────────────────────
-    print("\n📡 Fetching Luma community calendars…")
-    for name, slug in LUMA_COMMUNITY_SLUGS.items():
-        cal = fetch_luma_community(name, slug)
-        if cal:
-            for component in cal.walk():
-                if component.name == "VEVENT":
-                    stamp_source(component, name)
-                    merged.add_component(component)
-                    event_count += 1
-
-    # ── Luma calendar IDs ─────────────────────────────────────────────────────
-    print("\n📡 Fetching Luma calendar IDs…")
-    for name, cal_id in LUMA_CALENDAR_IDS.items():
-        cal = fetch_luma_calendar(name, cal_id)
+    # ── Luma direct iCal URLs ─────────────────────────────────────────────────
+    print("\n📡 Fetching Luma calendars…")
+    for name, url in LUMA_DIRECT_ICS_URLS.items():
+        cal = fetch_luma_direct(name, url)
         if cal:
             for component in cal.walk():
                 if component.name == "VEVENT":
