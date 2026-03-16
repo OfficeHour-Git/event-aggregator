@@ -98,7 +98,7 @@ def extract_real_location(vevent) -> str:
 def make_clean_vevent(src: Event, source_name: str) -> Event:
     """
     Create a fresh VEVENT from src, properly copying all fields,
-    fixing the location, and prefixing the source name to the summary.
+    fixing the location. No source prefix added — keeps event names clean.
     """
     dst = Event()
 
@@ -106,10 +106,8 @@ def make_clean_vevent(src: Event, source_name: str) -> Event:
     dst.add("uid",     str(src.get("uid",  str(uuid.uuid4()))) )
     dst.add("dtstamp", src.get("dtstamp", datetime.now(timezone.utc)))
 
-    # Summary — prefix with source name
+    # Summary — use as-is, no prefix
     raw_summary = str(src.get("summary", "Event"))
-    if not raw_summary.startswith("["):
-        raw_summary = f"[{source_name}] {raw_summary}"
     dst.add("summary", raw_summary)
 
     # Dates — preserve as-is (already UTC with Z suffix from Luma)
@@ -167,7 +165,7 @@ def dict_to_vevent(ev: dict, source_name: str) -> Event:
     """Convert a scraped event dict to a clean VEVENT component."""
     vevent = Event()
     vevent.add("uid",     str(uuid.uuid4()) + "@event-aggregator")
-    vevent.add("summary", f"[{source_name}] {ev.get('summary', 'Event')}")
+    vevent.add("summary", ev.get('summary', 'Event'))
     vevent.add("description", ev.get("description", "") + f"\n\nSource: {ev.get('url','')}")
     vevent.add("status",  "CONFIRMED")
 
@@ -263,13 +261,26 @@ def build_merged_calendar(output_path: str = "docs/events.ics") -> None:
             merged.add_component(component)
 
     event_count = 0
+    seen = set()  # tracks (normalized_title, start_datetime) to deduplicate
+
+    def is_duplicate(vevent) -> bool:
+        """Return True if we've already added an event with the same title+start."""
+        summary = str(vevent.get("summary", "")).strip().lower()
+        dtstart = vevent.get("dtstart")
+        start = str(dtstart.dt) if dtstart else ""
+        key = (summary, start)
+        if key in seen:
+            return True
+        seen.add(key)
+        return False
 
     # ── Luma calendars ────────────────────────────────────────────────────────
     print("\n📡 Fetching Luma calendars…")
     for name, url in LUMA_DIRECT_ICS_URLS.items():
         for vevent in fetch_luma(name, url):
-            merged.add_component(vevent)
-            event_count += 1
+            if not is_duplicate(vevent):
+                merged.add_component(vevent)
+                event_count += 1
 
     # ── Scraped sources ───────────────────────────────────────────────────────
     print("\n🕸  Scraping non-Luma sources…")
@@ -282,8 +293,10 @@ def build_merged_calendar(output_path: str = "docs/events.ics") -> None:
     for name, url, base in scraped:
         items = scrape_json_ld(url, name, base)
         for ev in items:
-            merged.add_component(dict_to_vevent(ev, name))
-            event_count += 1
+            vevent = dict_to_vevent(ev, name)
+            if not is_duplicate(vevent):
+                merged.add_component(vevent)
+                event_count += 1
 
     # ── Write output ──────────────────────────────────────────────────────────
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
