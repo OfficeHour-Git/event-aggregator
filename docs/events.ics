@@ -10,10 +10,10 @@ X-WR-TIMEZONE:America/New_York
 BEGIN:VEVENT
 SUMMARY:[Betaworks Events] We host events that explore the latest frontier
  s of technology\, art\, politics\, and science.
-DTSTART:20260316T173036Z
-DTSTAMP:20260316T173036Z
-UID:23b1fb22-b253-4a39-bbcb-318b8ae06aa7@event-aggregator
-CREATED:20260316T173036Z
+DTSTART:20260316T173547Z
+DTSTAMP:20260316T173547Z
+UID:56fa74f8-dffd-4113-9854-103111e028f6@event-aggregator
+CREATED:20260316T173547Z
 DESCRIPTION:\n\nSource: https://www.betaworks.com/event/distribution-is-yo
  ur-moat-ft-grace-ouma-cabezas
 URL:https://www.betaworks.com/event/distribution-is-your-moat-ft-grace-oum
@@ -21,10 +21,10 @@ URL:https://www.betaworks.com/event/distribution-is-your-moat-ft-grace-oum
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[Betaworks Events] In Person
-DTSTART:20260316T173036Z
-DTSTAMP:20260316T173036Z
-UID:f4ceabc6-040e-43b3-bfbc-ac0270ac02ce@event-aggregator
-CREATED:20260316T173036Z
+DTSTART:20260316T173547Z
+DTSTAMP:20260316T173547Z
+UID:0dc48a46-a1f7-4bf6-8411-a9e839d71ac2@event-aggregator
+CREATED:20260316T173547Z
 DESCRIPTION:\n\nSource: https://www.betaworks.com/event/distribution-is-yo
  ur-moat-ft-grace-ouma-cabezas
 URL:https://www.betaworks.com/event/distribution-is-your-moat-ft-grace-oum
@@ -32,10 +32,10 @@ URL:https://www.betaworks.com/event/distribution-is-your-moat-ft-grace-oum
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[Betaworks Events] In Person
-DTSTART:20260316T173036Z
-DTSTAMP:20260316T173036Z
-UID:54fbe5a7-4f73-47c2-8601-286f0128b060@event-aggregator
-CREATED:20260316T173036Z
+DTSTART:20260316T173547Z
+DTSTAMP:20260316T173547Z
+UID:54eac807-8978-4b82-b163-13714591bad3@event-aggregator
+CREATED:20260316T173547Z
 DESCRIPTION:\n\nSource: https://www.betaworks.com/event/distribution-is-yo
  ur-moat-ft-grace-ouma-cabezas
 URL:https://www.betaworks.com/event/distribution-is-your-moat-ft-grace-oum
@@ -43,10 +43,10 @@ URL:https://www.betaworks.com/event/distribution-is-your-moat-ft-grace-oum
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[Betaworks Events] Public Event
-DTSTART:20260316T173036Z
-DTSTAMP:20260316T173036Z
-UID:78c88c17-5318-45d5-a7b4-6c46516100ac@event-aggregator
-CREATED:20260316T173036Z
+DTSTART:20260316T173547Z
+DTSTAMP:20260316T173547Z
+UID:0a1294d6-d5a2-4e57-8d18-22c32e084cae@event-aggregator
+CREATED:20260316T173547Z
 DESCRIPTION:\n\nSource: https://www.betaworks.com/event/distribution-is-yo
  ur-moat-ft-grace-ouma-cabezas
 URL:https://www.betaworks.com/event/distribution-is-your-moat-ft-grace-oum
@@ -54,55 +54,55 @@ URL:https://www.betaworks.com/event/distribution-is-your-moat-ft-grace-oum
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[Betaworks Events] Public Event
-DTSTART:20260316T173036Z
-DTSTAMP:20260316T173036Z
-UID:dd0aeb44-55f1-423c-84e9-38b149865678@event-aggregator
-CREATED:20260316T173036Z
+DTSTART:20260316T173547Z
+DTSTAMP:20260316T173547Z
+UID:5f9f0870-bc1b-43f6-9f46-31a80b2eccf3@event-aggregator
+CREATED:20260316T173547Z
 DESCRIPTION:\n\nSource: https://www.betaworks.com/events
 URL:https://www.betaworks.com/events
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[Betaworks Events] Public Event
-DTSTART:20260316T173036Z
-DTSTAMP:20260316T173036Z
-UID:e002f30c-bca6-4fb5-8e90-068ac07d6864@event-aggregator
-CREATED:20260316T173036Z
+DTSTART:20260316T173547Z
+DTSTAMP:20260316T173547Z
+UID:1ea78742-2883-4feb-a4bd-e875dfac6a51@event-aggregator
+CREATED:20260316T173547Z
 DESCRIPTION:\n\nSource: https://www.betaworks.com/events
 URL:https://www.betaworks.com/events
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[Betaworks Events] In Person
-DTSTART:20260316T173036Z
-DTSTAMP:20260316T173036Z
-UID:a3ae20a5-84a7-4abd-95c9-525bf2300796@event-aggregator
-CREATED:20260316T173036Z
+DTSTART:20260316T173547Z
+DTSTAMP:20260316T173547Z
+UID:1be4c694-519d-40ed-9924-73b5dfeb5d6b@event-aggregator
+CREATED:20260316T173547Z
 DESCRIPTION:\n\nSource: https://www.betaworks.com/events
 URL:https://www.betaworks.com/events
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[Betaworks Events] Public Event
-DTSTART:20260316T173036Z
-DTSTAMP:20260316T173036Z
-UID:cf8f2f65-bba1-4d31-9ad9-3fa03d55bffe@event-aggregator
-CREATED:20260316T173036Z
+DTSTART:20260316T173547Z
+DTSTAMP:20260316T173547Z
+UID:55e276dc-2511-4b93-93e2-b88de8328e78@event-aggregator
+CREATED:20260316T173547Z
 DESCRIPTION:\n\nSource: https://www.betaworks.com/events
 URL:https://www.betaworks.com/events
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[Betaworks Events] Public Event
-DTSTART:20260316T173036Z
-DTSTAMP:20260316T173036Z
-UID:2b881298-540b-43a5-8dc0-fe70fce3a902@event-aggregator
-CREATED:20260316T173036Z
+DTSTART:20260316T173547Z
+DTSTAMP:20260316T173547Z
+UID:970ec1c1-a4ab-45d9-96f8-74c68c823815@event-aggregator
+CREATED:20260316T173547Z
 DESCRIPTION:\n\nSource: https://www.betaworks.com/events
 URL:https://www.betaworks.com/events
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:[Betaworks Events] In Person
-DTSTART:20260316T173036Z
-DTSTAMP:20260316T173036Z
-UID:083a2435-008b-4374-a296-3588bfe32d50@event-aggregator
-CREATED:20260316T173036Z
+DTSTART:20260316T173547Z
+DTSTAMP:20260316T173547Z
+UID:186ba441-34c6-4cd8-a390-8c5cf4233b88@event-aggregator
+CREATED:20260316T173547Z
 DESCRIPTION:\n\nSource: https://www.betaworks.com/events
 URL:https://www.betaworks.com/events
 END:VEVENT
