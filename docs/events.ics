@@ -1,0 +1,109 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//NYC AI Event Aggregator//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALDESC:Auto-aggregated from Luma\, Verci\, Betaworks\, AI Tinkerers\
+ , New York AI & more.
+X-WR-CALNAME:NYC AI & Tech Events — Aggregated
+X-WR-TIMEZONE:America/New_York
+BEGIN:VEVENT
+SUMMARY:[Betaworks Events] We host events that explore the latest frontier
+ s of technology\, art\, politics\, and science.
+DTSTART:20260316T165824Z
+DTSTAMP:20260316T165824Z
+UID:d3208149-bcd7-4317-8cd6-dbfffc70ecc5@event-aggregator
+CREATED:20260316T165824Z
+DESCRIPTION:\n\nSource: https://www.betaworks.com/event/distribution-is-yo
+ ur-moat-ft-grace-ouma-cabezas
+URL:https://www.betaworks.com/event/distribution-is-your-moat-ft-grace-oum
+ a-cabezas
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Betaworks Events] In Person
+DTSTART:20260316T165824Z
+DTSTAMP:20260316T165824Z
+UID:37e34e8a-5872-4994-b34f-4a138e241fd4@event-aggregator
+CREATED:20260316T165824Z
+DESCRIPTION:\n\nSource: https://www.betaworks.com/event/distribution-is-yo
+ ur-moat-ft-grace-ouma-cabezas
+URL:https://www.betaworks.com/event/distribution-is-your-moat-ft-grace-oum
+ a-cabezas
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Betaworks Events] In Person
+DTSTART:20260316T165824Z
+DTSTAMP:20260316T165824Z
+UID:48e29f25-0f36-4007-90b7-697d32cf7263@event-aggregator
+CREATED:20260316T165824Z
+DESCRIPTION:\n\nSource: https://www.betaworks.com/event/distribution-is-yo
+ ur-moat-ft-grace-ouma-cabezas
+URL:https://www.betaworks.com/event/distribution-is-your-moat-ft-grace-oum
+ a-cabezas
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Betaworks Events] Public Event
+DTSTART:20260316T165824Z
+DTSTAMP:20260316T165824Z
+UID:2e861716-a44b-4012-9a10-5d3121c3f4ae@event-aggregator
+CREATED:20260316T165824Z
+DESCRIPTION:\n\nSource: https://www.betaworks.com/event/distribution-is-yo
+ ur-moat-ft-grace-ouma-cabezas
+URL:https://www.betaworks.com/event/distribution-is-your-moat-ft-grace-oum
+ a-cabezas
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Betaworks Events] Public Event
+DTSTART:20260316T165824Z
+DTSTAMP:20260316T165824Z
+UID:3d86c251-7d9b-48c2-8e90-84cd3c294d43@event-aggregator
+CREATED:20260316T165824Z
+DESCRIPTION:\n\nSource: https://www.betaworks.com/events
+URL:https://www.betaworks.com/events
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Betaworks Events] Public Event
+DTSTART:20260316T165824Z
+DTSTAMP:20260316T165824Z
+UID:56e74194-33e3-40b8-ac8b-9292101ee323@event-aggregator
+CREATED:20260316T165824Z
+DESCRIPTION:\n\nSource: https://www.betaworks.com/events
+URL:https://www.betaworks.com/events
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Betaworks Events] In Person
+DTSTART:20260316T165824Z
+DTSTAMP:20260316T165824Z
+UID:58cb1dec-8430-498c-bd3b-879e8a7dffc4@event-aggregator
+CREATED:20260316T165824Z
+DESCRIPTION:\n\nSource: https://www.betaworks.com/events
+URL:https://www.betaworks.com/events
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Betaworks Events] Public Event
+DTSTART:20260316T165824Z
+DTSTAMP:20260316T165824Z
+UID:7313203b-c592-42db-bfd7-a42134e233ad@event-aggregator
+CREATED:20260316T165824Z
+DESCRIPTION:\n\nSource: https://www.betaworks.com/events
+URL:https://www.betaworks.com/events
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Betaworks Events] Public Event
+DTSTART:20260316T165824Z
+DTSTAMP:20260316T165824Z
+UID:e039ea87-e07e-487b-b4f9-5bb4f0166138@event-aggregator
+CREATED:20260316T165824Z
+DESCRIPTION:\n\nSource: https://www.betaworks.com/events
+URL:https://www.betaworks.com/events
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:[Betaworks Events] In Person
+DTSTART:20260316T165824Z
+DTSTAMP:20260316T165824Z
+UID:eba0fb2c-2ace-4981-aca8-fd63a01582a3@event-aggregator
+CREATED:20260316T165824Z
+DESCRIPTION:\n\nSource: https://www.betaworks.com/events
+URL:https://www.betaworks.com/events
+END:VEVENT
+END:VCALENDAR
