@@ -205,8 +205,13 @@ def make_clean_vevent(src: Event) -> Event:
     dst = Event()
     dst.add("uid",     str(src.get("uid", str(uuid.uuid4()))))
     dst.add("dtstamp", src.get("dtstamp", _NOW))
-    # Summary copied exactly as Luma provides — no prefix added
-    dst.add("summary", str(src.get("summary", "Event")))
+    # Summary — strip Luma's own "[CalendarName]" prefix if present
+    # Luma prepends "[Luma Calendar (cal-xxx)]" when curating external events
+    raw_summary = str(src.get("summary", "Event"))
+    raw_summary = re.sub(r'^\[Luma Calendar \(cal-[^)]+\)\]\s*', '', raw_summary).strip()
+    if not raw_summary:
+        raw_summary = "Event"
+    dst.add("summary", raw_summary)
 
     for field in ("dtstart", "dtend", "created", "last-modified"):
         val = src.get(field)
