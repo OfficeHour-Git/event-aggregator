@@ -82,7 +82,13 @@ _NOW = datetime.now(timezone.utc)
 _LUMA_PREFIX = re.compile(r'^\[Luma Calendar \(cal-[A-Za-z0-9]+\)\]\s*', re.IGNORECASE)
 
 def clean_summary(raw: str) -> str:
-    return _LUMA_PREFIX.sub('', raw).strip() or "Event"
+    s = raw.strip()
+    while True:
+        stripped = _LUMA_PREFIX.sub('', s).strip()
+        if stripped == s:
+            break
+        s = stripped
+    return s or "Event"
 
 # ─── Location / geo filter ────────────────────────────────────────────────────
 
