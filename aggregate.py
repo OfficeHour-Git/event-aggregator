@@ -1,281 +1,282 @@
 #!/usr/bin/env python3
 """
-Event Feed Aggregator
-Merges multiple event calendars (Luma + others) into a single .ics feed.
+Event Feed Aggregator — definitive version
+- Strips Luma's "[Luma Calendar (cal-xxx)]" prefix from event names
+- Filters out events outside US and Europe (keywords first, then GEO)
+- Filters out past events
+- Deduplicates by title + start time
 """
 
-import requests
 import re
-from datetime import datetime, timezone
-from bs4 import BeautifulSoup
-from icalendar import Calendar, Event, vText
+import os
+import sys
 import uuid
 import json
-import sys
+import requests
+from datetime import datetime, timezone
+from bs4 import BeautifulSoup
+from icalendar import Calendar, Event
+from dateutil.parser import parse as parse_dt
 
-# ─── Source Definitions ───────────────────────────────────────────────────────
+# ─── Luma iCal sources ────────────────────────────────────────────────────────
 
-LUMA_ICS_BASE = "https://api.lu.ma/ics/get"
-
-LUMA_COMMUNITY_SLUGS = {
-    "Tavily Community":         "eventstavily",
-    "Bond AI NYC":              "genai-ny",
-    "Open Source for AI":       "oss4ai",
-    "The AI Collective":        "genai-collective",
-    "Build Club":               "buildercommunityanz",
-    "Rho Community":            "rhoevents",
-    "Leverage SF (Nir Naamani)":"LeverageSF",
-    "Startup Grind NYC":        "startupgrindnyc",
-    "Fractal Tech NYC":         "nyc-tech",
-}
-
-LUMA_CALENDAR_IDS = {
-    "Nebius Community":         "cal-36Kb7AwwNrfc0eU",
-    "AI Builders Collective":   "cal-QvcuRhmCBjOA1T7",
+LUMA_DIRECT_ICS_URLS = {
+    "Luma Calendar 1":        "https://api2.luma.com/ics/get?entity=calendar&id=cal-yrYsEKDQ91hPMWy",
+    "Luma Calendar 2":        "https://api2.luma.com/ics/get?entity=calendar&id=cal-61Cv6COs4g9GKw7",
+    "Luma Calendar 3":        "https://api2.luma.com/ics/get?entity=calendar&id=cal-7Q5A70Bz5Idxopu",
+    "Luma Calendar 4":        "https://api2.luma.com/ics/get?entity=calendar&id=cal-iOipAs7mv59Hbuz",
+    "Luma Calendar 5":        "https://api2.luma.com/ics/get?entity=calendar&id=cal-tBOSmnsBzW0kTrf",
+    "Luma Calendar 6":        "https://api2.luma.com/ics/get?entity=calendar&id=cal-E74MDlDKBaeAwXK",
+    "Nebius Community":       "https://api2.luma.com/ics/get?entity=calendar&id=cal-36Kb7AwwNrfc0eU",
+    "Luma Calendar 8":        "https://api2.luma.com/ics/get?entity=calendar&id=cal-2mLDnq80EKWoGy8",
+    "Luma Calendar 9":        "https://api2.luma.com/ics/get?entity=calendar&id=cal-r8BcsXhhHYmA3tp",
+    "Luma Calendar 10":       "https://api2.luma.com/ics/get?entity=calendar&id=cal-8zLyKMgaKTvonbT",
+    "Luma Calendar 11":       "https://api2.luma.com/ics/get?entity=calendar&id=cal-vSo9sRaAQOgoflu",
+    "Luma Calendar 12":       "https://api2.luma.com/ics/get?entity=calendar&id=cal-YKwEv0xAlmNR6VN",
+    "Luma Calendar 13":       "https://api2.luma.com/ics/get?entity=calendar&id=cal-UAliCb7j5QccLrn",
+    "AI Builders Collective": "https://api2.luma.com/ics/get?entity=calendar&id=cal-QvcuRhmCBjOA1T7",
+    "Luma Calendar 15":       "https://api2.luma.com/ics/get?entity=calendar&id=cal-RHI1LJC6K8JRBLI",
+    "Luma Calendar 16":       "https://api2.luma.com/ics/get?entity=calendar&id=cal-l7gcEleWIMCKLbv",
 }
 
 OTHER_SOURCES = {
-    "Verci Events":             "https://www.verci.com/events",
-    "Betaworks Events":         "https://www.betaworks.com/events",
-    "AI Tinkerers (All Cities)":"https://aitinkerers.org/all_cities?m=r",
-    "New York AI":              "https://newyorkai.org",
+    "Verci Events":              "https://www.verci.com/events",
+    "Betaworks Events":          "https://www.betaworks.com/events",
+    "AI Tinkerers (All Cities)": "https://aitinkerers.org/all_cities?m=r",
 }
 
 HEADERS = {
     "User-Agent": (
-        "Mozilla/5.0 (compatible; EventAggregator/1.0; "
-        "+https://github.com/your-username/event-aggregator)"
-    )
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/124.0.0.0 Safari/537.36"
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.5",
 }
 
-# ─── Luma iCal Fetching ───────────────────────────────────────────────────────
+VTIMEZONE_NYC = """BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE"""
 
-def fetch_luma_community(name: str, slug: str) -> Calendar | None:
-    url = f"{LUMA_ICS_BASE}?entity=community&slug={slug}"
-    try:
-        r = requests.get(url, headers=HEADERS, timeout=15)
-        r.raise_for_status()
-        cal = Calendar.from_ical(r.content)
-        print(f"  ✓  {name} ({slug})")
-        return cal
-    except Exception as e:
-        print(f"  ✗  {name} ({slug}): {e}", file=sys.stderr)
-        return None
+_NOW = datetime.now(timezone.utc)
 
-def fetch_luma_calendar(name: str, cal_id: str) -> Calendar | None:
-    url = f"{LUMA_ICS_BASE}?entity=calendar&calendarApiId={cal_id}"
-    try:
-        r = requests.get(url, headers=HEADERS, timeout=15)
-        r.raise_for_status()
-        cal = Calendar.from_ical(r.content)
-        print(f"  ✓  {name} ({cal_id})")
-        return cal
-    except Exception as e:
-        print(f"  ✗  {name} ({cal_id}): {e}", file=sys.stderr)
-        return None
+# ─── Prefix stripping ─────────────────────────────────────────────────────────
 
-# ─── HTML Scrapers ────────────────────────────────────────────────────────────
+# Luma prepends "[Luma Calendar (cal-xxx)]" to event names when curating
+# events from other calendars. Strip it to get the real event name.
+_LUMA_PREFIX = re.compile(r'^\[Luma Calendar \(cal-[A-Za-z0-9]+\)\]\s*', re.IGNORECASE)
 
-def scrape_verci(url: str) -> list[dict]:
-    """Scrape Verci events page."""
-    events = []
-    try:
-        r = requests.get(url, headers=HEADERS, timeout=15)
-        r.raise_for_status()
-        soup = BeautifulSoup(r.text, "html.parser")
+def clean_summary(raw: str) -> str:
+    return _LUMA_PREFIX.sub('', raw).strip() or "Event"
 
-        # Verci uses structured event cards / JSON-LD
-        for script in soup.find_all("script", type="application/ld+json"):
-            try:
-                data = json.loads(script.string)
-                items = data if isinstance(data, list) else [data]
-                for item in items:
-                    if item.get("@type") == "Event":
-                        events.append({
-                            "summary":     item.get("name", "Verci Event"),
-                            "description": item.get("description", ""),
-                            "url":         item.get("url", url),
-                            "dtstart":     item.get("startDate"),
-                            "dtend":       item.get("endDate"),
-                            "location":    (item.get("location") or {}).get("name", ""),
-                        })
-            except Exception:
-                pass
+# ─── Location / geo filter ────────────────────────────────────────────────────
 
-        # Fallback: grab event card titles + links
-        if not events:
-            for card in soup.select("a[href*='/events/']"):
-                title = card.get_text(strip=True)
-                if title and len(title) > 3:
-                    events.append({
-                        "summary": title,
-                        "url": "https://www.verci.com" + card["href"]
-                               if card["href"].startswith("/") else card["href"],
-                    })
-        print(f"  ✓  Verci Events ({len(events)} events)")
-    except Exception as e:
-        print(f"  ✗  Verci Events: {e}", file=sys.stderr)
-    return events
+# Word-boundary regex — "india" won't match "indiana", etc.
+_EXCLUDED = re.compile(
+    r'\b(' + '|'.join([
+        # Middle East
+        'dubai', 'united arab emirates', 'abu dhabi', 'uae',
+        'saudi arabia', 'riyadh', 'qatar', 'doha',
+        # East Asia
+        'singapore', 'hong kong', 'tokyo', 'osaka', 'japan',
+        'china', 'beijing', 'shanghai', 'hangzhou', 'chengdu',
+        'guangzhou', 'nanjing', 'wuhan', 'shenzhen',
+        'south korea', 'seoul', 'taiwan', 'taipei',
+        'thailand', 'bangkok', 'vietnam', 'hanoi',
+        'indonesia', 'jakarta', 'philippines', 'manila',
+        'malaysia', 'kuala lumpur',
+        # South Asia
+        'india', 'bangalore', 'mumbai', 'delhi', 'hyderabad',
+        # Canada
+        'toronto', 'canada', 'vancouver', 'montreal', 'ottawa',
+        'halifax', 'calgary', 'edmonton', 'winnipeg',
+        # Latin America
+        'brazil', 'sao paulo', 'são paulo',
+        'mexico', 'guadalajara', 'monterrey', 'culiacan',
+        # Africa
+        'south africa', 'johannesburg', 'nigeria', 'kenya',
+        'addis ababa', 'nairobi', 'ghana',
+        # Oceania
+        'australia', 'sydney', 'melbourne', 'brisbane', 'perth',
+        'auckland', 'new zealand',
+        # URL slug fragments used by AU/NZ calendar
+        'buildercommunityanz', 'aunz',
+        # Other
+        'israel', 'tel aviv', 'el salvador',
+    ]) + r')\b',
+    re.IGNORECASE,
+)
 
+# US bounding box (covers CONUS, Hawaii, Alaska)
+_US_LAT  = (18,  72)
+_US_LON  = (-180, -60)
+# Europe bounding box
+_EU_LAT  = (34,  72)
+_EU_LON  = (-25,  45)
 
-def scrape_betaworks(url: str) -> list[dict]:
-    """Scrape Betaworks events page."""
-    events = []
-    try:
-        r = requests.get(url, headers=HEADERS, timeout=15)
-        r.raise_for_status()
-        soup = BeautifulSoup(r.text, "html.parser")
+def _in_us(lat, lon):
+    return _US_LAT[0] <= lat <= _US_LAT[1] and _US_LON[0] <= lon <= _US_LON[1]
 
-        # Try JSON-LD first
-        for script in soup.find_all("script", type="application/ld+json"):
-            try:
-                data = json.loads(script.string)
-                items = data if isinstance(data, list) else [data]
-                for item in items:
-                    if item.get("@type") == "Event":
-                        events.append({
-                            "summary":     item.get("name", "Betaworks Event"),
-                            "description": item.get("description", ""),
-                            "url":         item.get("url", url),
-                            "dtstart":     item.get("startDate"),
-                            "dtend":       item.get("endDate"),
-                            "location":    (item.get("location") or {}).get("name", ""),
-                        })
-            except Exception:
-                pass
+def _in_eu(lat, lon):
+    return _EU_LAT[0] <= lat <= _EU_LAT[1] and _EU_LON[0] <= lon <= _EU_LON[1]
 
-        if not events:
-            for card in soup.select("article, .event-card, [class*='event']"):
-                link = card.find("a")
-                title = card.find(["h2", "h3", "h4"])
-                if title:
-                    href = link["href"] if link else url
-                    if href.startswith("/"):
-                        href = "https://www.betaworks.com" + href
-                    events.append({
-                        "summary": title.get_text(strip=True),
-                        "url": href,
-                    })
-        print(f"  ✓  Betaworks Events ({len(events)} events)")
-    except Exception as e:
-        print(f"  ✗  Betaworks Events: {e}", file=sys.stderr)
-    return events
+def is_allowed(vevent) -> bool:
+    """
+    Return True if the event should be included (US, Europe, or virtual).
 
+    Order of checks:
+    1. Keywords — always first. Catches Canada/Mexico whose coordinates
+       overlap the US bounding box, plus any event naming a foreign city.
+    2. GEO bounding box — if coordinates are present AND outside both boxes,
+       exclude (catches Taiwan, Australia, Japan, etc. with no keywords).
+    3. Default KEEP — no GEO, no excluded keywords → virtual/online event.
+    """
+    # Build search text from all identifying fields
+    text = " ".join([
+        str(vevent.get("summary",     "")),
+        str(vevent.get("location",    "")),
+        str(vevent.get("description", "")),
+        str(vevent.get("uid",         "")),
+    ])
 
-def scrape_aitinkerers(url: str) -> list[dict]:
-    """Scrape AI Tinkerers events page."""
-    events = []
-    try:
-        r = requests.get(url, headers=HEADERS, timeout=15)
-        r.raise_for_status()
-        soup = BeautifulSoup(r.text, "html.parser")
+    # 1. Keywords
+    if _EXCLUDED.search(text):
+        return False
 
-        for script in soup.find_all("script", type="application/ld+json"):
-            try:
-                data = json.loads(script.string)
-                items = data if isinstance(data, list) else [data]
-                for item in items:
-                    if item.get("@type") == "Event":
-                        events.append({
-                            "summary":     item.get("name", "AI Tinkerers Event"),
-                            "description": item.get("description", ""),
-                            "url":         item.get("url", url),
-                            "dtstart":     item.get("startDate"),
-                            "dtend":       item.get("endDate"),
-                            "location":    (item.get("location") or {}).get("name", ""),
-                        })
-            except Exception:
-                pass
+    # 2. GEO
+    geo = vevent.get("geo")
+    if geo is not None:
+        try:
+            lat = float(geo.latitude)
+            lon = float(geo.longitude)
+            if _in_us(lat, lon) or _in_eu(lat, lon):
+                return True
+            return False   # GEO present but outside both boxes
+        except Exception:
+            pass  # malformed GEO — fall through to default
 
-        if not events:
-            # AI Tinkerers typically lists events in cards
-            for card in soup.select(".event, [class*='event-card'], article"):
-                link = card.find("a")
-                title = card.find(["h2", "h3", "h4", "strong"])
-                if title:
-                    href = link["href"] if link else url
-                    if href.startswith("/"):
-                        href = "https://aitinkerers.org" + href
-                    events.append({
-                        "summary": title.get_text(strip=True),
-                        "url": href,
-                    })
-        print(f"  ✓  AI Tinkerers ({len(events)} events)")
-    except Exception as e:
-        print(f"  ✗  AI Tinkerers: {e}", file=sys.stderr)
-    return events
+    # 3. Default: keep (virtual / no location)
+    return True
 
 
-def scrape_newyorkai(url: str) -> list[dict]:
-    """Scrape New York AI events page."""
-    events = []
-    try:
-        r = requests.get(url, headers=HEADERS, timeout=15)
-        r.raise_for_status()
-        soup = BeautifulSoup(r.text, "html.parser")
+def is_future(vevent) -> bool:
+    """Return True if the event starts today or later."""
+    dtstart = vevent.get("dtstart")
+    if dtstart is None:
+        return True
+    start = dtstart.dt
+    if hasattr(start, "tzinfo"):
+        if start.tzinfo is None:
+            start = start.replace(tzinfo=timezone.utc)
+    else:
+        start = datetime(start.year, start.month, start.day, tzinfo=timezone.utc)
+    now = datetime.now(timezone.utc)
+    today = now.replace(hour=0, minute=0, second=0, microsecond=0)
+    return start >= today
 
-        for script in soup.find_all("script", type="application/ld+json"):
-            try:
-                data = json.loads(script.string)
-                items = data if isinstance(data, list) else [data]
-                for item in items:
-                    if item.get("@type") == "Event":
-                        events.append({
-                            "summary":     item.get("name", "NY AI Event"),
-                            "description": item.get("description", ""),
-                            "url":         item.get("url", url),
-                            "dtstart":     item.get("startDate"),
-                            "dtend":       item.get("endDate"),
-                            "location":    (item.get("location") or {}).get("name", ""),
-                        })
-            except Exception:
-                pass
 
-        if not events:
-            for card in soup.select("a[href*='event'], article, .event"):
-                title = card.find(["h2", "h3", "h4"])
-                if not title:
-                    title = card
-                if title and title.get_text(strip=True):
-                    href = card.get("href", url) if card.name == "a" else url
-                    events.append({
-                        "summary": title.get_text(strip=True)[:100],
-                        "url": href,
-                    })
-        print(f"  ✓  New York AI ({len(events)} events)")
-    except Exception as e:
-        print(f"  ✗  New York AI: {e}", file=sys.stderr)
-    return events
+# ─── Location extractor ───────────────────────────────────────────────────────
 
-# ─── iCal Helpers ─────────────────────────────────────────────────────────────
+def real_location(vevent) -> str:
+    """Return physical address when available, otherwise Luma URL."""
+    loc = str(vevent.get("location", ""))
+    if loc and not loc.startswith("http"):
+        return loc
+    # Try to parse address from description
+    desc = str(vevent.get("description", ""))
+    m = re.search(r"Address:\n(.+?)(?:\n\n|\nHosted by|$)", desc, re.DOTALL)
+    if m:
+        addr = m.group(1).strip()
+        if addr.lower() not in ("check event page for more details.", ""):
+            return addr
+    return loc
 
-def dict_to_vevent(ev: dict, source_name: str) -> Event:
-    """Convert a scraped event dict to a VEVENT component."""
+
+# ─── VEVENT builder ───────────────────────────────────────────────────────────
+
+def make_vevent(src: Event) -> Event:
+    """Copy a raw Luma VEVENT into a clean output VEVENT."""
+    dst = Event()
+
+    # UID — keep original so Google Calendar can track updates
+    dst.add("uid", str(src.get("uid", str(uuid.uuid4()))))
+    dst.add("dtstamp", src.get("dtstamp", _NOW))
+
+    # Summary — strip Luma's "[Luma Calendar (cal-xxx)]" prefix
+    dst.add("summary", clean_summary(str(src.get("summary", "Event"))))
+
+    # Dates
+    for field in ("dtstart", "dtend", "created", "last-modified"):
+        val = src.get(field)
+        if val is not None:
+            dst.add(field, val.dt if hasattr(val, "dt") else val)
+
+    # Location — prefer real address over luma URL
+    loc = real_location(src)
+    if loc:
+        dst.add("location", loc)
+
+    # GEO — preserve for downstream use
+    geo = src.get("geo")
+    if geo is not None:
+        dst.add("geo", geo)
+
+    # Description + URL
+    dst.add("description", str(src.get("description", "")))
+    url = src.get("url")
+    if url:
+        dst.add("url", str(url))
+
+    # Force CONFIRMED so Google renders events normally (not greyed out)
+    dst.add("status", "CONFIRMED")
+
+    organizer = src.get("organizer")
+    if organizer:
+        dst.add("organizer", organizer)
+
+    return dst
+
+
+def scraped_to_vevent(ev: dict) -> Event:
+    """Convert a scraped dict to a VEVENT."""
     vevent = Event()
-    vevent.add("uid", str(uuid.uuid4()) + "@event-aggregator")
-    vevent.add("summary", f"[{source_name}] {ev.get('summary', 'Event')}")
-    vevent.add("description", ev.get("description", "") + f"\n\nSource: {ev.get('url','')}")
-    vevent.add("url", ev.get("url", ""))
+    vevent.add("uid",         str(uuid.uuid4()) + "@event-aggregator")
+    vevent.add("summary",     ev.get("summary", "Event"))
+    vevent.add("description", ev.get("description", "") + f"\n\nSource: {ev.get('url', '')}")
+    vevent.add("status",      "CONFIRMED")
+    vevent.add("dtstamp",     _NOW)
+    vevent.add("created",     _NOW)
+
+    if ev.get("url"):
+        vevent.add("url", ev["url"])
     if ev.get("location"):
         vevent.add("location", ev["location"])
 
-    # Parse dates
-    now = datetime.now(timezone.utc)
-    vevent.add("dtstamp", now)
-    vevent.add("created", now)
-
     if ev.get("dtstart"):
         try:
-            from dateutil.parser import parse as parse_dt
             vevent.add("dtstart", parse_dt(ev["dtstart"]))
         except Exception:
-            vevent.add("dtstart", now)
+            vevent.add("dtstart", _NOW)
     else:
-        vevent.add("dtstart", now)
+        vevent.add("dtstart", _NOW)
 
     if ev.get("dtend"):
         try:
-            from dateutil.parser import parse as parse_dt
             vevent.add("dtend", parse_dt(ev["dtend"]))
         except Exception:
             pass
@@ -283,72 +284,130 @@ def dict_to_vevent(ev: dict, source_name: str) -> Event:
     return vevent
 
 
-def stamp_source(vevent: Event, source_name: str) -> Event:
-    """Prefix the summary of an existing VEVENT with the source name."""
-    existing = str(vevent.get("summary", ""))
-    if not existing.startswith("["):
-        vevent["summary"] = vText(f"[{source_name}] {existing}")
-    return vevent
+# ─── Fetchers ─────────────────────────────────────────────────────────────────
 
-# ─── Merge & Write ────────────────────────────────────────────────────────────
+def fetch_luma(name: str, url: str) -> list[Event]:
+    kept = skipped_loc = skipped_past = 0
+    events = []
+    try:
+        r = requests.get(url, headers=HEADERS, timeout=15)
+        r.raise_for_status()
+        cal = Calendar.from_ical(r.content)
+        for component in cal.walk():
+            if component.name != "VEVENT":
+                continue
+            if not is_allowed(component):
+                skipped_loc += 1
+                continue
+            if not is_future(component):
+                skipped_past += 1
+                continue
+            events.append(make_vevent(component))
+            kept += 1
+        print(f"  ✓  {name} ({kept} kept, {skipped_loc} location-filtered, {skipped_past} past)")
+    except Exception as e:
+        print(f"  ✗  {name}: {e}", file=sys.stderr)
+    return events
+
+
+def scrape_json_ld(url: str, source_name: str, base_url: str = "") -> list[dict]:
+    events = []
+    try:
+        r = requests.get(url, headers=HEADERS, timeout=15)
+        r.raise_for_status()
+        soup = BeautifulSoup(r.text, "html.parser")
+
+        for script in soup.find_all("script", type="application/ld+json"):
+            try:
+                data = json.loads(script.string)
+                items = data if isinstance(data, list) else [data]
+                for item in items:
+                    # Require startDate to filter out page-nav junk
+                    if item.get("@type") == "Event" and item.get("startDate"):
+                        events.append({
+                            "summary":     item.get("name", f"{source_name} Event"),
+                            "description": item.get("description", ""),
+                            "url":         item.get("url", url),
+                            "dtstart":     item.get("startDate"),
+                            "dtend":       item.get("endDate"),
+                            "location":    (item.get("location") or {}).get("name", ""),
+                        })
+            except Exception:
+                pass
+
+        if not events:
+            for card in soup.select("article, .event-card, [class*='event'], a[href*='/event']"):
+                link  = card.find("a") if card.name != "a" else card
+                title = card.find(["h2", "h3", "h4"]) or card
+                if title and title.get_text(strip=True):
+                    href = link["href"] if link and link.get("href") else url
+                    if href.startswith("/") and base_url:
+                        href = base_url + href
+                    events.append({"summary": title.get_text(strip=True)[:120], "url": href})
+
+        print(f"  ✓  {source_name} ({len(events)} events)")
+    except Exception as e:
+        print(f"  ✗  {source_name}: {e}", file=sys.stderr)
+    return events
+
+
+# ─── Main ─────────────────────────────────────────────────────────────────────
 
 def build_merged_calendar(output_path: str = "docs/events.ics") -> None:
     merged = Calendar()
-    merged.add("prodid", "-//NYC AI Event Aggregator//EN")
-    merged.add("version", "2.0")
-    merged.add("calscale", "GREGORIAN")
-    merged.add("method", "PUBLISH")
-    merged.add(
-        "x-wr-calname",
-        "NYC AI & Tech Events — Aggregated"
-    )
-    merged.add(
-        "x-wr-caldesc",
-        "Auto-aggregated from Luma, Verci, Betaworks, AI Tinkerers, New York AI & more."
-    )
+    merged.add("prodid",        "-//NYC AI Event Aggregator//EN")
+    merged.add("version",       "2.0")
+    merged.add("calscale",      "GREGORIAN")
+    merged.add("method",        "PUBLISH")
+    merged.add("x-wr-calname",  "NYC AI & Tech Events — Aggregated")
+    merged.add("x-wr-caldesc",  "Auto-aggregated from Luma, Verci, Betaworks, AI Tinkerers & more.")
     merged.add("x-wr-timezone", "America/New_York")
 
+    # Embed timezone block
+    tz_cal = Calendar.from_ical(
+        "BEGIN:VCALENDAR\nVERSION:2.0\n" + VTIMEZONE_NYC + "\nEND:VCALENDAR"
+    )
+    for component in tz_cal.walk():
+        if component.name == "VTIMEZONE":
+            merged.add_component(component)
+
     event_count = 0
+    seen: set[tuple] = set()
 
-    # ── Luma community calendars ──────────────────────────────────────────────
-    print("\n📡 Fetching Luma community calendars…")
-    for name, slug in LUMA_COMMUNITY_SLUGS.items():
-        cal = fetch_luma_community(name, slug)
-        if cal:
-            for component in cal.walk():
-                if component.name == "VEVENT":
-                    stamp_source(component, name)
-                    merged.add_component(component)
-                    event_count += 1
+    def is_duplicate(vevent) -> bool:
+        key = (
+            str(vevent.get("summary", "")).strip().lower(),
+            str(vevent.get("dtstart").dt) if vevent.get("dtstart") else "",
+        )
+        if key in seen:
+            return True
+        seen.add(key)
+        return False
 
-    # ── Luma calendar IDs ─────────────────────────────────────────────────────
-    print("\n📡 Fetching Luma calendar IDs…")
-    for name, cal_id in LUMA_CALENDAR_IDS.items():
-        cal = fetch_luma_calendar(name, cal_id)
-        if cal:
-            for component in cal.walk():
-                if component.name == "VEVENT":
-                    stamp_source(component, name)
-                    merged.add_component(component)
-                    event_count += 1
+    # Luma calendars
+    print("\n📡 Fetching Luma calendars…")
+    for name, url in LUMA_DIRECT_ICS_URLS.items():
+        for vevent in fetch_luma(name, url):
+            if not is_duplicate(vevent):
+                merged.add_component(vevent)
+                event_count += 1
 
-    # ── Scraped sources ───────────────────────────────────────────────────────
+    # Scraped sources
     print("\n🕸  Scraping non-Luma sources…")
-    scrapers = [
-        ("Verci Events",             OTHER_SOURCES["Verci Events"],             scrape_verci),
-        ("Betaworks Events",         OTHER_SOURCES["Betaworks Events"],         scrape_betaworks),
-        ("AI Tinkerers (All Cities)",OTHER_SOURCES["AI Tinkerers (All Cities)"],scrape_aitinkerers),
-        ("New York AI",              OTHER_SOURCES["New York AI"],              scrape_newyorkai),
-    ]
-    for name, url, scraper in scrapers:
-        items = scraper(url)
-        for ev in items:
-            merged.add_component(dict_to_vevent(ev, name))
-            event_count += 1
+    for name, url, base in [
+        ("Verci Events",             OTHER_SOURCES["Verci Events"],             "https://www.verci.com"),
+        ("Betaworks Events",         OTHER_SOURCES["Betaworks Events"],         "https://www.betaworks.com"),
+        ("AI Tinkerers (All Cities)",OTHER_SOURCES["AI Tinkerers (All Cities)"],"https://aitinkerers.org"),
+    ]:
+        for ev in scrape_json_ld(url, name, base):
+            vevent = scraped_to_vevent(ev)
+            if is_allowed(vevent) and is_future(vevent) and not is_duplicate(vevent):
+                merged.add_component(vevent)
+                event_count += 1
 
-    # ── Write output ──────────────────────────────────────────────────────────
-    import os
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    out_dir = os.path.dirname(output_path)
+    if out_dir:
+        os.makedirs(out_dir, exist_ok=True)
     with open(output_path, "wb") as f:
         f.write(merged.to_ical())
 
