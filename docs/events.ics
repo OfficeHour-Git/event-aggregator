@@ -28,7 +28,7 @@ BEGIN:VEVENT
 SUMMARY:Grok Bot Meetup Hamburg #1
 DTSTART:20261028T170000Z
 DTEND:20261028T210000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120631Z
 UID:evt-o0Ft5eO05VXxllj@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/spacexai-76rs
  \n\nAddress:\nHouse of AI Hamburg\nHamburg\, Germany\n\nHosted by Alexande
@@ -42,7 +42,7 @@ BEGIN:VEVENT
 SUMMARY:Grok Bot Meetup Warsaw
 DTSTART:20261029T163000Z
 DTEND:20261029T200000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120631Z
 UID:evt-gEt7NGjhkSzGHgy@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/spacexai-918j
  \n\nAddress:\nCheck event page for more details.\n\nHosted by Francisco Te
@@ -56,7 +56,7 @@ BEGIN:VEVENT
 SUMMARY:Grok Bot Workshop: Build Your AI Team
 DTSTART:20261029T173000Z
 DTEND:20261029T190000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120631Z
 UID:evt-p8RDdAaeZDxEA4r@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/spacexai-kpc5
  \n\nAddress:\nCoolab\nTiranë\, Albania\n\nHosted by Dorian Kane & Dhimite
@@ -70,7 +70,7 @@ BEGIN:VEVENT
 SUMMARY:Grok Bot Build NorthWest
 DTSTART:20261030T110000Z
 DTEND:20261030T150000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120631Z
 UID:evt-THsXTNuU4EXqzU6@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/cursor-i0ov\n
  \nAddress:\nOneCoWork Winckley Square | Coworking Preston\nPreston\, Unite
@@ -85,7 +85,7 @@ BEGIN:VEVENT
 SUMMARY:Grok Bot Meetup Sofia
 DTSTART:20261030T130000Z
 DTEND:20261030T150000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120631Z
 UID:evt-xElyhVz87ZpYcFN@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/grok-bot-sofia
  \n\nAddress:\nBulgarian Army Stadium\nSofia\, Bulgaria\n\nHosted by Kristi
@@ -100,7 +100,7 @@ BEGIN:VEVENT
 SUMMARY:Grok Bot Bucharest Meetup
 DTSTART:20261030T150000Z
 DTEND:20261030T200000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120631Z
 UID:evt-92WvluPWmC3n01B@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/spacexai-226s
  \n\nAddress:\nCheck event page for more details.\n\nHosted by Sergei Chyrk
@@ -114,7 +114,7 @@ BEGIN:VEVENT
 SUMMARY:Grok Bot Dhaka Meetup
 DTSTART:20261031T080000Z
 DTEND:20261031T100000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120631Z
 UID:evt-NAySHdWoTsSf5qt@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/spacexai-qnlu
  \n\nAddress:\nCheck event page for more details.\n\nHosted by Mahinoor Rah
@@ -127,7 +127,7 @@ BEGIN:VEVENT
 SUMMARY:Grok Bot Vienna Build Day
 DTSTART:20261031T120000Z
 DTEND:20261031T170000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120631Z
 UID:evt-qclVJYGgfeCo6uJ@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/spacexai-build
  -day-vienna\n\nAddress:\nCheck event page for more details.\n\nHosted by A
@@ -141,7 +141,7 @@ BEGIN:VEVENT
 SUMMARY:Grok Hackathon at the Museum
 DTSTART:20261104T080000Z
 DTEND:20261105T213000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120631Z
 UID:evt-IEb2nHBuHyLU7Jz@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/spacexai-z1ys
  \n\nAddress:\nCtrl+Alt Museum\nPavia\, Italy\n\nHosted by Luca Bianchi & 4
@@ -155,7 +155,7 @@ BEGIN:VEVENT
 SUMMARY:Grok Bot Kanagawa Meetup
 DTSTART:20261104T093000Z
 DTEND:20261104T120000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120631Z
 UID:evt-R46QGAHCvinq4v2@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/spacexai-kanag
  awa-meetup-2\n\nAddress:\n〒212-0014 神奈川県川崎市幸区大宮町
@@ -171,7 +171,7 @@ BEGIN:VEVENT
 SUMMARY:Grok Bot Meetup Thessaloniki
 DTSTART:20261104T163000Z
 DTEND:20261104T193000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120631Z
 UID:evt-jtSHqiPjvTN5YIT@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/spacexai-thess
  -3\n\nAddress:\nCheck event page for more details.\n\nHosted by Dimitrios 
@@ -185,7 +185,7 @@ BEGIN:VEVENT
 SUMMARY:Grok Bot Hackathon Wrocław
 DTSTART:20261105T160000Z
 DTEND:20261105T210000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120632Z
 UID:evt-zyLWFtQN762IHBC@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/spacexai-gjig
  \n\nAddress:\nCheck event page for more details.\n\nHosted by Kornel Dubie
@@ -199,7 +199,7 @@ BEGIN:VEVENT
 SUMMARY:Grok Bot Meetup Málaga
 DTSTART:20261105T163000Z
 DTEND:20261105T190000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120632Z
 UID:evt-IwFQ5T4z0gimSNs@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/bot-mlg-1\n\nA
  ddress:\nImpact Hub Malaga\nMálaga\, Spain\n\nHosted by Damián Verde Vil
@@ -214,7 +214,7 @@ BEGIN:VEVENT
 SUMMARY:Cursor x Sandbox Hackathon | Stuttgart
 DTSTART:20261107T080000Z
 DTEND:20261107T183000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120632Z
 UID:evt-9rJzCiKkk6MBHpQ@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/spacexai-tueh
  \n\nAddress:\nEpplestraße 225/haus 3\nStuttgart\, Germany\n\nHosted by Sa
@@ -228,7 +228,7 @@ BEGIN:VEVENT
 SUMMARY:Grok Bot Alicante Meetup
 DTSTART:20261107T110000Z
 DTEND:20261107T133000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120632Z
 UID:evt-IJbCdkBXG4UlELp@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/spacexai-ol8x
  \n\nAddress:\nSausalito Premium Club\nSausalito Premium Club\, Alicante Po
@@ -243,7 +243,7 @@ BEGIN:VEVENT
 SUMMARY:Grok Bot Build Day SF: Real-World Agents
 DTSTART:20261107T200000Z
 DTEND:20261108T030000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120632Z
 UID:evt-A5EXdRTq5NeMn2X@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/ba9sivsv\n\nAd
  dress:\n1050 Sansome St\nSan Francisco\, CA\nUnited States\n\nHosted by Da
@@ -257,12 +257,12 @@ BEGIN:VEVENT
 SUMMARY:Macau Cursor Workshop｜Making your own Living Wallpaper
 DTSTART:20261110T100000Z
 DTEND:20261110T130000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120632Z
 UID:evt-9vntfgNVP4JvDUe@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/spacexai-macau
- -umac-wallpaper-nov\n\nAddress:\nUniversity of Macau\n\nHosted by John Ku 
- & TOM (xxxDreamer)
-LOCATION:University of Macau
+ -umac-wallpaper-nov\n\nAddress:\nCheck event page for more details.\n\nHos
+ ted by John Ku & TOM (xxxDreamer)
+LOCATION:https://luma.com/event/evt-9vntfgNVP4JvDUe
 ORGANIZER;CN="John Ku":MAILTO:calendar-invite@lu.ma
 STATUS:CONFIRMED
 END:VEVENT
@@ -270,7 +270,7 @@ BEGIN:VEVENT
 SUMMARY:Cursor x Grok Bot Build Day
 DTSTART:20261110T110000Z
 DTEND:20261110T123000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120632Z
 UID:evt-FGFaF3gp0rpICpn@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/spacexai-oih4
  \n\nAddress:\nWeb Summit Lisbon\n\nHosted by Hana Ahriz & Pixels & People
@@ -282,7 +282,7 @@ BEGIN:VEVENT
 SUMMARY:Grok Bot Stockholm Meetup x Aalto Founder School
 DTSTART:20261111T160000Z
 DTEND:20261111T193000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120632Z
 UID:evt-Zf065QfgEFDlRob@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/m5yicjqi\n\nAd
  dress:\nEidra\nStockholm\, Sweden\n\nHosted by Hitesh Chander Monga & Foun
@@ -296,7 +296,7 @@ BEGIN:VEVENT
 SUMMARY:Grok Bot Curitiba - Startups Meetup
 DTSTART:20261111T213000Z
 DTEND:20261112T000000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120632Z
 UID:evt-tUpXeeDK7mowEFV@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/cursor-dx23\n
  \nAddress:\nCheck event page for more details.\n\nHosted by Enzo Enrico Bo
@@ -309,7 +309,7 @@ BEGIN:VEVENT
 SUMMARY:Grok Bot Kassel Meetup
 DTSTART:20261112T170000Z
 DTEND:20261112T210000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120632Z
 UID:evt-Y9NcuiQ3UWIFEOG@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/rx61bqy9\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Eyad Kelleh & 5 ot
@@ -323,7 +323,7 @@ BEGIN:VEVENT
 SUMMARY:Grok Bot Meetup Indianapolis
 DTSTART:20261112T230000Z
 DTEND:20261113T010000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120632Z
 UID:evt-lbz3mHfHc5v6XPR@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/cudopyt3\n\nAd
  dress:\nLaunch Fishers\nFishers\, IN\nUnited States\n\nHosted by Jacob Thi
@@ -337,7 +337,7 @@ BEGIN:VEVENT
 SUMMARY:Grok Bot İstanbul Meetup
 DTSTART:20261113T160000Z
 DTEND:20261113T183000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120632Z
 UID:evt-Le3DLSHzL8qleX8@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/spacexai-feic
  \n\nAddress:\nCheck event page for more details.\n\nHosted by Ozgur Unlu &
@@ -351,7 +351,7 @@ BEGIN:VEVENT
 SUMMARY:Cursor Hackathon Mérida
 DTSTART:20261113T230000Z
 DTEND:20261114T030000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120632Z
 UID:evt-Uxl44Hdz3i8Goqd@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/spacexai-lxdo
  \n\nAddress:\nCheck event page for more details.\n\nHosted by Janeth Valdi
@@ -364,7 +364,7 @@ BEGIN:VEVENT
 SUMMARY:Cursor Hackathon Kampala
 DTSTART:20261114T060000Z
 DTEND:20261114T140000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120632Z
 UID:evt-oTWmj2nHbvYLJuZ@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/spacexai-edqp
  \n\nAddress:\nCheck event page for more details.\n\nHosted by Ronnie 3.0
@@ -376,7 +376,7 @@ BEGIN:VEVENT
 SUMMARY:Grok Bot Meetup Tampa Bay
 DTSTART:20261114T180000Z
 DTEND:20261114T210000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120632Z
 UID:evt-YJgIaDbgTcU3aKj@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/spacexai-g0x6
  \n\nAddress:\nCheck event page for more details.\n\nHosted by Alberto Jaur
@@ -390,7 +390,7 @@ BEGIN:VEVENT
 SUMMARY:Cursor Meetup hosted by CLUB AI @ H-FARM
 DTSTART:20261117T170000Z
 DTEND:20261117T200000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120632Z
 UID:evt-aQGiSiunfEyG3pJ@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/spacexai-equn
  \n\nAddress:\nVia Adriano Olivetti\, 1\nH-FARM Campus\nRoncade\, Italy\n\n
@@ -404,7 +404,7 @@ BEGIN:VEVENT
 SUMMARY:Cursor Meetup Philadelphia — November
 DTSTART:20261117T230000Z
 DTEND:20261118T013000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120632Z
 UID:evt-QB8ReJwO3T31ASF@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/cursor-acqy\n
  \nAddress:\nIndy Hall Clubhouse at 709 N 2nd St\nIndy Hall Clubhouse at 70
@@ -420,7 +420,7 @@ BEGIN:VEVENT
 SUMMARY:Grok Bot OKC Build Night
 DTSTART:20261117T233000Z
 DTEND:20261118T023000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120632Z
 UID:evt-OuSdeCYoJeGwXIB@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/grokbot-okc\n
  \nAddress:\nCheck event page for more details.\n\nHosted by Josh Birdwell
@@ -433,7 +433,7 @@ BEGIN:VEVENT
 SUMMARY:Cursor Hackathon Tallinn
 DTSTART:20261119T153000Z
 DTEND:20261119T200000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120632Z
 UID:evt-yzPlRWa16QXWiUV@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/81652ged\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Manuel Zimmermann
@@ -446,7 +446,7 @@ BEGIN:VEVENT
 SUMMARY:Cursor Meetup Copenhagen
 DTSTART:20261119T160000Z
 DTEND:20261119T190000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120632Z
 UID:evt-dVTYCNrgtg5KELA@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/spacexai-3wea
  \n\nAddress:\nTrustpilot A/S\nKøbenhavn\, Denmark\n\nHosted by Fernando A
@@ -460,7 +460,7 @@ BEGIN:VEVENT
 SUMMARY:Grok Bot Meetup Orlando
 DTSTART:20261120T230000Z
 DTEND:20261121T010000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120632Z
 UID:evt-3B0Lj0fJDPFyBJv@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/grok-bot-orlan
  do\n\nAddress:\nCheck event page for more details.\n\nHosted by Eddie De L
@@ -474,7 +474,7 @@ BEGIN:VEVENT
 SUMMARY:Grok Bot Meetup Changsha
 DTSTART:20261122T060000Z
 DTEND:20261122T093000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120632Z
 UID:evt-2cHCzSOr1N8lmVM@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/SpaceXAI-Chang
  sha-20261122\n\nAddress:\nCheck event page for more details.\n\nHosted by 
@@ -487,7 +487,7 @@ BEGIN:VEVENT
 SUMMARY:Build with Cursor: Nijmegen
 DTSTART:20261125T150000Z
 DTEND:20261125T200000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120632Z
 UID:evt-yv5F2E0n8aAaexD@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/yi2v31vc\n\nAd
  dress:\nStartUp Nijmegen\nNijmegen\, Netherlands\n\nHosted by Diego Mencha
@@ -502,7 +502,7 @@ BEGIN:VEVENT
 SUMMARY:Grok Bot Zagreb Meetup
 DTSTART:20261128T090000Z
 DTEND:20261128T150000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120632Z
 UID:evt-6PNyBxkoKOGrRab@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/spacexai-zp5g
  \n\nAddress:\nBIRD Incubator\nZagreb\, Croatia\n\nHosted by Tin Runje & Ni
@@ -517,7 +517,7 @@ BEGIN:VEVENT
 SUMMARY:Grok Bot Meetup Padova
 DTSTART:20261203T180000Z
 DTEND:20261203T210000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120632Z
 UID:evt-P8cK02KksKykP5e@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/spacexai-h4xj
  \n\nAddress:\nazzurrodigitale\nPadova\, Italy\n\nHosted by Victor Motrical
@@ -532,7 +532,7 @@ BEGIN:VEVENT
 SUMMARY:Grok Bot Meetup Guatemala
 DTSTART:20261205T210000Z
 DTEND:20261206T020000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120632Z
 UID:evt-MCqZ6hmHrb9u28G@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/spacexai-97mt
  \n\nAddress:\nCheck event page for more details.\n\nHosted by diego r\, Di
@@ -545,7 +545,7 @@ BEGIN:VEVENT
 SUMMARY:Grok Bot Meetup Chattanooga
 DTSTART:20261216T230000Z
 DTEND:20261217T010000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120632Z
 UID:evt-ZZ6Rfg2evW5W2Ya@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/xoi05vfx\n\nAd
  dress:\nThe Enterprise Center\nChattanooga\, TN\nUnited States\n\nHosted b
@@ -560,7 +560,7 @@ BEGIN:VEVENT
 SUMMARY:Grok Bot Workshop Tallinn
 DTSTART:20261217T153000Z
 DTEND:20261217T200000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120632Z
 UID:evt-nRr6eAiLNUhqUyQ@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/ra2ay9wq\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Manuel Zimmermann
@@ -573,7 +573,7 @@ BEGIN:VEVENT
 SUMMARY:Cursor Meetup Philadelphia — December
 DTSTART:20261217T230000Z
 DTEND:20261218T013000Z
-DTSTAMP:20261028T035918Z
+DTSTAMP:20261028T120632Z
 UID:evt-U4LmvynJh58rf1b@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/cursor-8wr8\n
  \nAddress:\nIndy Hall Clubhouse at 709 N 2nd St\nIndy Hall Clubhouse at 70
@@ -589,7 +589,7 @@ BEGIN:VEVENT
 SUMMARY:Bench Summit
 DTSTART:20261028T153000Z
 DTEND:20261029T020000Z
-DTSTAMP:20261028T035919Z
+DTSTAMP:20261028T120633Z
 UID:calev-sLWWGjYFD5JldYT@events.lu.ma
 DESCRIPTION:Find more information on https://luma.com/deepmind
 GEO:37.7749295;-122.41941550000001
@@ -602,7 +602,7 @@ BEGIN:VEVENT
 SUMMARY:Halloween At Imperial: Gemini Edition
 DTSTART:20261031T100000Z
 DTEND:20261031T180000Z
-DTSTAMP:20261028T035919Z
+DTSTAMP:20261028T120633Z
 UID:evt-cKrLsCOy4HDL2dX@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/p41k1z3g\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Imperial FinTech &
@@ -616,7 +616,7 @@ BEGIN:VEVENT
 SUMMARY:Scaling Startups with Gemini 4 Argon
 DTSTART:20261104T150000Z
 DTEND:20261104T180000Z
-DTSTAMP:20261028T035919Z
+DTSTAMP:20261028T120633Z
 UID:evt-rGSrSLJBalCKKi5@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/ScalingStartup
  s-LondonAIHub-Deepmind-GoogleCloud\n\nAddress:\nLondon AI Hub\nThis event 
@@ -631,7 +631,7 @@ BEGIN:VEVENT
 SUMMARY:Gemini 4 Argon Launch: Founder Briefing
 DTSTART:20261104T160000Z
 DTEND:20261104T170000Z
-DTSTAMP:20261028T035919Z
+DTSTAMP:20261028T120633Z
 UID:calev-vGscdP0kMNJyebi@events.lu.ma
 DESCRIPTION:Find more information on https://luma.com/deepmind
 LOCATION:https://rsvp.withgoogle.com/events/gemini-4-argon-launch-founder-
@@ -643,7 +643,7 @@ BEGIN:VEVENT
 SUMMARY:Built in London with Google DeepMind
 DTSTART:20261105T173000Z
 DTEND:20261105T200000Z
-DTSTAMP:20261028T035919Z
+DTSTAMP:20261028T120633Z
 UID:evt-O2kKN0L6DF2klvK@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/vercel-8b8w\n
  \nAddress:\nCheck event page for more details.\n\nHosted by Vercel Events 
@@ -657,7 +657,7 @@ BEGIN:VEVENT
 SUMMARY:AI Build Night Miami
 DTSTART:20261105T233000Z
 DTEND:20261106T030000Z
-DTSTAMP:20261028T035919Z
+DTSTAMP:20261028T120633Z
 UID:evt-sTt0wB8hAAvHfZL@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/ai-build-night
  -miami\n\nAddress:\nCheck event page for more details.\n\nHosted by Google
@@ -671,7 +671,7 @@ BEGIN:VEVENT
 SUMMARY:Breakfast with Google DeepMind: Miami Founders Roundtable
 DTSTART:20261106T150000Z
 DTEND:20261106T180000Z
-DTSTAMP:20261028T035919Z
+DTSTAMP:20261028T120633Z
 UID:calev-mnnhHQHB6NBEBeA@events.lu.ma
 DESCRIPTION:Find more information on https://luma.com/deepmind
 GEO:25.8022913;-80.20160039999999
@@ -684,7 +684,7 @@ BEGIN:VEVENT
 SUMMARY:UCL AgentVerse 2026
 DTSTART:20261107T100000Z
 DTEND:20261108T170000Z
-DTSTAMP:20261028T035919Z
+DTSTAMP:20261028T120633Z
 UID:calev-esUqfXf5pBPk5SX@events.lu.ma
 DESCRIPTION:Find more information on https://luma.com/deepmind
 GEO:51.5072178;-0.12758619999999998
@@ -696,7 +696,7 @@ BEGIN:VEVENT
 SUMMARY:AI ATL
 DTSTART;VALUE=DATE:20261107
 DTEND;VALUE=DATE:20261110
-DTSTAMP:20261028T035919Z
+DTSTAMP:20261028T120633Z
 UID:calev-7sl9e7INet2nYV5@events.lu.ma
 DESCRIPTION:Find more information on https://luma.com/deepmind
 GEO:33.750127500000005;-84.3885209
@@ -709,7 +709,7 @@ BEGIN:VEVENT
 SUMMARY:AIE Code Summit 2026 Hackathon
 DTSTART:20261107T170000Z
 DTEND:20261108T060000Z
-DTSTAMP:20261028T035919Z
+DTSTAMP:20261028T120633Z
 UID:calev-nBQbJtVB5BvSlhz@events.lu.ma
 DESCRIPTION:Find more information on https://luma.com/deepmind
 GEO:37.7749295;-122.41941550000001
@@ -721,7 +721,7 @@ BEGIN:VEVENT
 SUMMARY:AI Engineer Code Summit
 DTSTART;VALUE=DATE:20261110
 DTEND;VALUE=DATE:20261113
-DTSTAMP:20261028T035919Z
+DTSTAMP:20261028T120633Z
 UID:calev-UjVtY9tGEEOEaht@events.lu.ma
 DESCRIPTION:Find more information on https://luma.com/deepmind
 GEO:37.7749295;-122.41941550000001
@@ -733,7 +733,7 @@ BEGIN:VEVENT
 SUMMARY:Hack Junction 2026
 DTSTART;VALUE=DATE:20261113
 DTEND;VALUE=DATE:20261116
-DTSTAMP:20261028T035919Z
+DTSTAMP:20261028T120633Z
 UID:calev-EZ0HfDAB6Y0QpVu@events.lu.ma
 DESCRIPTION:Find more information on https://luma.com/deepmind
 GEO:60.2054911;24.6559001
@@ -745,7 +745,7 @@ BEGIN:VEVENT
 SUMMARY:{Tech: Europe} Agentic AI Hack
 DTSTART:20261114T083000Z
 DTEND:20261114T203000Z
-DTSTAMP:20261028T035919Z
+DTSTAMP:20261028T120633Z
 UID:evt-sNWJnECt0wl2HWO@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/kar-hack\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by {Tech: Europe}
@@ -758,7 +758,7 @@ BEGIN:VEVENT
 SUMMARY:Pre-Slush Reception @ The Clock Tower
 DTSTART:20261117T140000Z
 DTEND:20261117T180000Z
-DTSTAMP:20261028T035919Z
+DTSTAMP:20261028T120633Z
 UID:calev-d7lRSlOjtJudmvE@events.lu.ma
 DESCRIPTION:Find more information on https://luma.com/deepmind
 GEO:60.16985569999999;24.938378999999998
@@ -771,7 +771,7 @@ BEGIN:VEVENT
 SUMMARY:GTM Hackathon by Granola x Gemini
 DTSTART:20261117T180000Z
 DTEND:20261117T203000Z
-DTSTAMP:20261028T035919Z
+DTSTAMP:20261028T120633Z
 UID:evt-CZgpfroA4Hny1a7@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/granola-gemini
  -hackathon\n\nAddress:\nCheck event page for more details.\n\nHosted by Ca
@@ -785,7 +785,7 @@ BEGIN:VEVENT
 SUMMARY:Gemini 4 NYC Hackathon
 DTSTART:20261121T140000Z
 DTEND:20261122T020000Z
-DTSTAMP:20261028T035919Z
+DTSTAMP:20261028T120633Z
 UID:calev-WfvlY7bXfigNqX0@events.lu.ma
 DESCRIPTION:Find more information on https://luma.com/deepmind
 GEO:40.7127753;-74.0059728
@@ -794,10 +794,24 @@ ORGANIZER;CN="Cerebral Valley ":MAILTO:calendar-invite@lu.ma
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Physical AI Hack
+DTSTART:20261128T173000Z
+DTEND:20261129T033000Z
+DTSTAMP:20261028T120633Z
+UID:evt-nAlzxD5P2vwy4rf@events.lu.ma
+DESCRIPTION:Get up-to-date information at: https://luma.com/physicalhack\n
+ \nAddress:\nCheck event page for more details.\n\nHosted by tokens&\, Ales
+ sandro Amenta & Jacopo Piazza
+GEO:37.765364743656264;-122.3910022078558
+LOCATION:https://luma.com/event/evt-nAlzxD5P2vwy4rf
+ORGANIZER;CN=tokens&:MAILTO:calendar-invite@lu.ma
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:🦞 OpenClaw Meetup @ Nesta | FIDU
 DTSTART:20261106T120000Z
 DTEND:20261106T140000Z
-DTSTAMP:20261028T035919Z
+DTSTAMP:20261028T120634Z
 UID:evt-s4CzkWXL6Cn4s9w@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/kow7lull\n\nAd
  dress:\nNesta\nLondon\, United Kingdom\n\nHosted by First International Da
@@ -811,7 +825,7 @@ BEGIN:VEVENT
 SUMMARY:Boston OpenClaw Meetup [November 2026]
 DTSTART:20261112T230000Z
 DTEND:20261113T010000Z
-DTSTAMP:20261028T035919Z
+DTSTAMP:20261028T120634Z
 UID:evt-bvz2iUC9B1EoZdS@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/isp0bcdq\n\nAd
  dress:\nAldrich Hall\nHarvard Business School\, Aldrich Hall\, Room 111. B
@@ -826,7 +840,7 @@ BEGIN:VEVENT
 SUMMARY:OpenClaw Seattle - Monthly
 DTSTART:20261117T020000Z
 DTEND:20261117T040000Z
-DTSTAMP:20261028T035919Z
+DTSTAMP:20261028T120634Z
 UID:evt-GXfSe624KgBtg2u@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/pnl7e8fw\n\nAd
  dress:\nSeaboard Building Condos\nSeattle\, Washington\nUnited States\n\nH
@@ -841,7 +855,7 @@ BEGIN:VEVENT
 SUMMARY:MainClaw #4: Die Business-Edition
 DTSTART:20261119T173000Z
 DTEND:20261119T210000Z
-DTSTAMP:20261028T035919Z
+DTSTAMP:20261028T120634Z
 UID:evt-fFbYVVkpd8O3N2C@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/j2yrm251\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Philipp Hannemann
@@ -855,7 +869,7 @@ BEGIN:VEVENT
 SUMMARY:OpenClaw Triangle Meetup - November 24
 DTSTART:20261124T230000Z
 DTEND:20261125T013000Z
-DTSTAMP:20261028T035919Z
+DTSTAMP:20261028T120634Z
 UID:evt-2QbL9snLgCHbHWV@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/xni1mgw9\n\nAd
  dress:\nGamers Geekery & Tavern\nCary\, NC\nUnited States\n\nHosted by Dee
@@ -870,7 +884,7 @@ BEGIN:VEVENT
 SUMMARY:OpenClaw Seattle - Monthly
 DTSTART:20261215T020000Z
 DTEND:20261215T040000Z
-DTSTAMP:20261028T035919Z
+DTSTAMP:20261028T120634Z
 UID:evt-erh5zc31mUMASha@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/20zi6j2i\n\nAd
  dress:\nSeaboard Building Condos\nSeattle\, Washington\nUnited States\n\nH
@@ -885,7 +899,7 @@ BEGIN:VEVENT
 SUMMARY:OpenClaw Seattle - Monthly
 DTSTART:20270112T020000Z
 DTEND:20270112T040000Z
-DTSTAMP:20261028T035919Z
+DTSTAMP:20261028T120634Z
 UID:evt-NWbzBzFWilRssBF@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/nvomb3a9\n\nAd
  dress:\nSeaboard Building Condos\nSeattle\, Washington\nUnited States\n\nH
@@ -900,7 +914,7 @@ BEGIN:VEVENT
 SUMMARY:OpenClaw Seattle - Monthly
 DTSTART:20270216T020000Z
 DTEND:20270216T040000Z
-DTSTAMP:20261028T035919Z
+DTSTAMP:20261028T120634Z
 UID:evt-RjFhlj3T2XSK3R5@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/ss38gvs1\n\nAd
  dress:\nSeaboard Building Condos\nSeattle\, Washington\nUnited States\n\nH
@@ -915,7 +929,7 @@ BEGIN:VEVENT
 SUMMARY:OpenClaw Seattle - Monthly
 DTSTART:20270316T010000Z
 DTEND:20270316T030000Z
-DTSTAMP:20261028T035919Z
+DTSTAMP:20261028T120634Z
 UID:evt-HIfYGk39GSISOZA@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/cepiubx7\n\nAd
  dress:\nSeaboard Building Condos\nSeattle\, Washington\nUnited States\n\nH
@@ -927,24 +941,10 @@ ORGANIZER;CN="John Kennedy":MAILTO:calendar-invite@lu.ma
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:AI Careers Beyond Coding: Start Your Next Chapter in 90 Days(w/ Th
- e AI Collective)
-DTSTART:20261028T100000Z
-DTEND:20261028T130000Z
-DTSTAMP:20261028T035920Z
-UID:evt-71gFZhTrTj6puIX@events.lu.ma
-DESCRIPTION:Get up-to-date information at: https://luma.com/aic-si-10-28\n
- \nAddress:\nCheck event page for more details.\n\nHosted by The AI Collect
- ive & 4 others
-LOCATION:https://luma.com/event/evt-71gFZhTrTj6puIX
-ORGANIZER;CN="The AI Collective":MAILTO:calendar-invite@lu.ma
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:The AI Collective Poland: AI-Human Synergy (Wrocław)
 DTSTART:20261028T160000Z
 DTEND:20261028T193000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-rGH5iCxeKJ6LEte@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aic-po-10-28\n
  \nAddress:\nCheck event page for more details.\n\nHosted by The AI Collect
@@ -958,7 +958,7 @@ BEGIN:VEVENT
 SUMMARY:The AI Collective Podcast with AJ & Catherine: Wednesday\, Oct 28
 DTSTART:20261028T160000Z
 DTEND:20261028T173000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-7F3C0C3ytSqWHMl@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/genai-6ieo\n\n
  Address:\nCheck event page for more details.\n\nHosted by The AI Collectiv
@@ -971,7 +971,7 @@ BEGIN:VEVENT
 SUMMARY:AI Tasting Room (w/ The AI Collective Fayetteville)
 DTSTART:20261028T220000Z
 DTEND:20261029T000000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-bXi5ldKiQxytYFc@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aic-fa-10-28\n
  \nAddress:\nCheck event page for more details.\n\nHosted by The AI Collect
@@ -985,7 +985,7 @@ BEGIN:VEVENT
 SUMMARY:#LATechWeek AI Collective Pitch Night (w/ The AI Collective)
 DTSTART:20261029T010000Z
 DTEND:20261029T040000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-YY3wwNrsTyfjSQw@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aic-la-og-pitc
  h-night\n\nAddress:\nCheck event page for more details.\n\nHosted by The A
@@ -999,7 +999,7 @@ BEGIN:VEVENT
 SUMMARY:Hack for Humanity : London (w/ The AI Collective)
 DTSTART:20261029T090000Z
 DTEND:20261029T150000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-A4jGJcDp29pNig5@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/hack-for-human
  ity-london-aic\n\nAddress:\nCorgi Cafe\nLondon\, United Kingdom\n\nHosted 
@@ -1013,7 +1013,7 @@ BEGIN:VEVENT
 SUMMARY:The AI Collective Podcast with AJ & Catherine: Thursday\, Oct 29
 DTSTART:20261029T160000Z
 DTEND:20261029T173000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-8tIYJ2mUgotBa1A@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/genai-ffuz\n\n
  Address:\nCheck event page for more details.\n\nHosted by The AI Collectiv
@@ -1026,7 +1026,7 @@ BEGIN:VEVENT
 SUMMARY:The AI Collective Podcast with AJ & Catherine: Friday\, Oct 30
 DTSTART:20261030T160000Z
 DTEND:20261030T173000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-OPKLmgTnNeWLXgp@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/genai-xg7t\n\n
  Address:\nCheck event page for more details.\n\nHosted by The AI Collectiv
@@ -1039,7 +1039,7 @@ BEGIN:VEVENT
 SUMMARY:Stripe Community x Ecom North: AI Images in Ecommerce @ Ideogram
 DTSTART:20261030T220000Z
 DTEND:20261031T003000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-XRAIaV428zPd9sZ@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/ai-image\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by The AI Collective 
@@ -1053,7 +1053,7 @@ BEGIN:VEVENT
 SUMMARY:Hack for Humanity: Research Triangle
 DTSTART:20261031T140000Z
 DTEND:20261031T190000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-jf8Emc4LLoKpo90@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/h4h-research-t
  riangle\n\nAddress:\nCheck event page for more details.\n\nHosted by The A
@@ -1068,7 +1068,7 @@ SUMMARY:AI Day at FGCU: Southwest Florida AI Expo Day Hosted by FGCU (w/ T
  he AI Collective)
 DTSTART:20261102T140000Z
 DTEND:20261102T200000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-CTbtnmRFGDkapqM@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aic-na-11-2\n
  \nAddress:\nHarvey and Janet Cohen Student Union\nFort Myers\, FL\nUnited 
@@ -1084,7 +1084,7 @@ SUMMARY:UCD Builds - Pilots and Prototypes (w/ The AI Collective and Lovab
  le)
 DTSTART:20261102T150000Z
 DTEND:20261102T170000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-uJzKDFxZTQB2236@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aic-du-10-21\n
  \nAddress:\nCheck event page for more details.\n\nHosted by The AI Collect
@@ -1097,7 +1097,7 @@ BEGIN:VEVENT
 SUMMARY:The AI Collective Podcast with AJ & Catherine: Monday\, Nov 2
 DTSTART:20261102T170000Z
 DTEND:20261102T183000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-AanmdJB2qk4tQeX@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/genai-pee8\n\n
  Address:\nCheck event page for more details.\n\nHosted by The AI Collectiv
@@ -1110,7 +1110,7 @@ BEGIN:VEVENT
 SUMMARY:AI & Humans | The Conscious Future
 DTSTART:20261102T230000Z
 DTEND:20261103T013000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-9OlaO8MvDCRnI5c@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aic-bos-humans
  \n\nAddress:\nCheck event page for more details.\n\nHosted by The AI Colle
@@ -1124,7 +1124,7 @@ BEGIN:VEVENT
 SUMMARY:Movie Night: The AI Doc
 DTSTART:20261102T230000Z
 DTEND:20261103T013000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-cdjimq5XabroyPD@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aidoc-fll\n\nA
  ddress:\nSavor Cinema Fort Lauderdale\nFort Lauderdale\, FL\nUnited States
@@ -1139,7 +1139,7 @@ BEGIN:VEVENT
 SUMMARY:Vibe Night in Sandy Springs (w/ The AI Collective)
 DTSTART:20261102T230000Z
 DTEND:20261103T013000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-eMuvDF5X29IxYZX@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aic-at-11-2\n
  \nAddress:\nHudson Grille Sandy Springs\nSandy Springs\, GA\nUnited States
@@ -1154,7 +1154,7 @@ BEGIN:VEVENT
 SUMMARY:AI Meetup Peachtree Corners (w/ The AI Collective)
 DTSTART:20261102T233000Z
 DTEND:20261103T013000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-5v4yxP100WRnUhx@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aic-gw-11-2\n
  \nAddress:\nCheck event page for more details.\n\nHosted by The AI Collect
@@ -1168,7 +1168,7 @@ BEGIN:VEVENT
 SUMMARY:Lunch with a Side of AI (w/ The AI Collective)
 DTSTART:20261102T233000Z
 DTEND:20261103T003000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-IQRkkDPErtVT2zC@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aic-nz-11-3\n
  \nHosted by The AI Collective & Nadia Ellis
@@ -1180,7 +1180,7 @@ BEGIN:VEVENT
 SUMMARY:The AI Collective Podcast with AJ & Catherine: Tuesday\, Nov 3
 DTSTART:20261103T170000Z
 DTEND:20261103T183000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-eQ9tPswvEDl3CgH@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/genai-54bg\n\n
  Address:\nCheck event page for more details.\n\nHosted by The AI Collectiv
@@ -1193,7 +1193,7 @@ BEGIN:VEVENT
 SUMMARY:Future of work & AI Roundtable (w/ The AI Collective)
 DTSTART:20261103T180000Z
 DTEND:20261103T203000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-fy28QTuW3NfubRc@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/Futureofwork_r
  oundtable\n\nAddress:\nCheck event page for more details.\n\nHosted by The
@@ -1208,7 +1208,7 @@ SUMMARY:Stamford AI Meetup | Lightning Talks/Open Mic | w/ The AI Collecti
  ve
 DTSTART:20261103T223000Z
 DTEND:20261104T013000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-LFeTkot9xgTmOV8@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aic-st-11-3\n
  \nAddress:\nPoint Cafè - 2200 Atlantic St.\, Stamford (Harbor Point)\n\nH
@@ -1222,7 +1222,7 @@ SUMMARY:AI Sovereignty in Practice: Global\, Local or Hybrid? (w/ The AI C
  ollective)
 DTSTART:20261104T150000Z
 DTEND:20261104T170000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-bP253rO9Pa65ybr@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aic-sw-soverei
  gnty\n\nAddress:\nCheck event page for more details.\n\nHosted by The AI C
@@ -1236,7 +1236,7 @@ BEGIN:VEVENT
 SUMMARY:AI\, Human & Trust: Rethinking Decision-Making
 DTSTART:20261104T150000Z
 DTEND:20261104T173000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-MAl8Ld07qoOPe76@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aic-fi-11-4\n
  \nAddress:\nDesign Factory\nAalto Design Factory\, The Hub venue\nEspoo\, 
@@ -1250,7 +1250,7 @@ BEGIN:VEVENT
 SUMMARY:The AI Collective Podcast with AJ & Catherine: Wednesday\, Nov 4
 DTSTART:20261104T170000Z
 DTEND:20261104T183000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-QW6806TDKTrZbCh@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/genai-zdpw\n\n
  Address:\nCheck event page for more details.\n\nHosted by The AI Collectiv
@@ -1264,7 +1264,7 @@ SUMMARY:AIC Education: From AI Tools to AI Teammates (w/ The AI Collective
  )
 DTSTART:20261104T190000Z
 DTEND:20261104T200000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-UIXrplPWppKOxzG@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aic-gl-11-4\n
  \nHosted by The AI Collective\, Abraham & Lena Shakurova
@@ -1277,7 +1277,7 @@ SUMMARY:AI & the Next Generation: Opportunities\, Risks\, and What’s Ahe
  ad (w/ The AI Collective)
 DTSTART:20261105T020000Z
 DTEND:20261105T043000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-b1tA7EY7ed948IF@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aic-tr-11-4\n
  \nAddress:\nCheck event page for more details.\n\nHosted by The AI Collect
@@ -1292,7 +1292,7 @@ SUMMARY:AI x Energy: From Algorithms to Real-World Impact (w/ The AI Colle
  ctive)
 DTSTART:20261105T100000Z
 DTEND:20261105T130000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-AOgOFneJs0qSo64@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aic-po-11-5\n
  \nAddress:\nCheck event page for more details.\n\nHosted by The AI Collect
@@ -1306,7 +1306,7 @@ BEGIN:VEVENT
 SUMMARY:Hackathon: Build night for HR people! (w/ The AI Collective)
 DTSTART:20261105T153000Z
 DTEND:20261105T191500Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-7C0ZQLywR0fDGN6@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aic-sw-11-5\n
  \nAddress:\nCheck event page for more details.\n\nHosted by The AI Collect
@@ -1321,7 +1321,7 @@ SUMMARY:The AI SOCIAL: presented by AI Collective Bucharest & Beta Nights
  by ambasada
 DTSTART:20261105T163000Z
 DTEND:20261105T190000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-Sw0i9B1BEHCTo7b@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/ai-social\n\nA
  ddress:\nCheck event page for more details.\n\nHosted by The AI Collective
@@ -1335,7 +1335,7 @@ BEGIN:VEVENT
 SUMMARY:The AI Collective #3 Prague Meetup (w/ The AI Collective)
 DTSTART:20261105T170000Z
 DTEND:20261105T210000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-ak8XxT3ylqQ1g0N@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/ai-collective-
  meetup-3-prague\n\nAddress:\nTOK\nHlavní město Praha\, Czechia\n\nHosted
@@ -1349,7 +1349,7 @@ BEGIN:VEVENT
 SUMMARY:The AI Collective Podcast with AJ & Catherine: Thursday\, Nov 5
 DTSTART:20261105T170000Z
 DTEND:20261105T183000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-DuCA017IVSyLIuL@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/genai-3011\n\n
  Address:\nCheck event page for more details.\n\nHosted by The AI Collectiv
@@ -1362,7 +1362,7 @@ BEGIN:VEVENT
 SUMMARY:Meetup (w/ The AI Collective)
 DTSTART:20261105T220000Z
 DTEND:20261106T003000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-Y4QRsXJ29vijmPq@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aic-ma-11-5\n
  \nAddress:\nCheck event page for more details.\n\nHosted by The AI Collect
@@ -1376,7 +1376,7 @@ BEGIN:VEVENT
 SUMMARY:Beyond the Chat Window (w/ The AI Collective)
 DTSTART:20261105T223000Z
 DTEND:20261106T010000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-VkFEPNGT2ZAKlkd@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aic-sp-11-5\n
  \nAddress:\nCheck event page for more details.\n\nHosted by The AI Collect
@@ -1390,7 +1390,7 @@ BEGIN:VEVENT
 SUMMARY:ATL Build League
 DTSTART:20261105T230000Z
 DTEND:20261106T010000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-BPZblyJIJJvSSdL@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aic-at-11-5-a
  \n\nAddress:\nMutation Brewing and Distilling Company\nSandy Springs\, GA
@@ -1405,7 +1405,7 @@ BEGIN:VEVENT
 SUMMARY:OpenAI DevDay Exchange Community: Kansas City
 DTSTART:20261106T000000Z
 DTEND:20261106T023000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-XtDWw9rd4pFJLmL@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/CodexKC2026\n
  \nAddress:\nCheck event page for more details.\n\nHosted by Daniel Green &
@@ -1419,7 +1419,7 @@ BEGIN:VEVENT
 SUMMARY:The AI Collective Podcast with AJ & Catherine: Friday\, Nov 6
 DTSTART:20261106T170000Z
 DTEND:20261106T183000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-BO1GNYKwbg43EtM@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/genai-ciey\n\n
  Address:\nCheck event page for more details.\n\nHosted by The AI Collectiv
@@ -1432,7 +1432,7 @@ BEGIN:VEVENT
 SUMMARY:Build Night: Ship Something Businesses Need
 DTSTART:20261107T150000Z
 DTEND:20261107T193000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-otM8OWDG8ju3U5J@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/build-night\n
  \nAddress:\nCheck event page for more details.\n\nHosted by The AI Collect
@@ -1446,7 +1446,7 @@ BEGIN:VEVENT
 SUMMARY:The AI Collective Podcast with AJ & Catherine: Monday\, Nov 9
 DTSTART:20261109T170000Z
 DTEND:20261109T183000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-GMe9QbvBI0h51QJ@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/genai-mn5j\n\n
  Address:\nCheck event page for more details.\n\nHosted by The AI Collectiv
@@ -1459,7 +1459,7 @@ BEGIN:VEVENT
 SUMMARY:Built with AI: The Defensive Pedal Story (w/ The AI Collective)
 DTSTART:20261110T150000Z
 DTEND:20261110T160000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-CooCYRlCWlB9qd2@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aic-br-11-10\n
  \nAddress:\nCentrul de Afaceri\, Transfer Tehnologic și Incubator de Afac
@@ -1475,7 +1475,7 @@ BEGIN:VEVENT
 SUMMARY:The AI Collective Podcast with AJ & Catherine: Tuesday\, Nov 10
 DTSTART:20261110T170000Z
 DTEND:20261110T183000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-VedzpsZg0ssgTKU@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/genai-xy5g\n\n
  Address:\nCheck event page for more details.\n\nHosted by The AI Collectiv
@@ -1489,7 +1489,7 @@ SUMMARY:AI Collective x Gauntlet AI | Inside the Gauntlet (w/ The AI Colle
  ctive)
 DTSTART:20261111T000000Z
 DTEND:20261111T023000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-IEXHqrE2vl7O4Zt@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aic-gauntlet-n
  ov10\n\nAddress:\nCheck event page for more details.\n\nHosted by The AI C
@@ -1503,7 +1503,7 @@ BEGIN:VEVENT
 SUMMARY:The AI Collective Podcast with AJ & Catherine: Wednesday\, Nov 11
 DTSTART:20261111T170000Z
 DTEND:20261111T183000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-rslY6YSeBOMsHO3@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/genai-3qom\n\n
  Address:\nCheck event page for more details.\n\nHosted by The AI Collectiv
@@ -1516,7 +1516,7 @@ BEGIN:VEVENT
 SUMMARY:The Human Side of AI
 DTSTART:20261111T230000Z
 DTEND:20261112T010000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-CWK517ouuTo81hA@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/human-side-ai
  \n\nAddress:\nCheck event page for more details.\n\nHosted by The AI Colle
@@ -1530,7 +1530,7 @@ BEGIN:VEVENT
 SUMMARY:AI Learning and Sharing (w/ The AI Collective)
 DTSTART:20261111T230000Z
 DTEND:20261112T013000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-iQX8cOADQosDgnE@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aic-in-11-11\n
  \nAddress:\nCheck event page for more details.\n\nHosted by The AI Collect
@@ -1544,7 +1544,7 @@ BEGIN:VEVENT
 SUMMARY:AI Collective Detroit x Codalio : Building apps with Codalio
 DTSTART:20261111T233000Z
 DTEND:20261112T003000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-5RAbNSf2zNssESZ@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aic-de-11-11\n
  \nHosted by The AI Collective & 9 others
@@ -1556,7 +1556,7 @@ BEGIN:VEVENT
 SUMMARY:Put AI to Work with ChatGPT Dots
 DTSTART:20261112T020000Z
 DTEND:20261112T030000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-fvlLOXjYocCJY49@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/e9q4tcbr\n\nHo
  sted by Bill Raymond & 3 others
@@ -1568,7 +1568,7 @@ BEGIN:VEVENT
 SUMMARY:Beer and bots (w/ The AI Collective)
 DTSTART:20261112T073000Z
 DTEND:20261112T090000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-1FDGHEnrfEPFKRM@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aic-ad-11-12\n
  \nAddress:\nCheck event page for more details.\n\nHosted by The AI Collect
@@ -1582,7 +1582,7 @@ SUMMARY:Vibin' Out Mornin' | AI Collective - Stamford | w/ The AI Collecti
  ve
 DTSTART:20261112T150000Z
 DTEND:20261112T173000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-M6XQzwa0Xi5JwOd@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aic-st-11-12\n
  \nAddress:\nCheck event page for more details.\n\nHosted by The AI Collect
@@ -1595,7 +1595,7 @@ BEGIN:VEVENT
 SUMMARY:The AI Collective Podcast with AJ & Catherine: Thursday\, Nov 12
 DTSTART:20261112T170000Z
 DTEND:20261112T183000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-sl8385voKsJNaht@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/genai-lr6x\n\n
  Address:\nCheck event page for more details.\n\nHosted by The AI Collectiv
@@ -1609,7 +1609,7 @@ SUMMARY:Lunch & Hack: The Browser Is Becoming an AI Runtime (w/ The AI Col
  lective)
 DTSTART:20261112T190000Z
 DTEND:20261112T200000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-wCBOSEv9Wur0ZMC@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aic-gl-11-12\n
  \nHosted by The AI Collective & Adelina Martiniuc
@@ -1621,7 +1621,7 @@ BEGIN:VEVENT
 SUMMARY:The AI Collective Podcast with AJ & Catherine: Friday\, Nov 13
 DTSTART:20261113T170000Z
 DTEND:20261113T183000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-oUoYnSnYuJ7wIpN@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/genai-wmhn\n\n
  Address:\nCheck event page for more details.\n\nHosted by The AI Collectiv
@@ -1634,7 +1634,7 @@ BEGIN:VEVENT
 SUMMARY:Hack for Humanity: Salt Lake City
 DTSTART:20261114T160000Z
 DTEND:20261114T220000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-VAOXH7BZ2f6vr7s@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/h4h-salt-lake-
  city\n\nAddress:\nCheck event page for more details.\n\nHosted by AJ Green
@@ -1648,7 +1648,7 @@ BEGIN:VEVENT
 SUMMARY:The AI Collective Podcast with AJ & Catherine: Monday\, Nov 16
 DTSTART:20261116T170000Z
 DTEND:20261116T183000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-OMGXQbOez1tiVeB@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/genai-gt6z\n\n
  Address:\nCheck event page for more details.\n\nHosted by The AI Collectiv
@@ -1661,7 +1661,7 @@ BEGIN:VEVENT
 SUMMARY:🧠 AI Founders Roundtable with The AI Collective Miami x Avahi
 DTSTART:20261116T230000Z
 DTEND:20261117T013000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-Kx8K1mcfPbvcaH2@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/avahi-mi-1026
  \n\nAddress:\nCheck event page for more details.\n\nHosted by The AI Colle
@@ -1674,7 +1674,7 @@ BEGIN:VEVENT
 SUMMARY:The AI Collective Podcast with AJ & Catherine: Tuesday\, Nov 17
 DTSTART:20261117T170000Z
 DTEND:20261117T183000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-cFkB2NkRcS2w5xU@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/genai-nr5q\n\n
  Address:\nCheck event page for more details.\n\nHosted by The AI Collectiv
@@ -1687,7 +1687,7 @@ BEGIN:VEVENT
 SUMMARY:The AI Collective Podcast with AJ & Catherine: Wednesday\, Nov 18
 DTSTART:20261118T170000Z
 DTEND:20261118T183000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-3CtqKWoMhwqp50o@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/genai-ey6f\n\n
  Address:\nCheck event page for more details.\n\nHosted by The AI Collectiv
@@ -1700,7 +1700,7 @@ BEGIN:VEVENT
 SUMMARY:AI Collective Connect: Madrid × Barcelona (w/ The AI Collective)
 DTSTART:20261118T180000Z
 DTEND:20261118T193000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-6YqNoKFO4uJK5W0@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/AICollective_M
  adrid_Barcelona\n\nAddress:\nCheck event page for more details.\n\nHosted 
@@ -1713,7 +1713,7 @@ BEGIN:VEVENT
 SUMMARY:Batchery AI Startup Studio Office Hours (w/ The AI Collective)
 DTSTART:20261119T150000Z
 DTEND:20261120T050000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-8vy6vi8ySC79v2d@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aic-st-11-19\n
  \nAddress:\nCheck event page for more details.\n\nHosted by The AI Collect
@@ -1726,7 +1726,7 @@ BEGIN:VEVENT
 SUMMARY:The AI Collective Podcast with AJ & Catherine: Thursday\, Nov 19
 DTSTART:20261119T170000Z
 DTEND:20261119T183000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-qRLBds6HtL6DDmn@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/genai-y97s\n\n
  Address:\nCheck event page for more details.\n\nHosted by The AI Collectiv
@@ -1740,7 +1740,7 @@ SUMMARY:Vibin' Out with Hartford AI Collective (w/ The AI Collective) (w/
  The AI Collective)
 DTSTART:20261119T170000Z
 DTEND:20261119T210000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-rO6HFT7NRwHo46H@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aic-ha-11-19\n
  \nAddress:\nCheck event page for more details.\n\nHosted by The AI Collect
@@ -1754,7 +1754,7 @@ BEGIN:VEVENT
 SUMMARY:The AI Collective Podcast with AJ & Catherine: Friday\, Nov 20
 DTSTART:20261120T170000Z
 DTEND:20261120T183000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-m2WyX4usvhIF2hK@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/genai-bz50\n\n
  Address:\nCheck event page for more details.\n\nHosted by The AI Collectiv
@@ -1767,7 +1767,7 @@ BEGIN:VEVENT
 SUMMARY:The AI Collective Podcast with AJ & Catherine: Monday\, Nov 23
 DTSTART:20261123T170000Z
 DTEND:20261123T183000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-4csaOZKt3NiBvOQ@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/genai-em4z\n\n
  Address:\nCheck event page for more details.\n\nHosted by The AI Collectiv
@@ -1781,7 +1781,7 @@ SUMMARY:Build Your First AI Agent with n8n | AI Collective x n8n Douglasvi
  lle
 DTSTART:20261123T233000Z
 DTEND:20261124T013000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-qC1ZkEM7NjlIN7Y@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aic-do-11-23\n
  \nAddress:\nCheck event page for more details.\n\nHosted by The AI Collect
@@ -1795,7 +1795,7 @@ BEGIN:VEVENT
 SUMMARY:The AI Collective Podcast with AJ & Catherine: Tuesday\, Nov 24
 DTSTART:20261124T170000Z
 DTEND:20261124T183000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-2ww88d7v3XpT4gu@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/genai-jymn\n\n
  Address:\nCheck event page for more details.\n\nHosted by The AI Collectiv
@@ -1808,7 +1808,7 @@ BEGIN:VEVENT
 SUMMARY:The AI Collective Podcast with AJ & Catherine: Wednesday\, Nov 25
 DTSTART:20261125T170000Z
 DTEND:20261125T183000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-GUTJIfcwvhHjbyp@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/genai-b9wy\n\n
  Address:\nCheck event page for more details.\n\nHosted by The AI Collectiv
@@ -1818,10 +1818,24 @@ ORGANIZER;CN="The AI Collective":MAILTO:calendar-invite@lu.ma
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Why Should I Care About the EU AI Act?
+DTSTART:20261126T150000Z
+DTEND:20261126T170000Z
+DTSTAMP:20261028T120635Z
+UID:evt-ZgHu3XgbZVYqyNI@events.lu.ma
+DESCRIPTION:Get up-to-date information at: https://luma.com/aic-fi-why-sho
+ uld-i-care-about-the-eu-ai-act\n\nAddress:\nMaria 01\nHelsinki\, Finland\n
+ \nHosted by The AI Collective & 3 others
+GEO:60.16675379999999;24.9219224
+LOCATION:Maria 01\, Lapinlahdenkatu 16\, 00180 Helsinki\, Finland
+ORGANIZER;CN="The AI Collective":MAILTO:calendar-invite@lu.ma
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:The AI Collective Podcast with AJ & Catherine: Monday\, Nov 30
 DTSTART:20261130T170000Z
 DTEND:20261130T183000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-ZictTn2VzKsvK4B@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/genai-2c9z\n\n
  Address:\nCheck event page for more details.\n\nHosted by The AI Collectiv
@@ -1834,7 +1848,7 @@ BEGIN:VEVENT
 SUMMARY:Lunch with a Side of AI (w/ AI Collective NZ)
 DTSTART:20261130T233000Z
 DTEND:20261201T003000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-vjP1GzbAMNW01HM@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aic-nz-12-1\n
  \nHosted by The AI Collective & Nadia Ellis
@@ -1846,7 +1860,7 @@ BEGIN:VEVENT
 SUMMARY:The AI Collective Podcast with AJ & Catherine: Tuesday\, Dec 1
 DTSTART:20261201T170000Z
 DTEND:20261201T183000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-KTMzYdzRO71LDbH@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/genai-4b4m\n\n
  Address:\nCheck event page for more details.\n\nHosted by The AI Collectiv
@@ -1859,7 +1873,7 @@ BEGIN:VEVENT
 SUMMARY:The AI Collective Podcast with AJ & Catherine: Wednesday\, Dec 2
 DTSTART:20261202T170000Z
 DTEND:20261202T184500Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-T39cmr7zAIb1Q4W@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/genai-8i73\n\n
  Address:\nCheck event page for more details.\n\nHosted by The AI Collectiv
@@ -1872,7 +1886,7 @@ BEGIN:VEVENT
 SUMMARY:The AI Collective Podcast with AJ & Catherine: Thursday\, Dec 3
 DTSTART:20261203T170000Z
 DTEND:20261203T183000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-wv9xZpw50iCWaU0@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/genai-6mz7\n\n
  Address:\nCheck event page for more details.\n\nHosted by The AI Collectiv
@@ -1885,7 +1899,7 @@ BEGIN:VEVENT
 SUMMARY:The AI Collective Podcast with AJ & Catherine: Friday\, Dec 4
 DTSTART:20261204T170000Z
 DTEND:20261204T183000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-xYKL07Bh8Lk4OkE@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/genai-5nj1\n\n
  Address:\nCheck event page for more details.\n\nHosted by The AI Collectiv
@@ -1898,7 +1912,7 @@ BEGIN:VEVENT
 SUMMARY:Lovable Office Hour (w/ The AI Collective)
 DTSTART:20261206T080000Z
 DTEND:20261206T100000Z
-DTSTAMP:20261028T035920Z
+DTSTAMP:20261028T120635Z
 UID:evt-fHEqu2TjTzEHNCU@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aic-ta-12-6\n
  \nHosted by The AI Collective\, Grace Pan & Alix
@@ -1910,7 +1924,7 @@ BEGIN:VEVENT
 SUMMARY:Geek Room Global AI Hackathon
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261116
-DTSTAMP:20261028T035921Z
+DTSTAMP:20261028T120636Z
 UID:evt-JrHX9KXmergl5Ld@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/33nivwqh\n\nHo
  sted by Geek Room & Tavily Events
@@ -1922,7 +1936,7 @@ BEGIN:VEVENT
 SUMMARY:Global AI Hackathon
 DTSTART;VALUE=DATE:20261101
 DTEND;VALUE=DATE:20261123
-DTSTAMP:20261028T035921Z
+DTSTAMP:20261028T120636Z
 UID:calev-lHIqMKF5TJhnRBB@events.lu.ma
 DESCRIPTION:Find more information on https://luma.com/eventstavily
 LOCATION:https://hackculture.io/hackathons/ai-global-hackathon
@@ -1933,7 +1947,7 @@ BEGIN:VEVENT
 SUMMARY:MAKE ME MONEY: AI Agent Hackathon
 DTSTART;VALUE=DATE:20261102
 DTEND;VALUE=DATE:20261122
-DTSTAMP:20261028T035921Z
+DTSTAMP:20261028T120636Z
 UID:evt-Kkz4BaRdehZH7PL@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/ou24kgyr\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Sofia Senatorova\,
@@ -1946,7 +1960,7 @@ BEGIN:VEVENT
 SUMMARY:World of Tavily NYC
 DTSTART:20261112T230000Z
 DTEND:20261113T013000Z
-DTSTAMP:20261028T035921Z
+DTSTAMP:20261028T120636Z
 UID:evt-3BEzdCGz2L8qm3X@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/ivrwjk0o\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Tavily Events\, Al
@@ -1960,7 +1974,7 @@ BEGIN:VEVENT
 SUMMARY:BAND Dark Factory Buildathon: San Francisco
 DTSTART:20261113T180000Z
 DTEND:20261114T040000Z
-DTSTAMP:20261028T035921Z
+DTSTAMP:20261028T120636Z
 UID:evt-NjrLdWRauJIPvMv@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/band-ai-hacks-
  nov13-2026\n\nAddress:\nAWS Builder Loft\, 2nd floor\, 525 Market St\, San
@@ -1974,7 +1988,7 @@ BEGIN:VEVENT
 SUMMARY:SearchHack: Build the next layer of AI search
 DTSTART:20261114T180000Z
 DTEND:20261115T040000Z
-DTSTAMP:20261028T035921Z
+DTSTAMP:20261028T120636Z
 UID:evt-hFfO3nFvva1pCBC@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/e13wf1bd\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Taliyah Huang & 4 
@@ -1988,7 +2002,7 @@ BEGIN:VEVENT
 SUMMARY:Agentic Hackathon: From Research to Commerce
 DTSTART:20261127T130000Z
 DTEND:20261127T200000Z
-DTSTAMP:20261028T035921Z
+DTSTAMP:20261028T120636Z
 UID:evt-JCIYUTg587Wp1hF@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/research-to-co
  mmerce\n\nAddress:\nThe Delta Campus\nBerlin\, Germany\n\nHosted by AI Age
@@ -2002,7 +2016,7 @@ BEGIN:VEVENT
 SUMMARY:At the Table: A Tavily Dinner at re:Invent
 DTSTART:20261202T033000Z
 DTEND:20261202T053000Z
-DTSTAMP:20261028T035921Z
+DTSTAMP:20261028T120636Z
 UID:evt-r62q8YN3RPFr02Z@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/tavily-qdby\n
  \nAddress:\nCheck event page for more details.\n\nHosted by Tavily Events
@@ -2015,7 +2029,7 @@ BEGIN:VEVENT
 SUMMARY:Telos Hacks
 DTSTART:20270417T160000Z
 DTEND:20270418T200000Z
-DTSTAMP:20261028T035921Z
+DTSTAMP:20261028T120636Z
 UID:evt-33c7VvBBbnPopCP@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/qv0s1qsl\n\nAd
  dress:\nSan Francisco Bay Area\nCalifornia\, United States
@@ -2028,7 +2042,7 @@ BEGIN:VEVENT
 SUMMARY:Oasis Launch Day at Corgi Cafe
 DTSTART:20261028T170000Z
 DTEND:20261028T210000Z
-DTSTAMP:20261028T035922Z
+DTSTAMP:20261028T120637Z
 UID:evt-tuBPgC3vDq7Hajf@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/f89up3cz\n\nAd
  dress:\n121 E 27th St\nNew York\, NY\nUnited States\n\nHosted by Bria & 3 
@@ -2042,7 +2056,7 @@ BEGIN:VEVENT
 SUMMARY:Hype vs. Reality: An AI Debunk Night
 DTSTART:20261028T210000Z
 DTEND:20261029T000000Z
-DTSTAMP:20261028T035922Z
+DTSTAMP:20261028T120637Z
 UID:evt-DVCu7k9fmO277Eh@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/yvizqb74\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Open Business
@@ -2055,7 +2069,7 @@ BEGIN:VEVENT
 SUMMARY:Agents in NYC
 DTSTART:20261028T213000Z
 DTEND:20261029T010000Z
-DTSTAMP:20261028T035922Z
+DTSTAMP:20261028T120637Z
 UID:evt-1ZGaMZlVBV4JrZC@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/agentsinnyc\n
  \nAddress:\nDatadog\nNew York\, NY\nUnited States\n\nHosted by Albert Zhao
@@ -2070,7 +2084,7 @@ BEGIN:VEVENT
 SUMMARY:Daytona AI Builders - NYC\, October 2026
 DTSTART:20261028T213000Z
 DTEND:20261029T000000Z
-DTSTAMP:20261028T035922Z
+DTSTAMP:20261028T120637Z
 UID:evt-EB2GfEPMQzW9kcR@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/ai-builders-ny
  c-oct\n\nAddress:\nCheck event page for more details.\n\nHosted by Daytona
@@ -2083,7 +2097,7 @@ BEGIN:VEVENT
 SUMMARY:Marketing Leaders Dinner - Future of AI and Video Intelligence
 DTSTART:20261028T220000Z
 DTEND:20261029T003000Z
-DTSTAMP:20261028T035922Z
+DTSTAMP:20261028T120637Z
 UID:evt-3rY3HG7HxIADXsj@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/jsu53xml\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Aish Agarwal
@@ -2096,7 +2110,7 @@ BEGIN:VEVENT
 SUMMARY:Plug and Play x PMAI: Pitching Masterclass III
 DTSTART:20261028T220000Z
 DTEND:20261029T000000Z
-DTSTAMP:20261028T035922Z
+DTSTAMP:20261028T120637Z
 UID:evt-Iz0hB9EokCu2xan@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/w6eyybfk\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Alison Arnold & 4 
@@ -2110,7 +2124,7 @@ BEGIN:VEVENT
 SUMMARY:iMessage Agent Founder Pitch @Corgi
 DTSTART:20261028T223000Z
 DTEND:20261029T010000Z
-DTSTAMP:20261028T035922Z
+DTSTAMP:20261028T120637Z
 UID:evt-8kpFo54jiESKhdx@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/photonhq-k0ni
  \n\nAddress:\nCorgi Cafe\nNew York\, NY\nUnited States\n\nHosted by Julie 
@@ -2124,7 +2138,7 @@ BEGIN:VEVENT
 SUMMARY:The Listening Room: Agency Edition
 DTSTART:20261028T223000Z
 DTEND:20261029T013000Z
-DTSTAMP:20261028T035922Z
+DTSTAMP:20261028T120637Z
 UID:evt-NFgmZDnNvu85I8D@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/e1cp71oz\n\nAd
  dress:\nForgione\nNew York\, NY\nUnited States\n\nHosted by William Hansen
@@ -2138,7 +2152,7 @@ BEGIN:VEVENT
 SUMMARY:NYC AI Co-working: Builder Demos & Feedback
 DTSTART:20261029T180000Z
 DTEND:20261029T210000Z
-DTSTAMP:20261028T035922Z
+DTSTAMP:20261028T120637Z
 UID:evt-X41y6QCajbh1Rdc@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/jgwz7evq\n\nAd
  dress:\n26 Broadway\nStation3\, 3rd floor. Enter at 26 Broadway and go to 
@@ -2155,7 +2169,7 @@ SUMMARY:AI Builders Speed Dating hackathon hosted by Lyzr AI & Plug and Pl
  ay
 DTSTART:20261029T210000Z
 DTEND:20261030T003000Z
-DTSTAMP:20261028T035922Z
+DTSTAMP:20261028T120637Z
 UID:evt-TdWHDvE1ltLvFmI@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/yr5jxu9b\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Ankita Singh & 5 o
@@ -2169,7 +2183,7 @@ BEGIN:VEVENT
 SUMMARY:AI/ML Lecture & Networking @ Intuit
 DTSTART:20261029T210000Z
 DTEND:20261030T000000Z
-DTSTAMP:20261028T035922Z
+DTSTAMP:20261028T120637Z
 UID:evt-k0lTcBO2iDk3EDU@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/812fof21\n\nAd
  dress:\nIntuit Inc\nNew York\, NY\nUnited States\n\nHosted by Keifer Lee
@@ -2179,10 +2193,25 @@ ORGANIZER;CN="Keifer Lee":MAILTO:calendar-invite@lu.ma
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:Meet the Speakers of the Mental Health Tech Summit 2026 - PepperNY
+ C
+DTSTART:20261029T220000Z
+DTEND:20261030T003000Z
+DTSTAMP:20261028T120637Z
+UID:evt-8OH3c35Cq2mFGgK@events.lu.ma
+DESCRIPTION:Get up-to-date information at: https://luma.com/jobo10q7\n\nAd
+ dress:\nCheck event page for more details.\n\nHosted by Michael Spano\, Ab
+ by Tse & Sahar Mor (Bond AI)
+GEO:40.75078933430234;-73.99588340058556
+LOCATION:https://luma.com/event/evt-8OH3c35Cq2mFGgK
+ORGANIZER;CN="Michael Spano":MAILTO:calendar-invite@lu.ma
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:FDEs in AI for Science
 DTSTART:20261029T220000Z
 DTEND:20261030T010000Z
-DTSTAMP:20261028T035922Z
+DTSTAMP:20261028T120637Z
 UID:evt-6oHrl5tLk1iNWCc@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/xw65smfm\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Zaais van Zyl & 6 
@@ -2196,7 +2225,7 @@ BEGIN:VEVENT
 SUMMARY:Founders\, Operators & Investors: Rooftop Social
 DTSTART:20261029T223000Z
 DTEND:20261030T003000Z
-DTSTAMP:20261028T035922Z
+DTSTAMP:20261028T120637Z
 UID:evt-MO5XAwhTxR9qpu1@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/dwljtvli\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Stephan Rihs & 3 o
@@ -2210,7 +2239,7 @@ BEGIN:VEVENT
 SUMMARY:NousCon 2026
 DTSTART:20261030T220000Z
 DTEND:20261031T040000Z
-DTSTAMP:20261028T035922Z
+DTSTAMP:20261028T120637Z
 UID:evt-g1yccgOC9218f9C@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/y0y9ngkm\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Nous Research
@@ -2223,7 +2252,7 @@ BEGIN:VEVENT
 SUMMARY:AI DevCon NYC
 DTSTART;VALUE=DATE:20261102
 DTEND;VALUE=DATE:20261105
-DTSTAMP:20261028T035922Z
+DTSTAMP:20261028T120637Z
 UID:evt-E5Jx9D0IsF3kqY5@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/aidevcon-nyc20
  26\n\nAddress:\n34 35th St\nIndustry City room 4-1-A\nBrooklyn\, NY\nUnite
@@ -2237,7 +2266,7 @@ BEGIN:VEVENT
 SUMMARY:Build an Agent Factory with OpenAI’s Agents API and Rasa Mantle
 DTSTART:20261103T200000Z
 DTEND:20261103T230000Z
-DTSTAMP:20261028T035922Z
+DTSTAMP:20261028T120637Z
 UID:evt-M6CvnB3KK4huq9A@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/56nl6dpz\n\nAd
  dress:\nThe Assembly – Midtown Manhattan Corporate Event Venue\nNew York
@@ -2252,7 +2281,7 @@ BEGIN:VEVENT
 SUMMARY:Agents We Shipped\, Agents We Killed
 DTSTART:20261103T230000Z
 DTEND:20261104T020000Z
-DTSTAMP:20261028T035922Z
+DTSTAMP:20261028T120637Z
 UID:evt-lZGHpbwfE9X1QGh@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/2oedqcbk\n\nAd
  dress:\nFollia\nNew York\, NY\nUnited States\n\nHosted by Mike Perez & Sah
@@ -2266,7 +2295,7 @@ BEGIN:VEVENT
 SUMMARY:Mobile App Build Night @Corgi Cafe
 DTSTART:20261103T230000Z
 DTEND:20261104T020000Z
-DTSTAMP:20261028T035922Z
+DTSTAMP:20261028T120637Z
 UID:evt-42dQrg7PZ7sm5jM@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/ro1mshjx\n\nAd
  dress:\nCorgi Cafe\nNew York\, NY\nUnited States\n\nHosted by Samuel Klacm
@@ -2280,7 +2309,7 @@ BEGIN:VEVENT
 SUMMARY:Pizza & Build: Mobile App Hackathon
 DTSTART:20261104T230000Z
 DTEND:20261105T020000Z
-DTSTAMP:20261028T035922Z
+DTSTAMP:20261028T120637Z
 UID:evt-UqeioVW3A6fGZuU@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/w8nxixi0\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Samuel Klacman & 3
@@ -2294,7 +2323,7 @@ BEGIN:VEVENT
 SUMMARY:AI Content System + Investor Fireside Chat
 DTSTART:20261104T230000Z
 DTEND:20261105T020000Z
-DTSTAMP:20261028T035922Z
+DTSTAMP:20261028T120637Z
 UID:evt-3B0unGA03ut0g3P@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/contentsystem
  \n\nAddress:\nCheck event page for more details.\n\nHosted by Ella Molony 
@@ -2308,7 +2337,7 @@ BEGIN:VEVENT
 SUMMARY:SemiAnalysis x vCluster Presents: The Assembly
 DTSTART:20261105T000000Z
 DTEND:20261105T030000Z
-DTSTAMP:20261028T035922Z
+DTSTAMP:20261028T120637Z
 UID:evt-1BVI2tdxXkMd4LZ@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/semixvcluster
  \n\nAddress:\nCheck event page for more details.\n\nHosted by Michelle She
@@ -2323,7 +2352,7 @@ SUMMARY:Hard Negatives Meetup | Engineers Debate Night With Qdrant and Ago
  ra
 DTSTART:20261110T233000Z
 DTEND:20261111T023000Z
-DTSTAMP:20261028T035922Z
+DTSTAMP:20261028T120637Z
 UID:evt-CAUse7XqmRqLnOt@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/nyc-meetup-nov
  ember\n\nAddress:\n87 Lafayette St\nNew York\, NY\nUnited States\n\nHosted
@@ -2337,7 +2366,7 @@ BEGIN:VEVENT
 SUMMARY:Sales Off the Record- Panel\, Networking\, + Sales Tournament
 DTSTART:20261112T223000Z
 DTEND:20261113T010000Z
-DTSTAMP:20261028T035922Z
+DTSTAMP:20261028T120637Z
 UID:evt-vqxlR0HfHu1hdCU@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/uj6iemul\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Carme S.M. & Preet
@@ -2351,7 +2380,7 @@ BEGIN:VEVENT
 SUMMARY:PMAI: Sell Me This AI - A No BS Sales Workshop
 DTSTART:20261112T230000Z
 DTEND:20261113T013000Z
-DTSTAMP:20261028T035922Z
+DTSTAMP:20261028T120637Z
 UID:evt-6805hNGdGQ7TXdJ@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/bvbn3ddb\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Jeffrey Hang & 5 o
@@ -2365,7 +2394,7 @@ BEGIN:VEVENT
 SUMMARY:AI for Regulated Industries - Encord
 DTSTART:20261112T230000Z
 DTEND:20261113T040000Z
-DTSTAMP:20261028T035922Z
+DTSTAMP:20261028T120637Z
 UID:evt-0HkfYP6n4xVgqNe@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/k2i2rpzi\n\nAd
  dress:\nil Buco\nWine Cellar\nNew York\, NY\nUnited States\n\nHosted by Gh
@@ -2379,7 +2408,7 @@ BEGIN:VEVENT
 SUMMARY:Durable AI Workflows with Temporal and MongoDB
 DTSTART:20261112T233000Z
 DTEND:20261113T013000Z
-DTSTAMP:20261028T035922Z
+DTSTAMP:20261028T120637Z
 UID:evt-yCdoDabE3nueoNB@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/temporal-uvlr
  \n\nAddress:\nMongoDB\nNew York\, NY\nUnited States\n\nHosted by Temporal 
@@ -2390,10 +2419,24 @@ ORGANIZER;CN="Temporal Team":MAILTO:calendar-invite@lu.ma
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
+SUMMARY:The AI Briefing by Startup Grind: Who Owns the Data Layer Behind E
+ nterprise AI
+DTSTART:20261113T150000Z
+DTEND:20261113T170000Z
+DTSTAMP:20261028T120637Z
+UID:evt-XP7qSPLQZf53i8A@events.lu.ma
+DESCRIPTION:Get up-to-date information at: https://luma.com/edf6h976\n\nAd
+ dress:\nCivic Hall\nNew York\, NY\nUnited States\n\nHosted by Joshua Ness
+GEO:40.7338291;-73.9888627
+LOCATION:Civic Hall\, 124 E 14th St\, New York\, NY 10003\, USA
+ORGANIZER;CN="Joshua Ness":MAILTO:calendar-invite@lu.ma
+STATUS:CONFIRMED
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Claude SMB Workshop with 10x Learning - New York
 DTSTART:20261118T190000Z
 DTEND:20261118T233000Z
-DTSTAMP:20261028T035922Z
+DTSTAMP:20261028T120637Z
 UID:evt-THpXonE4mxM3tTX@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/tivdjlm0\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Julie Sarpy & 10x 
@@ -2407,7 +2450,7 @@ BEGIN:VEVENT
 SUMMARY:Agents & APIs NYC Developer Meetup
 DTSTART:20261119T220000Z
 DTEND:20261120T003000Z
-DTSTAMP:20261028T035922Z
+DTSTAMP:20261028T120637Z
 UID:evt-oDzBzssAxbliW7g@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/nyc-nov\n\nAdd
  ress:\n113 W 38th St\nTown Hall Meeting Room - 1400 Broadway \nNew York\, 
@@ -2421,7 +2464,7 @@ BEGIN:VEVENT
 SUMMARY:Agent Evaluation Science NYC
 DTSTART:20261120T140000Z
 DTEND:20261120T230000Z
-DTSTAMP:20261028T035922Z
+DTSTAMP:20261028T120637Z
 UID:evt-sTbORMqDnhj676T@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/cxmx1g4n\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Yining Hua & 8 oth
@@ -2435,7 +2478,7 @@ BEGIN:VEVENT
 SUMMARY:Twilio Assemble NYC: The Future of Comms + AI
 DTSTART:20261208T220000Z
 DTEND:20261209T023000Z
-DTSTAMP:20261028T035922Z
+DTSTAMP:20261028T120637Z
 UID:evt-JejlDQOelMWKRoc@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/xrgbe8p6\n\nAd
  dress:\nNew York\nNew York\, NY\nUnited States\n\nHosted by Twilio
@@ -2449,7 +2492,7 @@ SUMMARY:[SF] AWS Agentic Partner Showcase Extended - Temporal\, Arize\, Da
  tabricks
 DTSTART:20261029T233000Z
 DTEND:20261030T033000Z
-DTSTAMP:20261028T035923Z
+DTSTAMP:20261028T120638Z
 UID:evt-OEO8rxWfMyFhKtg@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/oss4ai-is20\n
  \nAddress:\nCheck event page for more details.\n\nHosted by Yujian Tang
@@ -2461,7 +2504,7 @@ BEGIN:VEVENT
 SUMMARY:Hack of Horrors
 DTSTART:20261030T160000Z
 DTEND:20261031T070000Z
-DTSTAMP:20261028T035923Z
+DTSTAMP:20261028T120638Z
 UID:evt-qocPwD7CM9IupzF@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/guild-xk38\n\n
  Hosted by Cory Waddingham & 3 others
@@ -2473,7 +2516,7 @@ BEGIN:VEVENT
 SUMMARY:Founders\, Investors\, Tech Leaders Lunch (Highly Limited Space)
 DTSTART:20261030T190000Z
 DTEND:20261030T203000Z
-DTSTAMP:20261028T035923Z
+DTSTAMP:20261028T120638Z
 UID:evt-vXfgave68ztBmDZ@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/g5d615rl\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Yujian Tang & Davi
@@ -2488,7 +2531,7 @@ SUMMARY:OSA Con 2026 - The Anti-Hype Conference for Open Source Analytics
  and AI
 DTSTART:20261102T173000Z
 DTEND:20261103T013000Z
-DTSTAMP:20261028T035923Z
+DTSTAMP:20261028T120638Z
 UID:evt-pYeTtMFjzmLW4P9@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/eis7567t\n\nAd
  dress:\nAWS Builder Loft\nSan Francisco\, CA\nUnited States\n\nHosted by O
@@ -2504,7 +2547,7 @@ BEGIN:VEVENT
 SUMMARY:Hands-On Multi Harness AI Coding w/ Omnigent
 DTSTART:20261103T200000Z
 DTEND:20261103T210000Z
-DTSTAMP:20261028T035923Z
+DTSTAMP:20261028T120638Z
 UID:evt-EUlWfoTDsI1czDd@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/oss4ai-dd4b\n
  \nHosted by Yujian Tang
@@ -2516,7 +2559,7 @@ BEGIN:VEVENT
 SUMMARY:Run by Apify
 DTSTART:20261110T180000Z
 DTEND:20261111T023000Z
-DTSTAMP:20261028T035923Z
+DTSTAMP:20261028T120638Z
 UID:evt-M7fiQ0trqfKX6bG@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/run-by-apify\n
  \nAddress:\nThe Pearl\nSan Francisco\, CA\nUnited States\n\nHosted by Apif
@@ -2531,7 +2574,7 @@ SUMMARY:[SV] AWS AWS Partner Showcase Extended with Anthropic\, Caylent\,
  Temporal\, LaunchPad
 DTSTART:20261111T003000Z
 DTEND:20261111T043000Z
-DTSTAMP:20261028T035923Z
+DTSTAMP:20261028T120638Z
 UID:evt-M7DuHCMBTBHGfHX@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/vh39ye03\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Yujian Tang
@@ -2544,7 +2587,7 @@ SUMMARY:[SF] AWS Partner Showcase Extended with Anthropic\, Grafana\, Supa
  base\, Miggo
 DTSTART:20261113T003000Z
 DTEND:20261113T043000Z
-DTSTAMP:20261028T035923Z
+DTSTAMP:20261028T120638Z
 UID:evt-TXUTvT7UjdYcsBD@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/6efhv90q\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Yujian Tang
@@ -2556,7 +2599,7 @@ BEGIN:VEVENT
 SUMMARY:2026 Super Demo Day
 DTSTART:20261116T173000Z
 DTEND:20261117T030000Z
-DTSTAMP:20261028T035923Z
+DTSTAMP:20261028T120638Z
 UID:evt-VkG19uTMuyF2yOC@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/2a7wm1zs\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Yujian Tang
@@ -2569,7 +2612,7 @@ BEGIN:VEVENT
 SUMMARY:Holiday Hacks
 DTSTART;VALUE=DATE:20261201
 DTEND;VALUE=DATE:20270101
-DTSTAMP:20261028T035923Z
+DTSTAMP:20261028T120638Z
 UID:evt-1JkTQ75raAjvffx@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/holiday-hacks
  \n\nHosted by Yujian Tang
@@ -2581,7 +2624,7 @@ BEGIN:VEVENT
 SUMMARY:Agents in 2027 and Beyond
 DTSTART:20261214T173000Z
 DTEND:20261215T030000Z
-DTSTAMP:20261028T035923Z
+DTSTAMP:20261028T120638Z
 UID:evt-5vvsaf6P0RyRwB3@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/abzyfbxm\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Yujian Tang
@@ -2594,7 +2637,7 @@ BEGIN:VEVENT
 SUMMARY:Open Source AI Day
 DTSTART:20270226T173000Z
 DTEND:20270227T033000Z
-DTSTAMP:20261028T035923Z
+DTSTAMP:20261028T120638Z
 UID:evt-GvTH2EU7XAVbtwa@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/open-source-ai
  -day\n\nAddress:\nCheck event page for more details.\n\nHosted by Yujian T
@@ -2607,7 +2650,7 @@ BEGIN:VEVENT
 SUMMARY:Seattle Startup Summit (2027)
 DTSTART:20270507T150000Z
 DTEND:20270508T030000Z
-DTSTAMP:20261028T035923Z
+DTSTAMP:20261028T120638Z
 UID:evt-8EOPI8Af0pksrw3@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/seattle-startu
  p-summit\n\nAddress:\nCheck event page for more details.\n\nHosted by Yuji
@@ -2620,7 +2663,7 @@ BEGIN:VEVENT
 SUMMARY:Tough Tech Week Happy Hour [Hosted by Rho x DLA Piper]
 DTSTART:20261028T220000Z
 DTEND:20261029T000000Z
-DTSTAMP:20261028T035923Z
+DTSTAMP:20261028T120639Z
 UID:evt-ni16G5xfhSN0Ys7@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/rhoevents-410h
  \n\nAddress:\nCheck event page for more details.\n\nHosted by Fiona Gallag
@@ -2635,7 +2678,7 @@ SUMMARY:Robotics and Physical AI Hardware Founder Dinner with Rho @ Missio
  n Robotics
 DTSTART:20261029T013000Z
 DTEND:20261029T033000Z
-DTSTAMP:20261028T035923Z
+DTSTAMP:20261028T120639Z
 UID:evt-iKGBMFfKPnUv3Xa@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/29psz53h\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Michael Raspuzzi\,
@@ -2649,7 +2692,7 @@ BEGIN:VEVENT
 SUMMARY:Founder Dinner with Gigsafe & Rho
 DTSTART:20261030T013000Z
 DTEND:20261030T033000Z
-DTSTAMP:20261028T035923Z
+DTSTAMP:20261028T120639Z
 UID:evt-rNtCONxfeJgsIcG@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/s1fxmsib\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Francesca Malayeri
@@ -2664,7 +2707,7 @@ SUMMARY:Music and Creator Tech Dinner - Rho X Music Tectonics X Yamaha Mus
  ic Innovations
 DTSTART:20261030T023000Z
 DTEND:20261030T043000Z
-DTSTAMP:20261028T035923Z
+DTSTAMP:20261028T120639Z
 UID:evt-b8yeL1jkUk8CIbJ@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/rhoevents-i0lj
  \n\nAddress:\nCalabra\nSanta Monica\, CA\nUnited States\n\nHosted by Rich 
@@ -2679,7 +2722,7 @@ BEGIN:VEVENT
 SUMMARY:Yale x Afore Capital Founder Dinner
 DTSTART:20261105T000000Z
 DTEND:20261105T020000Z
-DTSTAMP:20261028T035923Z
+DTSTAMP:20261028T120639Z
 UID:evt-Gip6trwKCJE7Rd8@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/qxnh20o5\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Filippo Fonseca & 
@@ -2694,7 +2737,7 @@ SUMMARY:Driverless: What Waymo Can Teach Voice AI About Going to Productio
  n | Founder Dinner with Coval & Rho
 DTSTART:20261105T023000Z
 DTEND:20261105T043000Z
-DTSTAMP:20261028T035923Z
+DTSTAMP:20261028T120639Z
 UID:evt-oWirJZlWtMrqdOv@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/1f2s8gaq\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Francesca Malayeri
@@ -2708,7 +2751,7 @@ BEGIN:VEVENT
 SUMMARY:Founder Dinner - Kewl Ventures X Rho
 DTSTART:20261106T023000Z
 DTEND:20261106T043000Z
-DTSTAMP:20261028T035923Z
+DTSTAMP:20261028T120639Z
 UID:evt-9EgQtiRLawwBy0q@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/rhoevents-hqg6
  \n\nAddress:\nWally's Santa Monica\nSanta Monica\, CA\nUnited States\n\nHo
@@ -2723,7 +2766,7 @@ BEGIN:VEVENT
 SUMMARY:Founders Paintball - Shor x Corgi x Rho
 DTSTART:20261107T183000Z
 DTEND:20261107T230000Z
-DTSTAMP:20261028T035923Z
+DTSTAMP:20261028T120639Z
 UID:evt-mEXmWUk8T7Lf1Ud@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/va9gkpbb\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Paulina Laba & 6 o
@@ -2737,7 +2780,7 @@ BEGIN:VEVENT
 SUMMARY:Rho x Stealth Talent: Creator-Operator Dinner
 DTSTART:20261120T030000Z
 DTEND:20261120T050000Z
-DTSTAMP:20261028T035923Z
+DTSTAMP:20261028T120639Z
 UID:evt-IeYK6a39GHEznGI@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/rhoevents-87wq
  \n\nAddress:\nMr. T Los Angeles\nLos Angeles\, CA\nUnited States\n\nHosted
@@ -2752,7 +2795,7 @@ BEGIN:VEVENT
 SUMMARY:The Rhose Bowl - UCLA Vs USC
 DTSTART:20261128T180000Z
 DTEND:20261128T210000Z
-DTSTAMP:20261028T035923Z
+DTSTAMP:20261028T120639Z
 UID:evt-UucGIco2sMYpm8f@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/rhoevents-nzls
  \n\nAddress:\nRose Bowl Stadium\nPasadena\, CA\nUnited States\n\nHosted by
@@ -2766,7 +2809,7 @@ BEGIN:VEVENT
 SUMMARY:NY(SKI): Founder & Friends Ski Retreat (Volume 3)
 DTSTART:20270201T113000Z
 DTEND:20270202T023000Z
-DTSTAMP:20261028T035923Z
+DTSTAMP:20261028T120639Z
 UID:evt-MigufGUVXmKXL49@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/nyski3\n\nAddr
  ess:\nCheck event page for more details.\n\nHosted by Jordan Deasy & 3 oth
@@ -2780,7 +2823,7 @@ BEGIN:VEVENT
 SUMMARY:Tech Happy Hour by Startup Grind
 DTSTART:20261030T210000Z
 DTEND:20261030T230000Z
-DTSTAMP:20261028T035924Z
+DTSTAMP:20261028T120640Z
 UID:evt-iSxsqbDFbV0RAxQ@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/qtkg25bv\n\nAd
  dress:\nTime Out Market Union Square\nNew York\, New York\nUnited States\n
@@ -2796,7 +2839,7 @@ SUMMARY:Prototyping in Public: Where Art and Science Get Tested on the Gal
  lery Floor
 DTSTART:20261104T000000Z
 DTEND:20261104T010000Z
-DTSTAMP:20261028T035924Z
+DTSTAMP:20261028T120640Z
 UID:evt-VOzJto2dYBlmGdZ@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/startup-ga1b\n
  \nAddress:\nThe National Arts Club\nNew York\, NY\nUnited States\n\nHosted
@@ -2811,7 +2854,7 @@ BEGIN:VEVENT
 SUMMARY:Health2Tech NYC - MedTech edition\, November 5\, 2026
 DTSTART:20261105T223000Z
 DTEND:20261106T013000Z
-DTSTAMP:20261028T035924Z
+DTSTAMP:20261028T120640Z
 UID:evt-be8EsJt4eklvQ8v@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/7p3pq7ds\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Alex Koshykov & 4 
@@ -2825,7 +2868,7 @@ BEGIN:VEVENT
 SUMMARY:OffScript: A Night of Improv for Founders & Teams
 DTSTART:20261110T223000Z
 DTEND:20261111T003000Z
-DTSTAMP:20261028T035924Z
+DTSTAMP:20261028T120640Z
 UID:evt-8KoJaTO19HceNuN@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/qdg026l9\n\nAd
  dress:\nPubkey\nNew York\, NY\nUnited States\n\nHosted by York Effect & Ca
@@ -2836,24 +2879,10 @@ ORGANIZER;CN="York Effect":MAILTO:calendar-invite@lu.ma
 STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:The AI Briefing by Startup Grind: Who Owns the Data Layer Behind E
- nterprise AI
-DTSTART:20261113T150000Z
-DTEND:20261113T170000Z
-DTSTAMP:20261028T035924Z
-UID:evt-XP7qSPLQZf53i8A@events.lu.ma
-DESCRIPTION:Get up-to-date information at: https://luma.com/edf6h976\n\nAd
- dress:\nCivic Hall\nNew York\, NY\nUnited States\n\nHosted by Joshua Ness
-GEO:40.7338291;-73.9888627
-LOCATION:Civic Hall\, 124 E 14th St\, New York\, NY 10003\, USA
-ORGANIZER;CN="Joshua Ness":MAILTO:calendar-invite@lu.ma
-STATUS:CONFIRMED
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:The Startup Pitch: Demo Showcase by Startup Grind
 DTSTART:20261119T223000Z
 DTEND:20261120T003000Z
-DTSTAMP:20261028T035924Z
+DTSTAMP:20261028T120640Z
 UID:evt-7Mlz6bOvOrCBjow@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/qb4tfe4d\n\nAd
  dress:\nThe Yard: Herald Square Coworking Office Space Manhattan\nNew York
@@ -2868,7 +2897,7 @@ BEGIN:VEVENT
 SUMMARY:The Future of AI Infrastructure
 DTSTART:20261209T230000Z
 DTEND:20261210T010000Z
-DTSTAMP:20261028T035924Z
+DTSTAMP:20261028T120640Z
 UID:evt-v8tzhKA7v2jhBT7@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/gzudtj1k\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Crazy Startup Guy 
@@ -2882,7 +2911,7 @@ BEGIN:VEVENT
 SUMMARY:Consciousness\, Neuroscience\, Philosophy & AGI Happy Hour
 DTSTART:20261030T000000Z
 DTEND:20261030T020000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120640Z
 UID:evt-Sc73bdi3VaKypzO@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/ai-925e\n\nAdd
  ress:\nCheck event page for more details.\n\nHosted by Ken Morimoto & Ari 
@@ -2896,7 +2925,7 @@ BEGIN:VEVENT
 SUMMARY:Quantum Computing Leaders\, Founders & Investors Happy Hour
 DTSTART:20261031T000000Z
 DTEND:20261031T020000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120640Z
 UID:evt-kmOSJl5IjEWGqtX@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/jagldmp1\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Ken Morimoto\, Tho
@@ -2910,7 +2939,7 @@ BEGIN:VEVENT
 SUMMARY:Vajrayana: An Introduction - Session 4
 DTSTART:20261028T230000Z
 DTEND:20261029T010000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120641Z
 UID:evt-pKmrCfc0zPPW29t@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/na5xfie4\n\nAd
  dress:\nFractal Tech\nBrooklyn\, NY\nUnited States\n\nHosted by Andrew Ble
@@ -2924,7 +2953,7 @@ BEGIN:VEVENT
 SUMMARY:⚡ Fractal Weekly Demo Party #12 ⚡
 DTSTART:20261029T223000Z
 DTEND:20261030T010000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120641Z
 UID:evt-rfo0PAPcm1e2AhR@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/1d8tvnhx\n\nAd
  dress:\nFractal Tech\nBrooklyn\, NY\nUnited States\n\nHosted by Liam Duffy
@@ -2937,7 +2966,7 @@ BEGIN:VEVENT
 SUMMARY:♠️ Poker Strategy (FractalU Class) ♥️ Session 5
 DTSTART:20261029T230000Z
 DTEND:20261030T010000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120641Z
 UID:evt-pk3dTj5r1lGynMY@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/19jfnir1\n\nAd
  dress:\nFractal Tech\nBrooklyn\, NY\nUnited States\n\nHosted by Alex Pinhe
@@ -2951,7 +2980,7 @@ BEGIN:VEVENT
 SUMMARY:Video & Film Creators IRL - Co-Working (S2E4)
 DTSTART:20261030T213000Z
 DTEND:20261031T000000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120641Z
 UID:calev-INbDq2S4o979IYF@events.lu.ma
 DESCRIPTION:Find more information on https://luma.com/nyc-tech
 GEO:40.7152269;-73.9467208
@@ -2963,7 +2992,7 @@ BEGIN:VEVENT
 SUMMARY:Speculative Worldbuilding Seminar (FractalU)\, Unit 4
 DTSTART:20261103T233000Z
 DTEND:20261104T013000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120641Z
 UID:evt-Wmd3a8KiwxJeFok@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/523bxysa\n\nAd
  dress:\nFractal Tech\nBrooklyn\, NY\nUnited States\n\nHosted by Sarah & Fr
@@ -2977,7 +3006,7 @@ BEGIN:VEVENT
 SUMMARY:Vajrayana: An Introduction - Session 5
 DTSTART:20261105T000000Z
 DTEND:20261105T020000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120641Z
 UID:evt-fhnrkrIqRs8RJEW@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/r4ffw69w\n\nAd
  dress:\nFractal Tech\nBrooklyn\, NY\nUnited States\n\nHosted by Andrew Ble
@@ -2991,7 +3020,7 @@ BEGIN:VEVENT
 SUMMARY:♠️ Poker Strategy (FractalU Class) ♥️ Session 6
 DTSTART:20261106T000000Z
 DTEND:20261106T020000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120641Z
 UID:evt-xfTxATfQCIliArp@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/nexzyjo8\n\nAd
  dress:\nFractal Tech\nBrooklyn\, NY\nUnited States\n\nHosted by Alex Pinhe
@@ -3005,7 +3034,7 @@ BEGIN:VEVENT
 SUMMARY:Ask a Republican!
 DTSTART:20261107T173000Z
 DTEND:20261107T193000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120641Z
 UID:evt-kFyPHH2venEYBkh@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/maximum-x5vk\n
  \nAddress:\nFractal Tech\nBrooklyn\, NY\nUnited States\n\nHosted by Daniel
@@ -3019,7 +3048,7 @@ BEGIN:VEVENT
 SUMMARY:SideQuest IRL #49
 DTSTART:20261108T193000Z
 DTEND:20261108T230000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120641Z
 UID:evt-wvm2Se9jJT0BM8f@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/79njnyit\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Tina He & Fractal 
@@ -3033,7 +3062,7 @@ BEGIN:VEVENT
 SUMMARY:Speculative Worldbuilding Seminar (FractalU)\, Unit 5
 DTSTART:20261110T233000Z
 DTEND:20261111T013000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120641Z
 UID:evt-vVVUKQnZ3EEaOXU@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/e9c2n06m\n\nAd
  dress:\nFractal Tech\nBrooklyn\, NY\nUnited States\n\nHosted by Sarah & Fr
@@ -3047,7 +3076,7 @@ BEGIN:VEVENT
 SUMMARY:Vajrayana: An Introduction - Session 6
 DTSTART:20261112T000000Z
 DTEND:20261112T020000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120641Z
 UID:evt-9oq6f3fgo2SFIMI@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/4johjpha\n\nAd
  dress:\nFractal Tech\nBrooklyn\, NY\nUnited States\n\nHosted by Andrew Ble
@@ -3061,7 +3090,7 @@ BEGIN:VEVENT
 SUMMARY:♠️ Poker Strategy (FractalU Class) ♥️ Session 7
 DTSTART:20261113T000000Z
 DTEND:20261113T020000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120641Z
 UID:evt-DfjmMswY2BKyMyZ@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/hx597okp\n\nAd
  dress:\nFractal Tech\nBrooklyn\, NY\nUnited States\n\nHosted by Alex Pinhe
@@ -3075,7 +3104,7 @@ BEGIN:VEVENT
 SUMMARY:NYC Physical AI\, ML\, and Computer Vision Meetup
 DTSTART:20261113T223000Z
 DTEND:20261114T013000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120641Z
 UID:evt-HphKhHYxRz4iLla@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/nyc-physical-a
  i-ml-and-computer-vision-meetup-nov\n\nAddress:\nFractal Tech\nBrooklyn\, 
@@ -3089,7 +3118,7 @@ BEGIN:VEVENT
 SUMMARY:Speculative Worldbuilding Seminar (FractalU)\, Unit 6
 DTSTART:20261117T233000Z
 DTEND:20261118T013000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120641Z
 UID:evt-FbEFrARJjDhg0Yy@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/uxxmtqz8\n\nAd
  dress:\nFractal Tech\nBrooklyn\, NY\nUnited States\n\nHosted by Sarah & Fr
@@ -3103,7 +3132,7 @@ BEGIN:VEVENT
 SUMMARY:Data Salon: Context and Data
 DTSTART:20261118T233000Z
 DTEND:20261119T020000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120641Z
 UID:evt-OsEJ8uj9Gpz3dOW@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/ozb7lz0u\n\nAd
  dress:\nFractal Tech\nBrooklyn\, NY\nUnited States\n\nHosted by Akpanoluo 
@@ -3118,7 +3147,7 @@ BEGIN:VEVENT
 SUMMARY:♠️ Poker Strategy (FractalU Class) ♥️ Session 8
 DTSTART:20261120T000000Z
 DTEND:20261120T020000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120641Z
 UID:evt-BEGp22H07AD6VI2@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/sbniif7r\n\nAd
  dress:\nFractal Tech\nBrooklyn\, NY\nUnited States\n\nHosted by Alex Pinhe
@@ -3132,7 +3161,7 @@ BEGIN:VEVENT
 SUMMARY:Maximum Graduation!
 DTSTART:20261121T230000Z
 DTEND:20261122T003000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120641Z
 UID:evt-18qw5oFx5e0TT9K@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/maximum-x33c\n
  \nAddress:\nFractal Tech\nBrooklyn\, NY\nUnited States\n\nHosted by Daniel
@@ -3146,7 +3175,7 @@ BEGIN:VEVENT
 SUMMARY:Jhana NYC Meditation
 DTSTART:20261122T190000Z
 DTEND:20261122T230000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120641Z
 UID:evt-GXomkC1JItmb0Ze@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/rp37jhn5\n\nAd
  dress:\n111 Conselyea St\nThe Lounge\nBrooklyn\, NY\nUnited States\n\nHost
@@ -3160,7 +3189,7 @@ BEGIN:VEVENT
 SUMMARY:SideQuest IRL #50
 DTSTART:20261122T193000Z
 DTEND:20261122T230000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120641Z
 UID:evt-qKSUBCRBwAGubBQ@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/olzhlvod\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Tina He & Fractal 
@@ -3174,7 +3203,7 @@ BEGIN:VEVENT
 SUMMARY:Context Engineering Guild of NYC: November Edition
 DTSTART:20261129T190000Z
 DTEND:20261129T220000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120641Z
 UID:evt-48QDg92GXfhjzwT@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/gl8rycz0\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Atin Woodard
@@ -3188,7 +3217,7 @@ SUMMARY:Bible-plus-classics reading group returns(!!!) with Session 2.1: C
  reation and corruption
 DTSTART:20261203T000000Z
 DTEND:20261203T020000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120641Z
 UID:evt-OlBdtOwMKWFqYx8@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/k4fp2c2i\n\nAd
  dress:\nFractal Tech\nBrooklyn\, NY\nUnited States\n\nHosted by Stephen W 
@@ -3202,7 +3231,7 @@ BEGIN:VEVENT
 SUMMARY:SideQuest IRL #51
 DTSTART:20261206T193000Z
 DTEND:20261206T230000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120641Z
 UID:evt-hUoSFba7Nio6GBf@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/j9qfr43w\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Tina He & Fractal 
@@ -3217,7 +3246,7 @@ SUMMARY:Bible-plus-classics reading group\, Session 2.2 - Borges: The limi
  ts of knowledge\, the joy of strangeness
 DTSTART:20261217T000000Z
 DTEND:20261217T020000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120641Z
 UID:evt-GtBUiIBzkcCpkvt@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/uixma227\n\nAd
  dress:\nFractal Tech\nBrooklyn\, NY\nUnited States\n\nHosted by Stephen W 
@@ -3231,7 +3260,7 @@ BEGIN:VEVENT
 SUMMARY:Data Salon: Agents and Stakeholders
 DTSTART:20261217T233000Z
 DTEND:20261218T020000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120641Z
 UID:evt-qSn5m71TpAjtGN5@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/w1r41e2v\n\nAd
  dress:\nFractal Tech\nBrooklyn\, NY\nUnited States\n\nHosted by Akpanoluo 
@@ -3246,7 +3275,7 @@ BEGIN:VEVENT
 SUMMARY:Jhana NYC Meditation
 DTSTART:20261220T190000Z
 DTEND:20261220T230000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120641Z
 UID:evt-N8FB5Cd7Vd4SLnu@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/bvped79n\n\nAd
  dress:\n111 Conselyea St\nThe Lounge\nBrooklyn\, NY\nUnited States\n\nHost
@@ -3260,7 +3289,7 @@ BEGIN:VEVENT
 SUMMARY:SideQuest IRL #52
 DTSTART:20261220T193000Z
 DTEND:20261220T230000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120641Z
 UID:evt-JiSob3V5GuLGmS4@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/zqxcxzm7\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Tina He & Fractal 
@@ -3274,7 +3303,7 @@ BEGIN:VEVENT
 SUMMARY:Context Engineering Guild: December Edition
 DTSTART:20270103T190000Z
 DTEND:20270103T220000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120641Z
 UID:evt-RKcji0pQDk6RNWF@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/h3llg1jp\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Atin Woodard
@@ -3288,7 +3317,7 @@ SUMMARY:Bible-plus-classics reading group\, Session 2.3 - Wilde: A cry fro
  m the depths\, a fire from the sky
 DTSTART:20270107T000000Z
 DTEND:20270107T020000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120641Z
 UID:evt-fEpoCNfFb7OoYwG@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/pno7z01m\n\nAd
  dress:\nFractal Tech\nBrooklyn\, NY\nUnited States\n\nHosted by Stephen W 
@@ -3303,7 +3332,7 @@ SUMMARY:Bible-plus-classics reading group\, Session 2.4 - Kierkegaard: The
   leap
 DTSTART:20270121T000000Z
 DTEND:20270121T020000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120641Z
 UID:evt-XdsrsDcwR8C0RzM@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/3njxzznr\n\nAd
  dress:\nFractal Tech\nBrooklyn\, NY\nUnited States\n\nHosted by Stephen W 
@@ -3318,7 +3347,7 @@ SUMMARY:Bible-plus-classics reading group\, Session 2.5 - Kafka: Wrestling
   with the incomprehensible
 DTSTART:20270204T000000Z
 DTEND:20270204T020000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120641Z
 UID:evt-PT283xAiRUFCZhw@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/dubd280y\n\nAd
  dress:\nFractal Tech\nBrooklyn\, NY\nUnited States\n\nHosted by Stephen W 
@@ -3333,7 +3362,7 @@ SUMMARY:Bible-plus-classics reading group\, Session 2.6 - Job and Weil: Su
  ffering and affliction
 DTSTART:20270218T000000Z
 DTEND:20270218T020000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120641Z
 UID:evt-wo8aKhvjaF50ObH@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/hqxmpsf8\n\nAd
  dress:\nFractal Tech\nBrooklyn\, NY\nUnited States\n\nHosted by Stephen W 
@@ -3348,7 +3377,7 @@ SUMMARY:Bible-plus-classics reading group\, Session 2.7 - Dostoevsky: Rebe
  llion and temptation
 DTSTART:20270304T000000Z
 DTEND:20270304T020000Z
-DTSTAMP:20261028T035925Z
+DTSTAMP:20261028T120641Z
 UID:evt-zBXSrKdCepsvzCr@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/jeei4era\n\nAd
  dress:\nFractal Tech\nBrooklyn\, NY\nUnited States\n\nHosted by Stephen W 
@@ -3362,7 +3391,7 @@ BEGIN:VEVENT
 SUMMARY:Wii Spots Olympics
 DTSTART:20261029T230000Z
 DTEND:20261030T010000Z
-DTSTAMP:20261028T035926Z
+DTSTAMP:20261028T120641Z
 UID:evt-yEtb3QTJVqN6C3j@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/xnyd93fd\n\nAd
  dress:\nCheck event page for more details.\n\nHosted by Verci
@@ -3375,7 +3404,7 @@ BEGIN:VEVENT
 SUMMARY:verci yoga & coffee
 DTSTART:20261030T130000Z
 DTEND:20261030T150000Z
-DTSTAMP:20261028T035926Z
+DTSTAMP:20261028T120641Z
 UID:calev-RETgAfF5p0SfViY@events.lu.ma
 DESCRIPTION:Find more information on https://luma.com/verci
 LOCATION:https://partiful.com/e/CDd4mLUWz6q3dpYZFIJR
@@ -3386,7 +3415,7 @@ BEGIN:VEVENT
 SUMMARY:Cookie Cafe
 DTSTART:20261102T160000Z
 DTEND:20261102T200000Z
-DTSTAMP:20261028T035926Z
+DTSTAMP:20261028T120641Z
 UID:evt-hBJEtYGBHIAOmAY@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/3z910byl\n\nAd
  dress:\nVerci Flatiron\nNew York\, NY\nUnited States\n\nHosted by Verci
@@ -3399,7 +3428,7 @@ BEGIN:VEVENT
 SUMMARY:Paper Lantern Decorating
 DTSTART:20261102T233000Z
 DTEND:20261103T003000Z
-DTSTAMP:20261028T035926Z
+DTSTAMP:20261028T120641Z
 UID:evt-DcmQtX9BW371FwV@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/qinoh5ql\n\nAd
  dress:\nVerci Flatiron\nNew York\, NY\nUnited States\n\nHosted by Verci
@@ -3412,7 +3441,7 @@ BEGIN:VEVENT
 SUMMARY:Onboarding Night
 DTSTART:20261103T000000Z
 DTEND:20261103T020000Z
-DTSTAMP:20261028T035926Z
+DTSTAMP:20261028T120641Z
 UID:evt-CADX2TxiI9ZQdCQ@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/verci-xuwr\n\n
  Address:\nVerci Flatiron\nNew York\, NY\nUnited States\n\nHosted by Verci
@@ -3425,7 +3454,7 @@ BEGIN:VEVENT
 SUMMARY:Open Mic Night (funny)
 DTSTART:20261104T000000Z
 DTEND:20261104T020000Z
-DTSTAMP:20261028T035926Z
+DTSTAMP:20261028T120641Z
 UID:evt-pGSOLDSlm4plZkd@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/tjfhptaf\n\nAd
  dress:\n45 E 20th St floor 12\nNew York\, New York\nUnited States\n\nHoste
@@ -3439,7 +3468,7 @@ BEGIN:VEVENT
 SUMMARY:Guitar Class 🎸
 DTSTART:20261104T233000Z
 DTEND:20261105T013000Z
-DTSTAMP:20261028T035926Z
+DTSTAMP:20261028T120641Z
 UID:calev-eru72Wq9cLqOrJr@events.lu.ma
 DESCRIPTION:Find more information on https://luma.com/verci
 LOCATION:https://partiful.com/e/y5MPzszUpltcC31HKdTt
@@ -3450,7 +3479,7 @@ BEGIN:VEVENT
 SUMMARY:Studio Jams - Open Mic
 DTSTART:20261107T190000Z
 DTEND:20261107T220000Z
-DTSTAMP:20261028T035926Z
+DTSTAMP:20261028T120641Z
 UID:calev-9rbRbIp6MXS7N2k@events.lu.ma
 DESCRIPTION:Find more information on https://luma.com/verci
 LOCATION:https://partiful.com/e/tVdFTSJeGUwsZxJslvY1
@@ -3461,7 +3490,7 @@ BEGIN:VEVENT
 SUMMARY:Open Mic Night (funny)
 DTSTART:20261111T000000Z
 DTEND:20261111T020000Z
-DTSTAMP:20261028T035926Z
+DTSTAMP:20261028T120641Z
 UID:evt-nDYKGvcYFsJROyt@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/xxramndq\n\nAd
  dress:\n45 E 20th St floor 12\nNew York\, New York\nUnited States\n\nHoste
@@ -3475,7 +3504,7 @@ BEGIN:VEVENT
 SUMMARY:Community Builders and Partnerships Dinner w/ Verci
 DTSTART:20261112T000000Z
 DTEND:20261112T030000Z
-DTSTAMP:20261028T035926Z
+DTSTAMP:20261028T120641Z
 UID:evt-ieOLBOPmc06qZZt@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/e9malz0d\n\nAd
  dress:\nVerci Flatiron\nRooftop\nNew York\, NY\nUnited States\n\nHosted by
@@ -3489,7 +3518,7 @@ BEGIN:VEVENT
 SUMMARY:Cookie Cafe
 DTSTART:20261116T160000Z
 DTEND:20261116T200000Z
-DTSTAMP:20261028T035926Z
+DTSTAMP:20261028T120641Z
 UID:evt-QqEdwtHiqVWiP4c@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/4xuwwfht\n\nAd
  dress:\nVerci Flatiron\nNew York\, NY\nUnited States\n\nHosted by Verci
@@ -3502,7 +3531,7 @@ BEGIN:VEVENT
 SUMMARY:Open Mic Night (funny)
 DTSTART:20261118T000000Z
 DTEND:20261118T020000Z
-DTSTAMP:20261028T035926Z
+DTSTAMP:20261028T120641Z
 UID:evt-bAOH5GJfU1B41Zk@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/ovefmlhg\n\nAd
  dress:\n45 E 20th St floor 12\nNew York\, New York\nUnited States\n\nHoste
@@ -3516,7 +3545,7 @@ BEGIN:VEVENT
 SUMMARY:Cookie Cafe
 DTSTART:20261130T160000Z
 DTEND:20261130T200000Z
-DTSTAMP:20261028T035926Z
+DTSTAMP:20261028T120641Z
 UID:evt-gRAkEtnbEZebsHX@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/pw0awzff\n\nAd
  dress:\nVerci Flatiron\nNew York\, NY\nUnited States\n\nHosted by Verci
@@ -3529,7 +3558,7 @@ BEGIN:VEVENT
 SUMMARY:Cookie Cafe
 DTSTART:20261207T160000Z
 DTEND:20261207T200000Z
-DTSTAMP:20261028T035926Z
+DTSTAMP:20261028T120641Z
 UID:evt-325zsfIv4dNjFpt@events.lu.ma
 DESCRIPTION:Get up-to-date information at: https://luma.com/jdf97zzr\n\nAd
  dress:\nVerci Flatiron\nNew York\, NY\nUnited States\n\nHosted by Verci
@@ -3540,20 +3569,20 @@ STATUS:CONFIRMED
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Events at Verci
-DTSTART:20261028T035917Z
-DTSTAMP:20261028T035917Z
-UID:ed5b4768-a0c5-4c13-a389-7ebc34533ee2@event-aggregator
-CREATED:20261028T035917Z
+DTSTART:20261028T120630Z
+DTSTAMP:20261028T120630Z
+UID:cc763672-76c0-4a87-b8dc-9d0164abbf96@event-aggregator
+CREATED:20261028T120630Z
 DESCRIPTION:\n\nSource: https://www.verci.com/cart
 STATUS:CONFIRMED
 URL:https://www.verci.com/cart
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:EVENTS
-DTSTART:20261028T035917Z
-DTSTAMP:20261028T035917Z
-UID:4f7d365a-ddef-4a1d-baf0-5517177924fe@event-aggregator
-CREATED:20261028T035917Z
+DTSTART:20261028T120630Z
+DTSTAMP:20261028T120630Z
+UID:cd21178a-34be-4b69-a4c4-65a5a1bddd13@event-aggregator
+CREATED:20261028T120630Z
 DESCRIPTION:\n\nSource: https://www.verci.com/events
 STATUS:CONFIRMED
 URL:https://www.verci.com/events
@@ -3561,10 +3590,10 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:We host events that explore the latest frontiers of technology\, a
  rt\, politics\, and science.
-DTSTART:20261028T035917Z
-DTSTAMP:20261028T035917Z
-UID:06fa878e-fe71-4a89-9bf6-8b07afa8a3ec@event-aggregator
-CREATED:20261028T035917Z
+DTSTART:20261028T120630Z
+DTSTAMP:20261028T120630Z
+UID:a8ffef29-651c-4bb6-9e84-b320989eb298@event-aggregator
+CREATED:20261028T120630Z
 DESCRIPTION:\n\nSource: https://www.betaworks.com/event/frontier-paper-clu
  b-2
 STATUS:CONFIRMED
@@ -3572,10 +3601,10 @@ URL:https://www.betaworks.com/event/frontier-paper-club-2
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:In Person
-DTSTART:20261028T035917Z
-DTSTAMP:20261028T035917Z
-UID:65624d56-c8a4-46e6-8711-86f58352bc7c@event-aggregator
-CREATED:20261028T035917Z
+DTSTART:20261028T120630Z
+DTSTAMP:20261028T120630Z
+UID:11a44f66-4d62-4864-ae4d-f298315da1b4@event-aggregator
+CREATED:20261028T120630Z
 DESCRIPTION:\n\nSource: https://www.betaworks.com/event/frontier-paper-clu
  b-2
 STATUS:CONFIRMED
@@ -3583,30 +3612,30 @@ URL:https://www.betaworks.com/event/frontier-paper-club-2
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Blobfish AI & Betaworks:
-DTSTART:20261028T035917Z
-DTSTAMP:20261028T035917Z
-UID:f34c4ada-e10f-48fd-96a4-8a94f95ba060@event-aggregator
-CREATED:20261028T035917Z
+DTSTART:20261028T120630Z
+DTSTAMP:20261028T120630Z
+UID:95398db6-477b-4909-8be6-f4b725a8c347@event-aggregator
+CREATED:20261028T120630Z
 DESCRIPTION:\n\nSource: https://www.betaworks.com/events
 STATUS:CONFIRMED
 URL:https://www.betaworks.com/events
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Frontier Paper Club
-DTSTART:20261028T035917Z
-DTSTAMP:20261028T035917Z
-UID:513576ad-d177-4df8-8862-df36aceaa7d9@event-aggregator
-CREATED:20261028T035917Z
+DTSTART:20261028T120630Z
+DTSTAMP:20261028T120630Z
+UID:984b0de0-bd55-4cc7-87e0-ee6f1611e440@event-aggregator
+CREATED:20261028T120630Z
 DESCRIPTION:\n\nSource: https://www.betaworks.com/events
 STATUS:CONFIRMED
 URL:https://www.betaworks.com/events
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Public Event
-DTSTART:20261028T035917Z
-DTSTAMP:20261028T035917Z
-UID:1222aef6-de54-40df-a34d-30cf23c38462@event-aggregator
-CREATED:20261028T035917Z
+DTSTART:20261028T120630Z
+DTSTAMP:20261028T120630Z
+UID:e0c65b6c-a443-4db0-bfa6-46ccdf736c63@event-aggregator
+CREATED:20261028T120630Z
 DESCRIPTION:\n\nSource: https://www.betaworks.com/event/frontier-paper-clu
  b-2
 STATUS:CONFIRMED
@@ -3614,80 +3643,80 @@ URL:https://www.betaworks.com/event/frontier-paper-club-2
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Browse Library
-DTSTART:20261028T035917Z
-DTSTAMP:20261028T035917Z
-UID:73721558-332a-4f84-826c-45cede5dd3ed@event-aggregator
-CREATED:20261028T035917Z
+DTSTART:20261028T120630Z
+DTSTAMP:20261028T120630Z
+UID:f086d827-045a-4afa-8a22-559d15688853@event-aggregator
+CREATED:20261028T120630Z
 DESCRIPTION:\n\nSource: https://vimeo.com/betaworks
 STATUS:CONFIRMED
 URL:https://vimeo.com/betaworks
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:AI Tinkerers Code of Conduct
-DTSTART:20261028T035917Z
-DTSTAMP:20261028T035917Z
-UID:3a20dcbc-bf70-4236-8aca-8cb13ffb32a3@event-aggregator
-CREATED:20261028T035917Z
+DTSTART:20261028T120630Z
+DTSTAMP:20261028T120630Z
+UID:2c7520ba-7bcf-48cc-9b0c-0868483b4d2b@event-aggregator
+CREATED:20261028T120630Z
 DESCRIPTION:\n\nSource: p/ai-tinkerers-code-of-conduct
 STATUS:CONFIRMED
 URL:p/ai-tinkerers-code-of-conduct
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Read post →
-DTSTART:20261028T035917Z
-DTSTAMP:20261028T035917Z
-UID:cf0e1a2b-cec6-4806-997a-b82d85e65d0f@event-aggregator
-CREATED:20261028T035917Z
+DTSTART:20261028T120630Z
+DTSTAMP:20261028T120630Z
+UID:78870050-5bd3-40eb-b8d3-a3a99dd9a770@event-aggregator
+CREATED:20261028T120630Z
 DESCRIPTION:\n\nSource: p/ai-tinkerers-code-of-conduct
 STATUS:CONFIRMED
 URL:p/ai-tinkerers-code-of-conduct
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:AI Tinkerers -Asunción
-DTSTART:20261028T035917Z
-DTSTAMP:20261028T035917Z
-UID:1a401f5e-bcac-450d-acfe-b0f8a2299d97@event-aggregator
-CREATED:20261028T035917Z
+DTSTART:20261028T120630Z
+DTSTAMP:20261028T120630Z
+UID:7c47b6b9-7ff5-41ac-9d60-80d470347f1f@event-aggregator
+CREATED:20261028T120630Z
 DESCRIPTION:\n\nSource: p/ai-tinkerers-fabrizio-pfannl
 STATUS:CONFIRMED
 URL:p/ai-tinkerers-fabrizio-pfannl
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Asunción
-DTSTART:20261028T035917Z
-DTSTAMP:20261028T035917Z
-UID:2315a33c-58cc-48ae-84de-2dcf7320b996@event-aggregator
-CREATED:20261028T035917Z
+DTSTART:20261028T120630Z
+DTSTAMP:20261028T120630Z
+UID:f75ff3a9-080b-46cc-b97c-9705613cecd2@event-aggregator
+CREATED:20261028T120630Z
 DESCRIPTION:\n\nSource: https://aitinkerers.org/all_cities?m=r
 STATUS:CONFIRMED
 URL:https://aitinkerers.org/all_cities?m=r
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Science Fair at AI Tinkerers:Interactive Demos During Networking
-DTSTART:20261028T035917Z
-DTSTAMP:20261028T035917Z
-UID:bb82095d-9d40-4497-85fe-1281a7e31854@event-aggregator
-CREATED:20261028T035917Z
+DTSTART:20261028T120630Z
+DTSTAMP:20261028T120630Z
+UID:5fe30341-71eb-4b62-8a8f-0c31358136e1@event-aggregator
+CREATED:20261028T120630Z
 DESCRIPTION:\n\nSource: p/ai-tinkerers-science-fair
 STATUS:CONFIRMED
 URL:p/ai-tinkerers-science-fair
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Interactive Demos During Networking
-DTSTART:20261028T035917Z
-DTSTAMP:20261028T035917Z
-UID:00604ab3-7848-4c67-9e59-dedb19a716fa@event-aggregator
-CREATED:20261028T035917Z
+DTSTART:20261028T120630Z
+DTSTAMP:20261028T120630Z
+UID:c5e53949-1f9f-4ef3-a427-51020dd040ea@event-aggregator
+CREATED:20261028T120630Z
 DESCRIPTION:\n\nSource: https://aitinkerers.org/all_cities?m=r
 STATUS:CONFIRMED
 URL:https://aitinkerers.org/all_cities?m=r
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Sponsorship Guidelines
-DTSTART:20261028T035917Z
-DTSTAMP:20261028T035917Z
-UID:dd138f64-9928-47bf-b03b-049ac8538bc8@event-aggregator
-CREATED:20261028T035917Z
+DTSTART:20261028T120630Z
+DTSTAMP:20261028T120630Z
+UID:0b6d8e04-1deb-43af-b8b8-d70536b32ee9@event-aggregator
+CREATED:20261028T120630Z
 DESCRIPTION:\n\nSource: p/sponsorship-guidelines
 STATUS:CONFIRMED
 URL:p/sponsorship-guidelines
@@ -3695,10 +3724,10 @@ END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Fostering Gender Inclusiveness in AI Tinkerers:Lessons from Medell
  ín
-DTSTART:20261028T035917Z
-DTSTAMP:20261028T035917Z
-UID:80132824-743a-4889-98f9-6816c87dd15e@event-aggregator
-CREATED:20261028T035917Z
+DTSTART:20261028T120630Z
+DTSTAMP:20261028T120630Z
+UID:82e1e4cc-0112-4e82-9090-91725843969f@event-aggregator
+CREATED:20261028T120630Z
 DESCRIPTION:\n\nSource: p/fostering-gender-inclusiveness-in-ai-tinkerers-l
  essons-from-medellin
 STATUS:CONFIRMED
@@ -3706,60 +3735,60 @@ URL:p/fostering-gender-inclusiveness-in-ai-tinkerers-lessons-from-medellin
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Lessons from Medellín
-DTSTART:20261028T035917Z
-DTSTAMP:20261028T035917Z
-UID:dc5ec21f-f6c4-4379-a520-ab4d100f59c4@event-aggregator
-CREATED:20261028T035917Z
+DTSTART:20261028T120630Z
+DTSTAMP:20261028T120630Z
+UID:96751024-a826-45ab-9607-b17c1ff72a11@event-aggregator
+CREATED:20261028T120630Z
 DESCRIPTION:\n\nSource: https://aitinkerers.org/all_cities?m=r
 STATUS:CONFIRMED
 URL:https://aitinkerers.org/all_cities?m=r
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:How to Run Demos
-DTSTART:20261028T035917Z
-DTSTAMP:20261028T035917Z
-UID:8a865221-12a2-4826-a0d2-c3c914391c73@event-aggregator
-CREATED:20261028T035917Z
+DTSTART:20261028T120630Z
+DTSTAMP:20261028T120630Z
+UID:3b68f98e-dccb-4633-a263-d77bff3ec667@event-aggregator
+CREATED:20261028T120630Z
 DESCRIPTION:\n\nSource: p/how-to-run-demos
 STATUS:CONFIRMED
 URL:p/how-to-run-demos
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Welcome
-DTSTART:20261028T035917Z
-DTSTAMP:20261028T035917Z
-UID:0ccdcf97-87c0-4450-b53f-561b43b8402b@event-aggregator
-CREATED:20261028T035917Z
+DTSTART:20261028T120630Z
+DTSTAMP:20261028T120630Z
+UID:7d9c748c-d715-4344-941f-687f18dcab28@event-aggregator
+CREATED:20261028T120630Z
 DESCRIPTION:\n\nSource: p/welcome
 STATUS:CONFIRMED
 URL:p/welcome
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:AI Tinkerers FAQ
-DTSTART:20261028T035917Z
-DTSTAMP:20261028T035917Z
-UID:4fdfd7f2-8066-48f0-979b-d6623600bf35@event-aggregator
-CREATED:20261028T035917Z
+DTSTART:20261028T120630Z
+DTSTAMP:20261028T120630Z
+UID:7544b059-7a61-486c-a536-305f5ac9116c@event-aggregator
+CREATED:20261028T120630Z
 DESCRIPTION:\n\nSource: p/ai-tinkerers-faq
 STATUS:CONFIRMED
 URL:p/ai-tinkerers-faq
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:AI Tinkerers Merch
-DTSTART:20261028T035917Z
-DTSTAMP:20261028T035917Z
-UID:00b3812a-8b75-4058-9945-cb2c8dbb5c04@event-aggregator
-CREATED:20261028T035917Z
+DTSTART:20261028T120630Z
+DTSTAMP:20261028T120630Z
+UID:317c59d1-7aec-476a-9891-df465696ffb0@event-aggregator
+CREATED:20261028T120630Z
 DESCRIPTION:\n\nSource: p/ai-tinkerers-merch
 STATUS:CONFIRMED
 URL:p/ai-tinkerers-merch
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:AI Tinkerers City Organizer Quickstart Guide
-DTSTART:20261028T035917Z
-DTSTAMP:20261028T035917Z
-UID:85467ac9-24bd-4015-bb58-d3b237002750@event-aggregator
-CREATED:20261028T035917Z
+DTSTART:20261028T120630Z
+DTSTAMP:20261028T120630Z
+UID:9a96720a-702d-4391-9a31-1ba98cedb4ec@event-aggregator
+CREATED:20261028T120630Z
 DESCRIPTION:\n\nSource: p/ai-tinkerers-city-organizer-quickstart-guide
 STATUS:CONFIRMED
 URL:p/ai-tinkerers-city-organizer-quickstart-guide
